@@ -4,41 +4,32 @@ categories:
 
   - data-filter: research
     category-name: research
-
-  - data-filter: outreach
-    category-name: outreach
   
   - data-filter: misc
     category-name: miscellaneous
 
+  - data-filter: Open Source
+    category-name: open-source
+
 links:
 
-  - git-api: https://api.github.com/repos/mkhangg/refined_panoptic_mapping
+  - git-api: https://api.github.com/repos/neuraloperator/CoDA-NO
     category: research
 
-  - git-api: https://api.github.com/repos/mkhangg/v3d-slam
-    category: research
+  - git-api: https://api.github.com/repos/neuraloperator/neuraloperator
+    category: open-source
 
-  - git-api: https://api.github.com/repos/mkhangg/semantic_scene_perception
+  - git-api: https://api.github.com/repos/ashiq24/Scale_Equivarinat_Fourier_Layer
     category: research
   
-  - git-api: https://api.github.com/repos/mkhangg/academic-website
-    category: misc
-
-  - git-api: https://api.github.com/repos/mkhangg/deformable_cobot
+  - git-api: https://api.github.com/repos/ashiq24/UNO
     category: research
-
-  - git-api: https://api.github.com/repos/mkhangg/calib_cobot
+  
+  - git-api: https://api.github.com/repos/ashiq24/BEENE
     category: research
-
-  - git-api: https://api.github.com/repos/mkhangg/perception_framework
-    category: research
-
-  - git-api: https://api.github.com/repos/mkhangg/hackmit22
-    category: outreach
-
-  - git-api: https://api.github.com/repos/tuantdang/iotree
-    category: research
-
-  - git-api: https://api.github.com/repos/mkhangg/robotech22
-    category: outreach
+  
+  - git-api: https://api.github.com/repos/ashiq24/Copula
+    category: open-source
+  
+  - git-api: https://api.github.com/repos/ashiq24/Python-Tool-to-Visualize-Fractals
+    category: miscellaneous

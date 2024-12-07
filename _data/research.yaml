@@ -14,7 +14,7 @@ projects:
 
   - title: Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs.
     system-name: 
-    gif: assets/img/demo_refined_mapping.gif
+    gif: assets/img/paper_fig/codano.png
     conference: NeurIPS 2024 
     conference-web: 
     status:
@@ -31,7 +31,7 @@ projects:
 
   - title: Truly Scale-Equivariant Deep Nets with Fourier Layers.
     system-name:
-    gif: assets/img/demo_v3d_slam.gif
+    gif: assets/img/paper_fig/scale_eq.png
     conference: NeurIPS 2023 
     conference-web:
     status:
@@ -49,7 +49,7 @@ projects:
 
   - title: 'U-NO: U-shaped Neural Operators'
     system-name: 
-    gif: assets/img/demo_scene_perception.gif
+    gif: assets/img/paper_fig/uno.png
     conference: Transactions on Machine Learning Research
     conference-web: 
     status:
@@ -60,14 +60,14 @@ projects:
     slides: 
     talk: 
     poster: 
-    abstract-less: Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces.
-    abstract-more: Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations. Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
+    abstract-less: Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces. Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations.
+    abstract-more:  Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
     tag: 
     category: Neural Operator
 
   - title: Generative Adversarial Neural Operators.
     system-name: 
-    gif: assets/img/demo_online.gif
+    gif: assets/img/paper_fig/gano.jpg
     conference: Transactions on Machine Learning Research
     conference-web: 
     status: 
@@ -85,7 +85,7 @@ projects:
   
   - title: 'PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators.'
     system-name: 
-    gif: assets/img/demo_multiplanar.gif
+    gif: assets/img/paper_fig/pacmo.jpg
     conference: ArXiv 
     conference-web: 
     status: 
@@ -103,7 +103,7 @@ projects:
 
   - title: "BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation.BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation."
     system-name: 
-    gif: assets/img/demo_extperfc.gif
+    gif: assets/img/paper_fig/beene.jpeg
     conference: Bioinformatics, Volume 39
     conference-web: https://academic.oup.com/bioinformatics
     status: 
@@ -121,7 +121,7 @@ projects:
 
   - title: 'CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments.'
     system-name: 
-    gif: assets/img/demo_perfc.gif
+    gif: assets/img/paper_fig/chapao.jpg
     conference: PLOS ONE
     conference-web: https://journals.plos.org/plosone/
     status: 
