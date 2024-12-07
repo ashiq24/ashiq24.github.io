@@ -16,8 +16,8 @@ icon-pic: assets/img/mandu_icon.png
 
 # GitHub Pages configurations
 remote_theme: pages-themes/minimal # or your specific theme
-url: "https://ashiq24.github.io" # replace with your GitHub Pages URL
-baseurl: "" # leave empty if site is at root
+repository: ashiq24/ashiq24.github.io  # Add this line
+github: [metadata]  # Add this line
 
 # Build settings
 markdown: kramdown
