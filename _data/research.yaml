@@ -1,157 +1,138 @@
 categories:
 
-  - data-filter: perception manipulation
-    category-name: perception + manipulation
+  - data-filter: Equivariance
+    category-name: Equivariance
 
-  - data-filter: slam
-    category-name: slam
+  - data-filter: Neural Operator
+    category-name: Neural Operator
 
-  - data-filter: framework
-    category-name: framework
+  - data-filter: Bioinformatics
+    category-name: Bioinformatics
 
 
 projects:
 
-  - title: Volumetric Mapping with Panoptic Refinement via Kernel Density Estimation for Mobile Robots
+  - title: Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs.
     system-name: 
     gif: assets/img/demo_refined_mapping.gif
-    conference: IROS 2024 (Abu Dhabi, United Arab Emirates) 
-    conference-web: https://iros2024-abudhabi.org/
+    conference: NeurIPS 2024 
+    conference-web: 
     status:
-    authors: <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
-    pdf: https://mkhangg.com/assets/papers/nguyen2024volumetric.pdf
-    code: https://github.com/mkhangg/refined_panoptic_mapping
-    demo: https://youtu.be/u214kCms27M
-    slides: https://mkhangg.com/assets/slides/iros24b_slides.pdf
-    talk: https://youtu.be/vQZMQApcTCY
-    poster: https://mkhangg.com/assets/posters/iros24b_poster.pdf
-    abstract-less: Reconstructing three-dimensional (3D) scenes with semantic understanding is vital in many robotic applications. Robots need to identify which objects, along with their positions and shapes, to manipulate them precisely with given tasks. Mobile robots, especially, usually use lightweight networks to segment objects on RGB images and then localize them via depth maps; however, they 
-    abstract-more: often encounter out-of-distribution scenarios where masks over-cover the objects. In this paper, we address the problem of panoptic segmentation quality in 3D scene reconstruction by refining segmentation errors using non-parametric statistical methods. To enhance mask precision, we map the predicted masks into a depth frame to estimate their distribution via kernel densities. The outliers in depth perception are then rejected without the need for additional parameters in an adaptive manner to out-of-distribution scenarios, followed by 3D reconstruction using projective signed distance functions (SDFs). We validate our method on a synthetic dataset, which shows improvements in both quantitative and qualitative results for panoptic mapping. Through real-world testing, the results furthermore show our method's capability to be deployed on a real-robot system.
-    tag: more_refined_mapping
-    category: slam
+    authors: <u>Md Ashiqur Rahman</u>, Robert Joseph George, Mogab Elleithy, Daniel Leibovici, Zongyi Li, Boris Bonev, Colin White, Julius Berner, Raymond A. Yeh, Jean Kossaifi, Kamyar Azizzadenesheli, Anima Anandkumar
+    pdf: https://arxiv.org/pdf/2403.12553
+    code: https://github.com/neuraloperator/CoDA-NO
+    demo: https://colab.research.google.com/drive/1-reJuIh8jCW38EPGed75hkAOMR2wc7Gq?usp=sharing
+    slides:
+    poster: 
+    abstract-less: Existing neural operator architectures face challenges when solving multiphysics problems with coupled partial differential equations (PDEs), due to complex geometries, 
+    abstract-more: interactions between physical variables, and the lack of large amounts of high-resolution training data. To address these issues, we propose Codomain Attention Neural Operator (CoDA-NO), which tokenizes functions along the codomain or channel space, enabling self-supervised learning or pretraining of multiple PDE systems. Specifically, we extend positional encoding, self-attention, and normalization layers to the function space. CoDA-NO can learn representations of different PDE systems with a single model. We evaluate CoDA-NO's potential as a backbone for learning multiphysics PDEs over multiple systems by considering few-shot learning settings. On complex downstream tasks with limited data, such as fluid flow simulations and fluid-structure interactions, we found CoDA-NO to outperform existing methods on the few-shot learning task by over 36\%.
+    tag: 
+    category: Neural Operator
 
-  - title: Robust RGB-D SLAM in Dynamic Environments with 3D Semantic Geometry Voting
-    system-name: V3D-SLAM
+  - title: Truly Scale-Equivariant Deep Nets with Fourier Layers.
+    system-name:
     gif: assets/img/demo_v3d_slam.gif
-    conference: IROS 2024 (Abu Dhabi, United Arab Emirates)
-    conference-web: https://iros2024-abudhabi.org/
+    conference: NeurIPS 2023 
+    conference-web:
     status:
-    authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
-    pdf: https://www.tuandang.info/assets/papers/v3d-slam.pdf
-    code: https://github.com/tuantdang/v3d-slam
-    demo: https://youtu.be/K4RcKrASpqI
-    slides: https://mkhangg.com/assets/slides/iros24a_slides.pdf
-    talk: https://youtu.be/aWGu9Qxow7g
-    poster: https://mkhangg.com/assets/posters/iros24a_poster.pdf
-    abstract-less: Simultaneous localization and mapping (SLAM) in highly dynamic environments is challenging due to the correlation complexity between moving objects and the camera pose. Many methods have been proposed to deal with this problem; however, the moving properties of dynamic objects with a moving camera remain unclear. Therefore, to improve SLAM's performance, 
-    abstract-more: minimizing disruptive events of moving objects with a physical understanding of 3D shapes and dynamics of objects is needed. In this paper, we propose a robust method, V3D-SLAM, to remove moving objects via two lightweight re-evaluation stages, including identifying potentially moving and static objects using a spatial-reasoned Hough voting mechanism and refining static objects by detecting dynamic noise caused by intra-object motions using Chamfer distances as similarity measurements. Through our experiment on the TUM RGB-D benchmark on dynamic sequences with ground-truth camera trajectories, the results show that our methods outperform most other recent state-of-the-art SLAM methods.
-    tag: more_v3d_slam
-    category: slam
+    authors: <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
+    pdf: https://arxiv.org/pdf/2311.02922
+    code: https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/
+    demo: https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing
+    slides: 
+    talk:
+    poster: https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/resource/poster_thumb.pdf
+    abstract-less: In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation
+    abstract-more: ; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
+    tag: 
+    category: Equivariance
 
-  - title: Real-Time 3D Semantic Scene Perception for Egocentric Robots with Binocular Vision
+  - title: 'U-NO: U-shaped Neural Operators'
     system-name: 
     gif: assets/img/demo_scene_perception.gif
-    conference: arXiv (02/19/2024)
+    conference: Transactions on Machine Learning Research
     conference-web: 
     status:
-    authors: <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
-    pdf: https://arxiv.org/pdf/2402.11872.pdf
-    code: https://github.com/mkhangg/semantic_scene_perception
-    demo: https://youtu.be/-dho7l_r56U
+    authors: <u>Md Ashiqur Rahman</u>, Zachary E. Ross, Kamyar Azizzadenesheli.
+    pdf: https://openreview.net/pdf?id=j3oQF9coJd
+    code: https://github.com/ashiq24/UNO
+    demo: https://colab.research.google.com/drive/1f1WYsjAgIjJRFtfQYYnZCZsxl602MMPX?usp=sharing
     slides: 
     talk: 
     poster: 
-    abstract-less: Perceiving a three-dimensional (3D) scene with multiple objects while moving indoors is essential for vision-based mobile cobots, especially for enhancing their manipulation tasks. In this work, we present an end-to-end pipeline with instance segmentation, feature matching, and point-set registration for egocentric robots with binocular vision, and demonstrate the robot's 
-    abstract-more: grasping capability through the proposed pipeline. First, we design an RGB image-based segmentation approach for single-view 3D semantic scene segmentation, leveraging common object classes in 2D datasets to encapsulate 3D points into point clouds of object instances through corresponding depth maps. Next, 3D correspondences of two consecutive segmented point clouds are extracted based on matched keypoints between objects of interest in RGB images from the prior step. In addition, to be aware of spatial changes in 3D feature distribution, we also weigh each 3D point pair based on the estimated distribution using kernel density estimation (KDE), which subsequently gives robustness with less central correspondences while solving for rigid transformations between point clouds. Finally, we test our proposed pipeline on the 7-DOF dual-arm Baxter robot with a mounted Intel RealSense D435i RGB-D camera. The result shows that our robot can segment objects of interest, register multiple views while moving, and grasp the target object.
-    tag: more_scene_perception
-    category: perception manipulation
+    abstract-less: Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces.
+    abstract-more: Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations. Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
+    tag: 
+    category: Neural Operator
 
-  - title: Online 3D Deformable Object Classification for Mobile Cobot Manipulation
+  - title: Generative Adversarial Neural Operators.
     system-name: 
     gif: assets/img/demo_online.gif
-    conference: ISR Europe 2023 (Stuttgart, Baden-Wurttemberg, Germany)
-    conference-web: https://www.isr-robotics.org/isr
-    status: 
-    authors: <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
-    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10363065
-    code: https://github.com/mkhangg/deformable_cobot
-    demo: https://youtu.be/qkgi3T6xYzI
-    slides: https://mkhangg.com/assets/slides/isr23_slides.pdf
-    talk: https://youtu.be/ATzyXtLAK6E
-    poster: 
-    abstract-less: Vision-based object manipulation in assistive mobile cobots essentially relies on classifying the target objects based on their 3D shapes and features, whether they are deformed or not. In this work, we present an auto-generated dataset of deformed objects specific for assistive mobile cobot manipulation using an intuitive Laplacian-based mesh deformation procedure. We 
-    abstract-more: first determine the graspable region of the robot hand on the given object's mesh. Then, we uniformly sample handle points within the graspable region and perform deformation with multiple handle points based on the robot gripper configuration. In each deformation, we identify the orientation of handle points and prevent self-intersection to guarantee the object's physical meaning when multiple handle points are simultaneously applied to the mesh at different deformation intensities. We also introduce a lightweight neural network for 3D deformable object classification. Finally, we test our generated dataset on the Baxter robot with two 7-DOF arms, an integrated RGB-D camera, and a 3D deformable object classifier. The result shows that the robot is able to classify real-world deformed objects from point clouds captured at multiple views by the RGB-D camera.
-    tag: more_online
-    category: perception manipulation
-  
-  - title: Multiplanar Self-Calibration for Mobile Cobot 3D Object Manipulation using 2D Detectors and Depth Estimation
-    system-name: 
-    gif: assets/img/demo_multiplanar.gif
-    conference: IROS 2023 (Detroit, MI, U.S.)
-    conference-web: https://ieee-iros.org/
-    status: 
-    authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
-    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10341911
-    code: https://github.com/tuantdang/calib_cobot
-    demo: https://youtu.be/KrDJ22rvOAo
-    slides: 
-    talk: 
-    poster: 
-    abstract-less: Calibration is the first and foremost step in dealing with sensor displacement errors that can appear during extended operation and off-time periods to enable robot object manipulation with precision. In this paper, we present a novel multiplanar self-calibration between the 
-    abstract-more: camera system and the robot's end-effector for 3D object manipulation. Our approach first takes the robot end-effector as ground truth to calibrate the camera’s position and orientation while the robot arm moves the object in multiple planes in 3D space, and a 2D state-of-the-art vision detector identifies the object’s center in the image coordinates system. The transformation between world coordinates and image coordinates is then computed using 2D pixels from the detector and 3D known points obtained by robot kinematics. Next, an integrated stereo-vision system estimates the distance between the camera and the object, resulting in 3D object localization. We test our proposed method on the Baxter robot with two 7-DOF arms and a 2D detector that can run in real time on an onboard GPU. After self-calibrating, our robot can localize objects in 3D using an RGB camera and depth image.
-    tag: more_multiplanar
-    category: perception manipulation
-
-  - title: An Efficient 2D & 3D Perception Software-Hardware Framework for Mobile Cobot
-    system-name: ExtPerFC
-    gif: assets/img/demo_extperfc.gif
-    conference: arXiv (06/08/2023)
+    conference: Transactions on Machine Learning Research
     conference-web: 
     status: 
-    authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
-    pdf: https://arxiv.org/pdf/2306.04853.pdf
-    code: https://github.com/tuantdang/perception_framework
-    demo: https://youtu.be/q4oz9Rixbzs
+    authors: <u>Md Ashiqur Rahman</u>, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli.
+    pdf: https://openreview.net/pdf?id=X1VzbBU6xZ
+    code: https://github.com/neuraloperator/GANO
+    demo: 
     slides: 
     talk: 
     poster: 
-    abstract-less: As the reliability of the robot's perception correlates with the number of integrated sensing modalities to tackle uncertainty, a practical solution to manage these sensors from different computers, operate them simultaneously, and maintain their real-time performance on the existing robotic system with minimal effort is needed. In this work, we present an end-to-end software-hardware 
-    abstract-more: framework, namely <i>ExtPerFC</i>, that supports both conventional hardware and software components and integrates machine learning object detectors without requiring an additional dedicated graphic processor unit (GPU). We first design our framework to achieve real-time performance on the existing robotic system, guarantee configuration optimization, and concentrate on code reusability. We then mathematically model and utilize our transfer learning strategies for 2D object detection and fuse them into depth images for 3D depth estimation. Lastly, we systematically test the proposed framework on the Baxter robot with two 7-DOF arms, a four-wheel mobility base, and an Intel RealSense D435i RGB-D camera. The results show that the robot achieves real-time performance while executing other tasks (<i>e.g.</i>, map building, localization, navigation, object detection, arm moving, and grasping) simultaneously with available hardware like Intel onboard CPUs/GPUs on distributed computers. Also, to comprehensively control, program, and monitor the robot system, we design and introduce an end-user application.
-    tag: more_extperfc
-    category: framework
+    abstract-less: We propose the generative adversarial neural operator (GANO), a generative model paradigm for learning probabilities on infinite-dimensional function spaces.
+    abstract-more: The natural sciences and engineering are known to have many types of data that are sampled from infinite-dimensional function spaces, where classical finite-dimensional deep generative adversarial networks (GANs) may not be directly applicable. GANO generalizes the GAN framework and allows for the sampling of functions by learning push-forward operator maps in infinite-dimensional spaces. GANO consists of two main components, a generator neural operator and a discriminator neural functional. The inputs to the generator are samples of functions from a user-specified probability measure, e.g., Gaussian random field (GRF), and the generator outputs are synthetic data functions. The input to the discriminator is either a real or synthetic data function. In this work, we instantiate GANO using the Wasserstein criterion and show how the Wasserstein loss can be computed in infinite-dimensional spaces. We empirically study GANO in controlled cases where both input and output functions are samples from GRFs and compare its performance to the finite-dimensional counterpart GAN. We empirically study the efficacy of GANO on real-world function data of volcanic activities and show its superior performance over GAN.
+    tag:
+    category: Neural Operator
+  
+  - title: 'PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators.'
+    system-name: 
+    gif: assets/img/demo_multiplanar.gif
+    conference: ArXiv 
+    conference-web: 
+    status: 
+    authors: <U>Md Ashiqur Rahman</u>, Jasorsi Ghosh, Hrishikesh Viswanath, Kamyar Azizzadenesheli, Aniket Bera.
+    pdf: https://arxiv.org/pdf/2211.16210
+    code: 
+    demo:
+    slides: 
+    talk: 
+    poster: 
+    abstract-less: We address the problem of generating 3D human motions in dyadic activities. In contrast to the concurrent works, which mainly focus on
+    abstract-more: generating the motion of a single actor from the textual description, we generate the motion of one of the actors from the motion of the other participating actor in the action. This is a particularly challenging, under-explored problem, that requires learning intricate relationships between the motion of two actors participating in an action and also identifying the action from the motion of one actor. To address these, we propose partner conditioned motion operator (PaCMO), a neural operator-based generative model which learns the distribution of human motion conditioned by the partner's motion in function spaces through adversarial training. Our model can handle long unlabeled action sequences at arbitrary time resolution. We also introduce the "Functional Frechet Inception Distance" (F2ID) metric for capturing similarity between real and generated data for function spaces. We test PaCMO on NTU RGB+D and DuetDance datasets and our model produces realistic results evidenced by the F2ID score and the conducted user study.
+    tag: 
+    category: Neural Operator
 
-  - title: An Efficient 2D and 3D Perception Software-Hardware Framework for Mobile Cobot
-    system-name: PerFC
+  - title: "BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation.BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation."
+    system-name: 
+    gif: assets/img/demo_extperfc.gif
+    conference: Bioinformatics, Volume 39
+    conference-web: https://academic.oup.com/bioinformatics
+    status: 
+    authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Mahfuza Sharmin, Md Shamsuzzoha Bayzid
+    pdf: https://academic.oup.com/bioinformatics/article/39/8/btad479/7240486?login=false
+    code: https://github.com/ashiq24/BEENE
+    demo: 
+    slides: 
+    talk: 
+    poster: 
+    abstract-less: Analyzing large-scale single-cell transcriptomic datasets generated using different technologies is challenging due to the presence of batch-specific systematic variations known as batch effects.
+    abstract-more: Since biological and technological differences are often interspersed, detecting and accounting for batch effects in RNA-seq datasets are critical for effective data integration and interpretation. Low-dimensional embeddings, such as principal component analysis (PCA) are widely used in visual inspection and estimation of batch effects. Linear dimensionality reduction methods like PCA are effective in assessing the presence of batch effects, especially when batch effects exhibit linear patterns. However, batch effects are inherently complex and existing linear dimensionality reduction methods could be inadequate and imprecise in the presence of sophisticated nonlinear batch effects. Results:- We present Batch Effect Estimation using Nonlinear Embedding (BEENE), a deep nonlinear auto-encoder network which is specially tailored to generate an alternative lower dimensional embedding suitable for both linear and nonlinear batch effects. BEENE simultaneously learns the batch and biological variables from RNA-seq data, resulting in an embedding that is more robust and sensitive than PCA embedding in terms of detecting and quantifying batch effects. BEENE was assessed on a collection of carefully controlled simulated datasets as well as biological datasets, including two technical replicates of mouse embryogenesis cells, peripheral blood mononuclear cells from three largely different experiments and five studies of pancreatic islet cells
+    tag: 
+    category: Bioinformatics
+
+  - title: 'CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments.'
+    system-name: 
     gif: assets/img/demo_perfc.gif
-    conference: FLAIRS-36 (Clearwater Beach, FL, U.S.)
-    conference-web: https://www.flairs-36.info/home
+    conference: PLOS ONE
+    conference-web: https://journals.plos.org/plosone/
     status: 
-    authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
-    pdf: https://journals.flvc.org/FLAIRS/article/view/133316/137627
-    code: https://github.com/tuantdang/perception_framework
-    demo: https://youtu.be/q4oz9Rixbzs
+    authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Sifat Muhammad Abdullah, Md. Shamsuzzoha Bayzid.
+    pdf: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265360
+    code: https://github.com/ashiq24/CHAPAO
+    demo: 
     slides: 
     talk: 
     poster: 
-    abstract-less: In this work, we present an end-to-end software-hardware framework that supports both conventional hardware and software components and integrates machine learning object detectors without requiring an additional dedicated graphic processor unit (GPU). We design our framework to achieve real-time performance on the robot system, guarantee such performance on 
-    abstract-more: multiple computing devices, and concentrate on code reusability. We then utilize transfer learning strategies for 2D object detection and fuse them into depth images for 3D depth estimation. Lastly, we test the proposed framework on the Baxter robot with two 7-DOF arms and a four-wheel mobility base. The results show that the robot achieves real-time performance while executing other tasks (map building, localization, navigation, object detection, arm moving, and grasping) with available hardware like Intel onboard GPUs on distributed computers. Also, to comprehensively control, program, and monitor the robot system, we  design and introduce an end-user application.
-    tag: more_perfc
-    category: framework
-
-  - title: A Battery-free Wearable System with Biocompatible Sensors for Continuous Tree Health Monitoring
-    system-name: IoTree
-    gif: assets/img/demo_iotree.gif
-    conference: MobiCom 2022 (Sydney, NSW, Australia)
-    conference-web: https://www.sigmobile.org/mobicom/2022/
-    status: 
-    authors: Tuan Dang, Trung Tran, <u>Khang Nguyen</u>, Tien Pham, Nhat Pham, Tam Vu, Phuc Nguyen.
-    pdf: https://dl.acm.org/doi/pdf/10.1145/3495243.3567652
-    code: https://github.com/tuantdang/iotree
-    demo: https://youtu.be/8DUfOcuPwIk
-    slides: 
-    talk: 
-    poster: 
-    abstract-less: In this paper, we present a low-maintenance, wind-powered, batteryfree, biocompatible, tree wearable, and intelligent sensing system, namely <i>IoTree</i>, to monitor water and nutrient levels inside a living tree. <i>IoTree</i> system includes tiny-size, biocompatible, and implantable sensors that 
-    abstract-more: continuously measure the impedance variations inside the living tree’s xylem, where water and nutrients are transported from the root to the upper parts. The collected data are then compressed and transmitted to a base station located at up to 1.8 kilometers (approximately 1.1 miles) away. The entire <i>IoTree</i> system is powered by wind energy and controlled by an adaptive computing technique called block-based intermittent computing, ensuring the forward progress and data consistency under intermittent power and allowing the firmware to execute with the most optimal memory and energy usage. We prototype <i>IoTree</i> that opportunistically performs sensing, data compression, and long-range communication tasks without batteries. During in-lab experiments, <i>IoTree</i> also obtains the accuracy of 91.08% and 90.51% in measuring 10 levels of nutrients, NH<sub>3</sub> and K<sub>2</sub>O, respectively. While tested with Burkwood Viburnum and White Bird trees in the indoor environment, <i>IoTree</i> data strongly correlated with multiple watering and fertilizing events. We also deployed <i>IoTree</i> on a grapevine farm for 30 days, and the system is able to provide sufficient measurements every day.
-    tag: more_iotree
-    category: 
+    abstract-less: High-throughput experimental technologies are generating tremendous amounts of genomic data, offering valuable resources to answer important questions and extract biological insights. Storing this sheer amount of genomic data has become a major concern in bioinformatics.
+    abstract-more: General purpose compression techniques (e.g. gzip, bzip2, 7-zip) are being widely used due to their pervasiveness and relatively good speed. However, they are not customized for genomic data and may fail to leverage special characteristics and redundancy of the biomolecular sequences. Results:- We present a new lossless compression method CHAPAO (COmpressing Alignments using Hierarchical and Probabilistic Approach), which is especially designed for multiple sequence alignments (MSAs) of biomolecular data and offers very good compression gain. We have introduced a novel hierarchical referencing technique to represent biomolecular sequences which combines likelihood based analyses of the sequence similarities and graph theoretic algorithms. We performed an extensive evaluation study using a collection of real biological data from the avian phylogenomics project, 1000 plants project (1KP), and 16S and 23S rRNA datasets. We report the performance of CHAPAO in comparison with general purpose compression techniques as well as with MFCompress and Nucleotide Archival Format (NAF)—two of the best known methods especially designed for FASTA files. Experimental results suggest that CHAPAO offers significant improvements in compression gain over most other alternative methods.
+    tag: 
+    category: Bioinformatics
