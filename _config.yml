@@ -1,10 +1,37 @@
-# headers and icon 
+# # headers and icon 
+# title: Md Ashiqur Rahman
+# info: phd cs @ Purdue
+# icon-pic: assets/img/mandu_icon.png
+
+# # exclude these items when generated website in _site/index.html
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - README.md
+
+# Site settings
 title: Md Ashiqur Rahman
 info: phd cs @ Purdue
 icon-pic: assets/img/mandu_icon.png
+
+# GitHub Pages configurations
+remote_theme: pages-themes/minimal # or your specific theme
+url: "https://ashiq24.github.io" # replace with your GitHub Pages URL
+baseurl: "" # leave empty if site is at root
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # exclude these items when generated website in _site/index.html
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
