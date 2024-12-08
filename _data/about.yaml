@@ -31,10 +31,10 @@ email: rahman79@purdue.edu
 # about me
 first-paragraph:  I am Md Ashiqur Rahman, a fourth-year Ph.D. student in Computer Science at Purdue University, guided by Professor Raymond A. Yeh. My research is primarily focused on the development of robust machine learning models, particularly in the areas of equivalence and geometric machine learning, as well as exploring the applications of AI in scientific discovery.
 second-paragraph: I earned my Bachelor's degree in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET). I am passionate about advancing the field of computer science and am always open to discussions and collaborations. Thank you for visiting my page!
-# research-introduction: I do research in robotics, mainly focusing on applying <code>cognitive architectures to robotic grasping</code> to enable robots with a closely similar human grasping capability. Just imagine the robot enters the kitchen, finds a banana, grasps without crushing it, and brings it back to you.
+research-introduction: My research unifies geometric principles, signal processing techniques, and equivariance theory to develop more robust and consistent AI systems.
 
 research-interests:
-My reseach combine geometry, signal processing, equivarinace with deep learning to more robust models.
+
   - field: Computer Vision
     subfields: Geometric Deep Learning, Equivariant Neural Networks 
   
