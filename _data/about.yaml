@@ -34,7 +34,7 @@ second-paragraph: I earned my Bachelor's degree in Computer Science and Engineer
 # research-introduction: I do research in robotics, mainly focusing on applying <code>cognitive architectures to robotic grasping</code> to enable robots with a closely similar human grasping capability. Just imagine the robot enters the kitchen, finds a banana, grasps without crushing it, and brings it back to you.
 
 research-interests:
-
+My reseach combine geometry, signal processing, equivarinace with deep learning to more robust models.
   - field: Computer Vision
     subfields: Geometric Deep Learning, Equivariant Neural Networks 
   
