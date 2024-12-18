@@ -122,6 +122,12 @@ However, if you can just leave anything field `blank`, it will just will not con
 
 **3. Run the webpage at localhost**
 
+ashiq24 -- run the following first
+
+```
+source ~/.bashrc
+```
+
 After changing to your information, the website can be tested using the following command:
 
 ```
