@@ -50,7 +50,7 @@ projects:
   - title: 'U-NO: U-shaped Neural Operators'
     system-name: 
     gif: assets/img/paper_fig/uno.png
-    conference: Transactions on Machine Learning Research
+    conference: Transactions on Machine Learning Research 2023
     conference-web: 
     status:
     authors: <u>Md Ashiqur Rahman</u>, Zachary E. Ross, Kamyar Azizzadenesheli.
@@ -68,7 +68,7 @@ projects:
   - title: Generative Adversarial Neural Operators.
     system-name: 
     gif: assets/img/paper_fig/gano.jpg
-    conference: Transactions on Machine Learning Research
+    conference: Transactions on Machine Learning Research 2022
     conference-web: 
     status: 
     authors: <u>Md Ashiqur Rahman</u>, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli.
@@ -86,7 +86,7 @@ projects:
   - title: 'PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators.'
     system-name: 
     gif: assets/img/paper_fig/pacmo.jpg
-    conference: ArXiv 
+    conference: ArXiv 2022
     conference-web: 
     status: 
     authors: <U>Md Ashiqur Rahman</u>, Jasorsi Ghosh, Hrishikesh Viswanath, Kamyar Azizzadenesheli, Aniket Bera.
@@ -104,7 +104,7 @@ projects:
   - title: "BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation.BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation."
     system-name: 
     gif: assets/img/paper_fig/beene.jpeg
-    conference: Bioinformatics, Volume 39
+    conference: Bioinformatics, Volume 39, 2023
     conference-web: https://academic.oup.com/bioinformatics
     status: 
     authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Mahfuza Sharmin, Md Shamsuzzoha Bayzid
@@ -122,7 +122,7 @@ projects:
   - title: 'CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments.'
     system-name: 
     gif: assets/img/paper_fig/chapao.jpg
-    conference: PLOS ONE
+    conference: PLOS ONE 2022
     conference-web: https://journals.plos.org/plosone/
     status: 
     authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Sifat Muhammad Abdullah, Md. Shamsuzzoha Bayzid.
