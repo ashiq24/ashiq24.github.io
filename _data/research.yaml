@@ -12,6 +12,24 @@ categories:
 
 projects:
 
+  - title: Group Downsampling with Equivariant Anti-aliasing
+    system-name:
+    gif: assets/img/paper_fig/group_dwn.jpg
+    conference: ICLR 2025 
+    conference-web:
+    status:
+    authors: <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
+    pdf: https://openreview.net/pdf?id=sOte83GogU
+    code:
+    demo: 
+    slides: 
+    talk:
+    poster: 
+    abstract-less: Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing.
+    abstract-more:  This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
+    tag: more_equivariance
+    category: Equivariance
+
   - title: Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs.
     system-name: 
     gif: assets/img/paper_fig/codano.png

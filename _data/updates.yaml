@@ -2,13 +2,13 @@ updates:
 
   - picture: assets/img/updates_fig/confernec.png
     desc: I will attend NeurIPS 2024 in <hightlight>Vancouver, Canada</hightlight>.
-    time: October 2024
+    time: December 2024
 
-  # - picture: assets/img/updates_gan/abudhabi_boy.jpg
-  #   desc: I will attend IROS 2024 in <hightlight>Abu Dhabi, UAE</hightlight>.
-  #   time: October 2024
+  - picture: assets/img/updates_fig/iclr_png_singa.png
+    desc: I will attend ICLR 2025 in <hightlight>Singapore</hightlight>.
+    time: April 2025
 
-  # - picture: assets/img/updates_gan/fix_robot.jpg
+  # - picture: assets/img/updates_fig/iclr.png
   #   desc: I will be the GTA for <hightlight>CSE 4360 (Robotics) course</hightlight> this semester!
   #   time: August 2024
 
