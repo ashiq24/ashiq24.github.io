@@ -39,7 +39,7 @@ projects:
     authors: <u>Md Ashiqur Rahman</u>, Robert Joseph George, Mogab Elleithy, Daniel Leibovici, Zongyi Li, Boris Bonev, Colin White, Julius Berner, Raymond A. Yeh, Jean Kossaifi, Kamyar Azizzadenesheli, Anima Anandkumar
     pdf: https://arxiv.org/pdf/2403.12553
     code: https://github.com/neuraloperator/CoDA-NO
-    demo: https://colab.research.google.com/drive/1-reJuIh8jCW38EPGed75hkAOMR2wc7Gq?usp=sharing
+    demo: https://colab.research.google.com/drive/1W6Qy5Mk_vEjZgrA0tWMespXqKEYDOdc6?usp=sharing
     slides:
     poster: 
     abstract-less: Existing neural operator architectures face challenges when solving multiphysics problems with coupled partial differential equations (PDEs), due to complex geometries, 
