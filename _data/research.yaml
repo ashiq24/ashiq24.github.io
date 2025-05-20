@@ -20,11 +20,11 @@ projects:
     status:
     authors: <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
     pdf: https://openreview.net/pdf?id=sOte83GogU
-    code:
-    demo: 
+    code: https://github.com/ashiq24/Group_Sampling
+    demo: https://colab.research.google.com/drive/1Fkuid94wnVltsgwOblvbuGaVMjLl1YCr?usp=sharing
     slides: 
     talk:
-    poster: 
+    tutorial: https://huggingface.co/blog/ashiq24/group-sampling
     abstract-less: Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing.
     abstract-more:  This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
     tag: more_equivariance
@@ -59,7 +59,7 @@ projects:
     demo: https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing
     slides: 
     talk:
-    poster: https://ashiq24.github.io/Scale_Equivarinat_Fourier_Layer/resource/poster_thumb.pdf
+    poster: https://ashiq24.github.io/scale_equivariant_fourier_layer/resource/poster_thumb.pdf
     abstract-less: In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation
     abstract-more: ; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
     tag: more_equivariance
