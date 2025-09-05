@@ -62,42 +62,7 @@ function scrollToTopDiv(divTag) {
 }
 
 
-// Button for toggle theme (dark/light)
-function toggleTheme() {
-    const bodyEl = document.body;
-    const buttonEl = document.querySelector('.toggle-theme-button');
-    const speechBalloon = document.querySelector('.speech-balloon');
-    const clickSound = new Audio('assets/sounds/switch_sound.wav');
-
-    if (bodyEl.classList.contains('light-theme')) {
-        bodyEl.classList.remove('light-theme');
-        bodyEl.classList.add('dark-theme');
-        buttonEl.classList.remove('light-theme');
-        buttonEl.classList.add('dark-theme');
-        buttonEl.innerText = '☀️';
-        speechBalloon.innerText = 'lights turned off!';
-        clickSound.play();
-    } else {
-        bodyEl.classList.remove('dark-theme');
-        bodyEl.classList.add('light-theme');
-        buttonEl.classList.remove('dark-theme');
-        buttonEl.classList.add('light-theme');
-        buttonEl.innerText = '🌙';
-        speechBalloon.innerText = 'lights turned on!';
-        clickSound.play();
-    }
-}
-
-
-// Handle scroll event to hide/show back-to-top and toggle theme button
-window.addEventListener('scroll', function() {
-    const buttonEl = document.querySelector('.toggle-theme-button');
-    if (window.scrollY > 0) {
-        buttonEl.style.display = 'none';
-    } else {
-        buttonEl.style.display = 'block';
-    }
-});
+// Initialize the toggleText function for each link
 
 
 // Owl carousel for updates
@@ -105,7 +70,7 @@ function initializeOwlCarousel() {
     $('.owl-carousel').owlCarousel({
         loop: false,
         rewind: false,
-        margin: 10,
+        margin: 5,
         nav: true,
         dots: false,
         lazyLoad: false,
@@ -597,26 +562,6 @@ $(document).ready(function() {
 });
 
 
-// Dark/Light theme based on predefined time
-document.addEventListener('DOMContentLoaded', function() {
-    const buttonEl = document.querySelector('.toggle-theme-button');
-    const speechBalloon = document.querySelector('.speech-balloon');
-    var currentHour = new Date().getHours();
-
-    // Dark theme is used between 7 PM of last day
-    // to 7 AM next day. Otherwise, use light theme
-    if (currentHour > 19 || currentHour <= 7) {
-        document.body.classList.add('dark-theme');
-        buttonEl.innerText = '☀️';
-        speechBalloon.innerText = 'it\'s night, lights off!';
-    } else {
-        document.body.classList.add('light-theme');
-        buttonEl.innerText = '🌙';
-        speechBalloon.innerText = 'it\'s day, lights on!';
-    }
-});
-
-
 // Automatically update year in footer
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
@@ -689,5 +634,15 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Animate the particles
-animate();
+// Animate the particles only in dark mode
+// function checkAndAnimate() {
+//     if (document.body.classList.contains('dark-theme')) {
+//         animate();
+//     } else {
+//         ctx.clearRect(0, 0, canvas.width, canvas.height);
+//         requestAnimationFrame(checkAndAnimate);
+//     }
+// }
+
+// Start checking for theme
+// checkAndAnimate();

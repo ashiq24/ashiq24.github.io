@@ -1,0 +1,15 @@
+<!-- Affiliations section -->
+
+<hr>
+<div class="row" id="affiliations">
+    <div class="col">
+        <h2 clss="mb-5">🏛️ Affiliations</h2>
+        <p></p>
+        <div class="owl-carousel owl-theme affiliations-carousel">
+            {% for affiliation in site.data.affiliations.affiliations %}
+                {% include_relative _libs/affiliation_widget.html %}
+            {% endfor %}
+        </div>
+        <p></p>
+    </div>
+</div>

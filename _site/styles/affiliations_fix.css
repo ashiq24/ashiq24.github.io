@@ -1,0 +1,230 @@
+/* Complete Fix for Owl Carousel Sections */
+
+/* Force Owl Carousel to display items horizontally */
+.owl-carousel {
+    display: block !important;
+    width: 100% !important;
+}
+
+.owl-carousel .owl-wrapper-outer {
+    width: 100% !important;
+}
+
+.owl-carousel .owl-wrapper {
+    display: flex !important;
+    width: auto !important;
+}
+
+.owl-carousel .owl-item {
+    float: left !important;
+    display: block !important;
+    width: auto !important;
+    min-height: 1px !important;
+}
+
+/* Updates section styles - ensure horizontal layout */
+.owl-carousel .news-card {
+    background-color: none;
+    width: 180px !important;
+    height: 291px;
+    border-radius: 7px;
+    margin: 3px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    float: none !important;
+}
+
+.owl-carousel .news-desc {
+    flex-grow: 1;
+    padding: 0.4rem 1rem 0rem 1rem;
+    font-size: 13px;
+}
+
+.owl-carousel .news-time {
+    color: grey;
+    padding: 0rem 1rem 0.6rem 1rem;
+    font-size: 12px;
+}
+
+/* Affiliations section styles - ensure horizontal layout */
+.affiliations-carousel .owl-item {
+    float: left !important;
+    display: block !important;
+    width: auto !important;
+}
+
+.affiliations-carousel .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0.6rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0 3px;
+    width: 160px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+    height: 180px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    float: none !important;
+}
+
+.light-theme .affiliations-carousel .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliations-carousel .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliations-carousel .affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliations-carousel .affiliation-image-container {
+    text-align: center;
+    margin-bottom: 0.4rem;
+    flex-shrink: 0;
+}
+
+.affiliations-carousel .affiliation-image {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 8px;
+    object-fit: contain;
+    border: 2px solid #bd5d38;
+    background-color: #ffffff;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.affiliations-carousel .affiliation-content {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.affiliations-carousel .affiliation-institution {
+    margin: 0 0 0.3rem 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+.light-theme .affiliations-carousel .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliations-carousel .affiliation-institution {
+    color: #fff;
+}
+
+.affiliations-carousel .affiliation-period {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliations-carousel .affiliation-description {
+    display: none; /* Hide description to maintain uniform card height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliations-carousel .affiliation-card {
+        width: 140px !important;
+        min-width: 140px !important;
+        max-width: 140px !important;
+        height: 160px !important;
+        padding: 0.6rem;
+        margin: 0 8px;
+    }
+    
+    .affiliations-carousel .affiliation-image {
+        width: 40px !important;
+        height: 40px !important;
+        object-fit: contain;
+        background-color: #ffffff;
+        padding: 2px;
+        box-sizing: border-box;
+    }
+    
+    .affiliations-carousel .affiliation-institution {
+        font-size: 0.75rem;
+    }
+    
+    .affiliations-carousel .affiliation-period {
+        font-size: 0.65rem;
+    }
+    
+    .owl-carousel .news-card {
+        width: 140px !important;
+        height: 240px;
+    }
+}
+
+/* Additional fixes for Owl Carousel horizontal layout */
+.owl-carousel .owl-stage-outer {
+    overflow: hidden !important;
+}
+
+.owl-carousel .owl-stage {
+    position: relative !important;
+    -ms-transform: translate3d(0px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+    width: auto !important;
+    display: flex !important;
+}
+
+.owl-carousel .owl-item {
+    position: relative !important;
+    min-height: 1px !important;
+    float: left !important;
+    -webkit-backface-visibility: hidden !important;
+    -webkit-touch-callout: none !important;
+    display: inline-block !important;
+}
+
+/* Force all carousels to display items horizontally */
+.owl-carousel.owl-loaded .owl-item {
+    display: inline-block !important;
+    float: left !important;
+    width: auto !important;
+}
+
+/* Ensure news cards don't stack */
+.owl-carousel .owl-item .news-card {
+    display: block !important;
+    float: none !important;
+}
+
+/* Ensure affiliation cards don't stack */
+.owl-carousel .owl-item .affiliation-card {
+    display: block !important;
+    float: none !important;
+}
+
+/* Override any Bootstrap or other framework interference */
+.owl-carousel .owl-item:before,
+.owl-carousel .owl-item:after {
+    content: none !important;
+    display: none !important;
+}
+
+.owl-carousel .owl-item {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
