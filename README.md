@@ -8,7 +8,7 @@ This repository contains source code of [my academic website](https://mkhangg.co
 
 <!-- Update -->
 ## Update
-List of updates (in terms of functionalities):
+List of updates (in terms of functionalities): 
 
 * **[14 Jun 2024]** Navigation bar is added.
 * **[07 May 2024]** Flippable contact information card including email and phone number is added.

@@ -99,8 +99,11 @@
     width: 70px !important;
     height: 70px !important;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
     border: 2px solid #bd5d38;
+    background-color: #ffffff;
+    padding: 4px;
+    box-sizing: border-box;
 }
 
 .affiliations-carousel .affiliation-content {
@@ -152,6 +155,10 @@
     .affiliations-carousel .affiliation-image {
         width: 40px !important;
         height: 40px !important;
+        object-fit: contain;
+        background-color: #ffffff;
+        padding: 2px;
+        box-sizing: border-box;
     }
     
     .affiliations-carousel .affiliation-institution {
