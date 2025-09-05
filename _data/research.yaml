@@ -12,7 +12,7 @@ categories:
 
 projects:
 
-  - title: CLIPSym: Delving into Symmetry Detection with CLIP
+  - title: "CLIPSym: Delving into Symmetry Detection with CLIP"
     system-name:
     gif: assets/img/paper_fig/clip_sym.png
     conference: ICCV 2025 
