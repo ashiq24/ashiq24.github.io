@@ -986,7 +986,7 @@ div.desc {
 }
 
 
-/* Styles for update cards */
+/* Styles for update cards - Force with specificity */
 .news-card {
     background-color: none;
     width: 100%;
@@ -1001,13 +1001,26 @@ div.desc {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    max-height: 220px !important;
+    min-height: 220px !important;
+    box-sizing: border-box !important;
 }
 
-.news-card img {
+div.news-card {
+    height: 220px !important;
+    width: 150px !important;
+    max-height: 220px !important;
+    min-height: 220px !important;
+}
+
+.news-card img,
+div.news-card img {
     width: 100% !important;
     height: 110px !important;
     object-fit: cover !important;
     flex-shrink: 0;
+    max-height: 110px !important;
+    min-height: 110px !important;
 }
 
 .news-desc {
