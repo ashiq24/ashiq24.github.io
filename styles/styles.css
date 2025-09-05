@@ -524,7 +524,7 @@ code {
 }
 
 .publication-header {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .system-name {
@@ -536,7 +536,7 @@ code {
 .publication-title {
     font-size: 1.1rem;
     font-weight: bold;
-    margin: 0.25rem 0;
+    margin: 0.15rem 0;
     color: #333;
     line-height: 1.4;
 }
@@ -550,7 +550,7 @@ code {
 }
 
 .publication-meta {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .conference-link {
@@ -576,13 +576,13 @@ code {
 
 .publication-authors {
     color: #6c757d;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     font-size: 0.9rem;
     line-height: 1.4;
 }
 
 .publication-links {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -1547,7 +1547,7 @@ canvas {
 }
 
 .publication-header {
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.65rem;
 }
 
 .system-name {
@@ -1560,12 +1560,12 @@ canvas {
     color: #1f2937;
     font-size: 1.125rem;
     font-weight: 600;
-    margin: 0.375rem 0;
+    margin: 0.25rem 0;
     line-height: 1.4;
 }
 
 .publication-meta {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.45rem;
 }
 
 .conference-link {
