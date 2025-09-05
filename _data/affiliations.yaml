@@ -3,19 +3,16 @@ affiliations:
   - institution: PhD, Purdue University
     image: assets/img/purdue_logo.png
     period: 2023 - Present
-    description: 
 
-  - institution: Bangladesh University of Engg. and Tech.
+  - institution: Bangladesh University of Engineering and Technology
     image: assets/img/buet_logo.png
     period: 2015 - 2019
-    description: 
 
-  - institution: UResearch Intern at NVIDIA
-    image: assets/img/nvidia_logo.png
+  - institution: NVIDIA Research
+    image: assets/img/Nvidia-Logo.png
     period: Summer 2023
-    description: 
 
-  - institution: Research Intern at Autodesk
+  - institution: Autodesk Research
     image: assets/img/updates_fig/autodesk_1.png
     period: Summer 2025
     description: 
