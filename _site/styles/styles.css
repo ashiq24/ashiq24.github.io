@@ -508,6 +508,18 @@ code {
     height: 100%;
 }
 
+/* Reduce gap between image and description in publication cards */
+.publication-card .row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.publication-card .col-sm-4,
+.publication-card .col-sm-8 {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
 .publication-header {
     margin-bottom: 0.75rem;
 }
