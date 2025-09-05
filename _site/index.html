@@ -26,10 +26,11 @@
 
         <!-- Core theme CSS -->
         <link href="styles/styles.css" rel="stylesheet"/>
+        <link href="styles/affiliations_fix.css" rel="stylesheet"/>
 
     </head>
 
-    <body>
+    <body class="light-theme">
 
         <!-- Moving particles -->
         <canvas id="canvas"></canvas>
@@ -42,9 +43,6 @@
         <!-- Back to top button -->
         <a id="back-to-top-button"></a>
 
-        <!-- Toggle dark/light theme button -->
-        <button class="toggle-theme-button" onclick="toggleTheme()">☀️</button>
-        
         <!-- Assitant icon saying about theme changes -->
         <div class="popup-icon-container" id="popupIconContainer" draggable="true">
             <div class="icon"><img src="assets/img/mandu_icon.png" width="65" height="65"></div>
@@ -64,6 +62,7 @@
             </a>
             <ul>
                 <li><p onclick="scrollToTopDiv('html')"><span class="emoji">🏡</span> <span class="text">home</span></p></li>
+                <li><p onclick="scrollToTopDiv('#affiliations')"><span class="emoji">🏛️</span> <span class="text">affiliations</span></p></li>
                 <li><p onclick="scrollToTopDiv('#updates')"><span class="emoji">📜</span> <span class="text">updates</span></p></li>
                 <li><p onclick="scrollToTopDiv('#research')"><span class="emoji">📚</span> <span class="text">publications</span></p></li>
                 <li><p onclick="scrollToTopDiv('#outreach')"><span class="emoji">🧩</span> <span class="text">outreach</span></p></li>
@@ -165,13 +164,71 @@
     </div>
 </div>
 
+<!-- Affiliations section -->
+
+<hr />
+<div class="row" id="affiliations">
+    <div class="col">
+        <h2 clss="mb-5">🏛️ Affiliations</h2>
+        <p></p>
+        <div class="owl-carousel owl-theme affiliations-carousel">
+            
+<div class="affiliation-card">
+    <div class="affiliation-image-container">
+        <img src="assets/img/uta_logo.png" class="affiliation-image" alt="Purdue University" />
+    </div>
+    <div class="affiliation-content">
+        <h5 class="affiliation-institution">Purdue University</h5>
+        <p class="affiliation-period">2023 - Present</p>
+        <p class="affiliation-description">Ph.D. in Computer Science, focusing on machine learning and computer vision.</p>
+    </div>
+</div>
+            
+<div class="affiliation-card">
+    <div class="affiliation-image-container">
+        <img src="assets/img/uta_cse_logo.png" class="affiliation-image" alt="Bangladesh University of Engineering and Technology" />
+    </div>
+    <div class="affiliation-content">
+        <h5 class="affiliation-institution">Bangladesh University of Engineering and Technology</h5>
+        <p class="affiliation-period">2015 - 2019</p>
+        <p class="affiliation-description">Bachelor's in Computer Science and Engineering.</p>
+    </div>
+</div>
+            
+<div class="affiliation-card">
+    <div class="affiliation-image-container">
+        <img src="assets/img/uta_logo.png" class="affiliation-image" alt="University of Texas at Arlington" />
+    </div>
+    <div class="affiliation-content">
+        <h5 class="affiliation-institution">University of Texas at Arlington</h5>
+        <p class="affiliation-period">2019 - 2023</p>
+        <p class="affiliation-description">M.S. in Computer Science, research in robotics and AI.</p>
+    </div>
+</div>
+            
+<div class="affiliation-card">
+    <div class="affiliation-image-container">
+        <img src="assets/img/updates_fig/autodesk_1.png" class="affiliation-image" alt="Research Intern at Autodesk" />
+    </div>
+    <div class="affiliation-content">
+        <h5 class="affiliation-institution">Research Intern at Autodesk</h5>
+        <p class="affiliation-period">Summer 2025</p>
+        <p class="affiliation-description">Working on AI-driven design tools and generative modeling.</p>
+    </div>
+</div>
+            
+        </div>
+        <p></p>
+    </div>
+</div>
+
 <!-- Updates section -->
 
 <hr />
 
 <div class="row" id="updates">
     <div class="col">
-        <h2 clss="mb-5">📜 updates</h2>
+        <h2 clss="mb-5">📜 Updates</h2>
         <p></p>
         <div class="owl-carousel owl-theme">
             
@@ -204,7 +261,7 @@
 
 <div class="row" id="research">
     <div class="col">
-        <h2 clss="mb-5">📚 publications</h2>
+        <h2 clss="mb-5">📚 Publications</h2>
         <p></p>
         <div id="filters-project">
             <button class="filter-button active" data-filter="*">all</button>
@@ -219,266 +276,199 @@
         <p></p>
         <div id="projects" class="isotope">
             
-                <div class="project" data-filter="Equivariance">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/group_dwn.jpg" />
+                <div class="project publication-card" data-filter="Equivariance">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/group_dwn.jpg" alt="Group Downsampling with Equivariant Anti-aliasing" />
+        <div class="publication-meta">
+            <h3 class="publication-title">Group Downsampling with Equivariant Anti-aliasing</h3>
+            <div class="publication-venue">ICLR 2025</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.</div>
+            <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=sOte83GogU" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/ashiq24/Group_Sampling" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+                <a href="https://colab.research.google.com/drive/1Fkuid94wnVltsgwOblvbuGaVMjLl1YCr?usp=sharing" target="_blank" rel="noopener" class="btn-link btn-demo">DEMO</a>
+                <a href="https://huggingface.co/blog/ashiq24/group-sampling" target="_blank" rel="noopener" class="btn-link btn-tutorial">TUTORIAL</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>Group Downsampling with Equivariant Anti-aliasing</b>
-            <br />
-            <i><a href="" target="_blank" rel="noopener">ICLR 2025</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
-            <br />
-             <a href="https://openreview.net/pdf?id=sOte83GogU" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/ashiq24/Group_Sampling" target="_blank" rel="noopener">[CODE]</a> 
-             | <a href="https://colab.research.google.com/drive/1Fkuid94wnVltsgwOblvbuGaVMjLl1YCr?usp=sharing" target="_blank" rel="noopener">[DEMO]</a> 
-            
-            
-            
-             | <a href="https://huggingface.co/blog/ashiq24/group-sampling" target="_blank" rel="noopener">[TUTORIAL]</a> 
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing.
-            <span class="collapse" id="more_equivariance">
-                This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
-            </span> 
-            <span> <a href="#more_equivariance" data-toggle="collapse" onclick="toggleText(this)" id="link-more_equivariance">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing.
+        <span class="collapse" id="more_equivariance">
+            This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
+        </span> 
+        <span> <a href="#more_equivariance" data-toggle="collapse" onclick="toggleText(this)" id="link-more_equivariance">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Neural Operator">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/codano.png" />
+                <div class="project publication-card" data-filter="Neural Operator">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/codano.png" alt="Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs" />
+        <div class="publication-meta">
+            <h3 class="publication-title">Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs.</h3>
+            <div class="publication-venue">NeurIPS 2024</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, Robert Joseph George, Mogab Elleithy, Daniel Leibovici, Zongyi Li, Boris Bonev, Colin White, Julius Berner, Raymond A. Yeh, Jean Kossaifi, Kamyar Azizzadenesheli, Anima Anandkumar</div>
+            <div class="publication-links">
+                <a href="https://arxiv.org/pdf/2403.12553" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/neuraloperator/CoDA-NO" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+                <a href="https://colab.research.google.com/drive/1W6Qy5Mk_vEjZgrA0tWMespXqKEYDOdc6?usp=sharing" target="_blank" rel="noopener" class="btn-link btn-demo">DEMO</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs.</b>
-            <br />
-            <i><a href="" target="_blank" rel="noopener">NeurIPS 2024</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, Robert Joseph George, Mogab Elleithy, Daniel Leibovici, Zongyi Li, Boris Bonev, Colin White, Julius Berner, Raymond A. Yeh, Jean Kossaifi, Kamyar Azizzadenesheli, Anima Anandkumar
-            <br />
-             <a href="https://arxiv.org/pdf/2403.12553" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/neuraloperator/CoDA-NO" target="_blank" rel="noopener">[CODE]</a> 
-             | <a href="https://colab.research.google.com/drive/1W6Qy5Mk_vEjZgrA0tWMespXqKEYDOdc6?usp=sharing" target="_blank" rel="noopener">[DEMO]</a> 
-            
-            
-            
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Existing neural operator architectures face challenges when solving multiphysics problems with coupled partial differential equations (PDEs), due to complex geometries,
-            <span class="collapse" id="more_neural_operator">
-                interactions between physical variables, and the lack of large amounts of high-resolution training data. To address these issues, we propose Codomain Attention Neural Operator (CoDA-NO), which tokenizes functions along the codomain or channel space, enabling self-supervised learning or pretraining of multiple PDE systems. Specifically, we extend positional encoding, self-attention, and normalization layers to the function space. CoDA-NO can learn representations of different PDE systems with a single model. We evaluate CoDA-NO's potential as a backbone for learning multiphysics PDEs over multiple systems by considering few-shot learning settings. On complex downstream tasks with limited data, such as fluid flow simulations and fluid-structure interactions, we found CoDA-NO to outperform existing methods on the few-shot learning task by over 36%.
-            </span> 
-            <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        Existing neural operator architectures face challenges when solving multiphysics problems with coupled partial differential equations (PDEs), due to complex geometries,
+        <span class="collapse" id="more_neural_operator">
+            interactions between physical variables, and the lack of large amounts of high-resolution training data. To address these issues, we propose Codomain Attention Neural Operator (CoDA-NO), which tokenizes functions along the codomain or channel space, enabling self-supervised learning or pretraining of multiple PDE systems. Specifically, we extend positional encoding, self-attention, and normalization layers to the function space. CoDA-NO can learn representations of different PDE systems with a single model. We evaluate CoDA-NO's potential as a backbone for learning multiphysics PDEs over multiple systems by considering few-shot learning settings. On complex downstream tasks with limited data, such as fluid flow simulations and fluid-structure interactions, we found CoDA-NO to outperform existing methods on the few-shot learning task by over 36%.
+        </span> 
+        <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Equivariance">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/scale_eq.png" />
+                <div class="project publication-card" data-filter="Equivariance">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/scale_eq.png" alt="Truly Scale-Equivariant Deep Nets with Fourier Layers" />
+        <div class="publication-meta">
+            <h3 class="publication-title">Truly Scale-Equivariant Deep Nets with Fourier Layers.</h3>
+            <div class="publication-venue">NeurIPS 2023</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.</div>
+            <div class="publication-links">
+                <a href="https://arxiv.org/pdf/2311.02922" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+                <a href="https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing" target="_blank" rel="noopener" class="btn-link btn-demo">DEMO</a>
+                <a href="https://ashiq24.github.io/scale_equivariant_fourier_layer/resource/poster_thumb.pdf" target="_blank" rel="noopener" class="btn-link btn-poster">POSTER</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>Truly Scale-Equivariant Deep Nets with Fourier Layers.</b>
-            <br />
-            <i><a href="" target="_blank" rel="noopener">NeurIPS 2023</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
-            <br />
-             <a href="https://arxiv.org/pdf/2311.02922" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/" target="_blank" rel="noopener">[CODE]</a> 
-             | <a href="https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing" target="_blank" rel="noopener">[DEMO]</a> 
-            
-            
-             | <a href="https://ashiq24.github.io/scale_equivariant_fourier_layer/resource/poster_thumb.pdf" target="_blank" rel="noopener">[POSTER]</a> 
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation
-            <span class="collapse" id="more_equivariance">
-                ; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
-            </span> 
-            <span> <a href="#more_equivariance" data-toggle="collapse" onclick="toggleText(this)" id="link-more_equivariance">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation
+        <span class="collapse" id="more_equivariance">
+            ; This is known as scale-equivariance. Recent works have made progress in developing scale-equivariant convolutional neural networks, e.g., through weight-sharing and kernel resizing. However, these networks are not truly scale-equivariant in practice. Specifically, they do not consider anti-aliasing as they formulate the down-scaling operation in the continuous domain. To address this shortcoming, we directly formulate down-scaling in the discrete domain with consideration of anti-aliasing. We then propose a novel architecture based on Fourier layers to achieve truly scale-equivariant deep nets, i.e., absolute zero equivariance-error. Following prior works, we test this model on MNIST-scale and STL-10 datasets. Our proposed model achieves competitive classification performance while maintaining zero equivariance-error.
+        </span> 
+        <span> <a href="#more_equivariance" data-toggle="collapse" onclick="toggleText(this)" id="link-more_equivariance">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Neural Operator">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/uno.png" />
+                <div class="project publication-card" data-filter="Neural Operator">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/uno.png" alt="U-NO: U-shaped Neural Operators" />
+        <div class="publication-meta">
+            <h3 class="publication-title">U-NO: U-shaped Neural Operators</h3>
+            <div class="publication-venue">Transactions on Machine Learning Research 2023</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, Zachary E. Ross, Kamyar Azizzadenesheli.</div>
+            <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=j3oQF9coJd" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/ashiq24/UNO" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+                <a href="https://colab.research.google.com/drive/1f1WYsjAgIjJRFtfQYYnZCZsxl602MMPX?usp=sharing" target="_blank" rel="noopener" class="btn-link btn-demo">DEMO</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>U-NO: U-shaped Neural Operators</b>
-            <br />
-            <i><a href="" target="_blank" rel="noopener">Transactions on Machine Learning Research 2023</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, Zachary E. Ross, Kamyar Azizzadenesheli.
-            <br />
-             <a href="https://openreview.net/pdf?id=j3oQF9coJd" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/ashiq24/UNO" target="_blank" rel="noopener">[CODE]</a> 
-             | <a href="https://colab.research.google.com/drive/1f1WYsjAgIjJRFtfQYYnZCZsxl602MMPX?usp=sharing" target="_blank" rel="noopener">[DEMO]</a> 
-            
-            
-            
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces. Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations.
-            <span class="collapse" id="more_neural_operator">
-                Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
-            </span> 
-            <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces. Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations.
+        <span class="collapse" id="more_neural_operator">
+            Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
+        </span> 
+        <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Neural Operator">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/gano.jpg" />
+                <div class="project publication-card" data-filter="Neural Operator">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/gano.jpg" alt="Generative Adversarial Neural Operators" />
+        <div class="publication-meta">
+            <h3 class="publication-title">Generative Adversarial Neural Operators.</h3>
+            <div class="publication-venue">Transactions on Machine Learning Research 2022</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli.</div>
+            <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=X1VzbBU6xZ" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/neuraloperator/GANO" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>Generative Adversarial Neural Operators.</b>
-            <br />
-            <i><a href="" target="_blank" rel="noopener">Transactions on Machine Learning Research 2022</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli.
-            <br />
-             <a href="https://openreview.net/pdf?id=X1VzbBU6xZ" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/neuraloperator/GANO" target="_blank" rel="noopener">[CODE]</a> 
-            
-            
-            
-            
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            We propose the generative adversarial neural operator (GANO), a generative model paradigm for learning probabilities on infinite-dimensional function spaces.
-            <span class="collapse" id="more_neural_operator">
-                The natural sciences and engineering are known to have many types of data that are sampled from infinite-dimensional function spaces, where classical finite-dimensional deep generative adversarial networks (GANs) may not be directly applicable. GANO generalizes the GAN framework and allows for the sampling of functions by learning push-forward operator maps in infinite-dimensional spaces. GANO consists of two main components, a generator neural operator and a discriminator neural functional. The inputs to the generator are samples of functions from a user-specified probability measure, e.g., Gaussian random field (GRF), and the generator outputs are synthetic data functions. The input to the discriminator is either a real or synthetic data function. In this work, we instantiate GANO using the Wasserstein criterion and show how the Wasserstein loss can be computed in infinite-dimensional spaces. We empirically study GANO in controlled cases where both input and output functions are samples from GRFs and compare its performance to the finite-dimensional counterpart GAN. We empirically study the efficacy of GANO on real-world function data of volcanic activities and show its superior performance over GAN.
-            </span> 
-            <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        We propose the generative adversarial neural operator (GANO), a generative model paradigm for learning probabilities on infinite-dimensional function spaces.
+        <span class="collapse" id="more_neural_operator">
+            The natural sciences and engineering are known to have many types of data that are sampled from infinite-dimensional function spaces, where classical finite-dimensional deep generative adversarial networks (GANs) may not be directly applicable. GANO generalizes the GAN framework and allows for the sampling of functions by learning push-forward operator maps in infinite-dimensional spaces. GANO consists of two main components, a generator neural operator and a discriminator neural functional. The inputs to the generator are samples of functions from a user-specified probability measure, e.g., Gaussian random field (GRF), and the generator outputs are synthetic data functions. The input to the discriminator is either a real or synthetic data function. In this work, we instantiate GANO using the Wasserstein criterion and show how the Wasserstein loss can be computed in infinite-dimensional spaces. We empirically study GANO in controlled cases where both input and output functions are samples from GRFs and compare its performance to the finite-dimensional counterpart GAN. We empirically study the efficacy of GANO on real-world function data of volcanic activities and show its superior performance over GAN.
+        </span> 
+        <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Neural Operator">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/pacmo.jpg" />
+                <div class="project publication-card" data-filter="Neural Operator">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/pacmo.jpg" alt="PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators" />
+        <div class="publication-meta">
+            <h3 class="publication-title">PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators.</h3>
+            <div class="publication-venue">ArXiv 2022</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, Jasorsi Ghosh, Hrishikesh Viswanath, Kamyar Azizzadenesheli, Aniket Bera.</div>
+            <div class="publication-links">
+                <a href="https://arxiv.org/pdf/2211.16210" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators.</b>
-            <br />
-            <i><a href="" target="_blank" rel="noopener">ArXiv 2022</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, Jasorsi Ghosh, Hrishikesh Viswanath, Kamyar Azizzadenesheli, Aniket Bera.
-            <br />
-             <a href="https://arxiv.org/pdf/2211.16210" target="_blank" rel="noopener">[PDF]</a> 
-            
-            
-            
-            
-            
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            We address the problem of generating 3D human motions in dyadic activities. In contrast to the concurrent works, which mainly focus on
-            <span class="collapse" id="more_neural_operator">
-                generating the motion of a single actor from the textual description, we generate the motion of one of the actors from the motion of the other participating actor in the action. This is a particularly challenging, under-explored problem, that requires learning intricate relationships between the motion of two actors participating in an action and also identifying the action from the motion of one actor. To address these, we propose partner conditioned motion operator (PaCMO), a neural operator-based generative model which learns the distribution of human motion conditioned by the partner's motion in function spaces through adversarial training. Our model can handle long unlabeled action sequences at arbitrary time resolution. We also introduce the "Functional Frechet Inception Distance" (F2ID) metric for capturing similarity between real and generated data for function spaces. We test PaCMO on NTU RGB+D and DuetDance datasets and our model produces realistic results evidenced by the F2ID score and the conducted user study.
-            </span> 
-            <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        We address the problem of generating 3D human motions in dyadic activities. In contrast to the concurrent works, which mainly focus on
+        <span class="collapse" id="more_neural_operator">
+            generating the motion of a single actor from the textual description, we generate the motion of one of the actors from the motion of the other participating actor in the action. This is a particularly challenging, under-explored problem, that requires learning intricate relationships between the motion of two actors participating in an action and also identifying the action from the motion of one actor. To address these, we propose partner conditioned motion operator (PaCMO), a neural operator-based generative model which learns the distribution of human motion conditioned by the partner's motion in function spaces through adversarial training. Our model can handle long unlabeled action sequences at arbitrary time resolution. We also introduce the "Functional Frechet Inception Distance" (F2ID) metric for capturing similarity between real and generated data for function spaces. We test PaCMO on NTU RGB+D and DuetDance datasets and our model produces realistic results evidenced by the F2ID score and the conducted user study.
+        </span> 
+        <span> <a href="#more_neural_operator" data-toggle="collapse" onclick="toggleText(this)" id="link-more_neural_operator">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Bioinformatics">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/beene.jpeg" />
+                <div class="project publication-card" data-filter="Bioinformatics">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/beene.jpeg" alt="BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation" />
+        <div class="publication-meta">
+            <h3 class="publication-title">BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation.</h3>
+            <div class="publication-venue">Bioinformatics, Volume 39, 2023</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Mahfuza Sharmin, Md Shamsuzzoha Bayzid</div>
+            <div class="publication-links">
+                <a href="https://academic.oup.com/bioinformatics/article/39/8/btad479/7240486?login=false" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/ashiq24/BEENE" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation.BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation.</b>
-            <br />
-            <i><a href="https://academic.oup.com/bioinformatics" target="_blank" rel="noopener">Bioinformatics, Volume 39, 2023</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Mahfuza Sharmin, Md Shamsuzzoha Bayzid
-            <br />
-             <a href="https://academic.oup.com/bioinformatics/article/39/8/btad479/7240486?login=false" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/ashiq24/BEENE" target="_blank" rel="noopener">[CODE]</a> 
-            
-            
-            
-            
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            Analyzing large-scale single-cell transcriptomic datasets generated using different technologies is challenging due to the presence of batch-specific systematic variations known as batch effects.
-            <span class="collapse" id="more_bioinformatics">
-                Since biological and technological differences are often interspersed, detecting and accounting for batch effects in RNA-seq datasets are critical for effective data integration and interpretation. Low-dimensional embeddings, such as principal component analysis (PCA) are widely used in visual inspection and estimation of batch effects. Linear dimensionality reduction methods like PCA are effective in assessing the presence of batch effects, especially when batch effects exhibit linear patterns. However, batch effects are inherently complex and existing linear dimensionality reduction methods could be inadequate and imprecise in the presence of sophisticated nonlinear batch effects. Results:- We present Batch Effect Estimation using Nonlinear Embedding (BEENE), a deep nonlinear auto-encoder network which is specially tailored to generate an alternative lower dimensional embedding suitable for both linear and nonlinear batch effects. BEENE simultaneously learns the batch and biological variables from RNA-seq data, resulting in an embedding that is more robust and sensitive than PCA embedding in terms of detecting and quantifying batch effects. BEENE was assessed on a collection of carefully controlled simulated datasets as well as biological datasets, including two technical replicates of mouse embryogenesis cells, peripheral blood mononuclear cells from three largely different experiments and five studies of pancreatic islet cells
-            </span> 
-            <span> <a href="#more_bioinformatics" data-toggle="collapse" onclick="toggleText(this)" id="link-more_bioinformatics">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        Analyzing large-scale single-cell transcriptomic datasets generated using different technologies is challenging due to the presence of batch-specific systematic variations known as batch effects.
+        <span class="collapse" id="more_bioinformatics">
+            Since biological and technological differences are often interspersed, detecting and accounting for batch effects in RNA-seq datasets are critical for effective data integration and interpretation. Low-dimensional embeddings, such as principal component analysis (PCA) are widely used in visual inspection and estimation of batch effects. Linear dimensionality reduction methods like PCA are effective in assessing the presence of batch effects, especially when batch effects exhibit linear patterns. However, batch effects are inherently complex and existing linear dimensionality reduction methods could be inadequate and imprecise in the presence of sophisticated nonlinear batch effects. Results:- We present Batch Effect Estimation using Nonlinear Embedding (BEENE), a deep nonlinear auto-encoder network which is specially tailored to generate an alternative lower dimensional embedding suitable for both linear and nonlinear batch effects. BEENE simultaneously learns the batch and biological variables from RNA-seq data, resulting in an embedding that is more robust and sensitive than PCA embedding in terms of detecting and quantifying batch effects. BEENE was assessed on a collection of carefully controlled simulated datasets as well as biological datasets, including two technical replicates of mouse embryogenesis cells, peripheral blood mononuclear cells from three largely different experiments and five studies of pancreatic islet cells
+        </span> 
+        <span> <a href="#more_bioinformatics" data-toggle="collapse" onclick="toggleText(this)" id="link-more_bioinformatics">... See More</a></span>
     </div>
 </div>
 
             
-                <div class="project" data-filter="Bioinformatics">
-    <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/paper_fig/chapao.jpg" />
+                <div class="project publication-card" data-filter="Bioinformatics">
+    <div class="publication-header">
+        <img class="publication-image" src="assets/img/paper_fig/chapao.jpg" alt="CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments" />
+        <div class="publication-meta">
+            <h3 class="publication-title">CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments.</h3>
+            <div class="publication-venue">PLOS ONE 2022</div>
+            <div class="publication-authors"><u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Sifat Muhammad Abdullah, Md. Shamsuzzoha Bayzid.</div>
+            <div class="publication-links">
+                <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265360" target="_blank" rel="noopener" class="btn-link btn-pdf">PDF</a>
+                <a href="https://github.com/ashiq24/CHAPAO" target="_blank" rel="noopener" class="btn-link btn-code">CODE</a>
+            </div>
         </div>
-        <div class="col-sm-8">
-            
-            <b>CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments.</b>
-            <br />
-            <i><a href="https://journals.plos.org/plosone/" target="_blank" rel="noopener">PLOS ONE 2022</a></i> 
-            
-            <br />
-            <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Sifat Muhammad Abdullah, Md. Shamsuzzoha Bayzid.
-            <br />
-             <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265360" target="_blank" rel="noopener">[PDF]</a> 
-             | <a href="https://github.com/ashiq24/CHAPAO" target="_blank" rel="noopener">[CODE]</a> 
-            
-            
-            
-            
-            
-            <br />
-            <u><b><i>Abstract</i></b>:</u> 
-            High-throughput experimental technologies are generating tremendous amounts of genomic data, offering valuable resources to answer important questions and extract biological insights. Storing this sheer amount of genomic data has become a major concern in bioinformatics.
-            <span class="collapse" id="more_bioinformatics">
-                General purpose compression techniques (e.g. gzip, bzip2, 7-zip) are being widely used due to their pervasiveness and relatively good speed. However, they are not customized for genomic data and may fail to leverage special characteristics and redundancy of the biomolecular sequences. Results:- We present a new lossless compression method CHAPAO (COmpressing Alignments using Hierarchical and Probabilistic Approach), which is especially designed for multiple sequence alignments (MSAs) of biomolecular data and offers very good compression gain. We have introduced a novel hierarchical referencing technique to represent biomolecular sequences which combines likelihood based analyses of the sequence similarities and graph theoretic algorithms. We performed an extensive evaluation study using a collection of real biological data from the avian phylogenomics project, 1000 plants project (1KP), and 16S and 23S rRNA datasets. We report the performance of CHAPAO in comparison with general purpose compression techniques as well as with MFCompress and Nucleotide Archival Format (NAF)—two of the best known methods especially designed for FASTA files. Experimental results suggest that CHAPAO offers significant improvements in compression gain over most other alternative methods.
-            </span> 
-            <span> <a href="#more_bioinformatics" data-toggle="collapse" onclick="toggleText(this)" id="link-more_bioinformatics">... See More</a></span>
-        </div>                       
+    </div>
+    <div class="publication-abstract">
+        <strong>Abstract:</strong> 
+        High-throughput experimental technologies are generating tremendous amounts of genomic data, offering valuable resources to answer important questions and extract biological insights. Storing this sheer amount of genomic data has become a major concern in bioinformatics.
+        <span class="collapse" id="more_bioinformatics">
+            General purpose compression techniques (e.g. gzip, bzip2, 7-zip) are being widely used due to their pervasiveness and relatively good speed. However, they are not customized for genomic data and may fail to leverage special characteristics and redundancy of the biomolecular sequences. Results:- We present a new lossless compression method CHAPAO (COmpressing Alignments using Hierarchical and Probabilistic Approach), which is especially designed for multiple sequence alignments (MSAs) of biomolecular data and offers very good compression gain. We have introduced a novel hierarchical referencing technique to represent biomolecular sequences which combines likelihood based analyses of the sequence similarities and graph theoretic algorithms. We performed an extensive evaluation study using a collection of real biological data from the avian phylogenomics project, 1000 plants project (1KP), and 16S and 23S rRNA datasets. We report the performance of CHAPAO in comparison with general purpose compression techniques as well as with MFCompress and Nucleotide Archival Format (NAF)—two of the best known methods especially designed for FASTA files. Experimental results suggest that CHAPAO offers significant improvements in compression gain over most other alternative methods.
+        </span> 
+        <span> <a href="#more_bioinformatics" data-toggle="collapse" onclick="toggleText(this)" id="link-more_bioinformatics">... See More</a></span>
     </div>
 </div>
 
@@ -493,7 +483,7 @@
 <hr>
 <div class="row" id="outreach">
     <div class="col">
-        <h2 clss="mb-5">🧩 outreach activities</h2>
+        <h2 clss="mb-5">🧩 Outreach Activities</h2>
         <p></p>
         
         <p></p>
@@ -506,7 +496,7 @@
 
 <div class="row" id="resources">
     <div class="col">
-        <h2 clss="mb-5">⛏️ resources</h2>
+        <h2 clss="mb-5">⛏️ Resources</h2>
         <p></p>
         all software releases of the above projects can also be found here!
         <p></p>
@@ -568,7 +558,7 @@
 <!-- <hr>
 <div class="row" id="gallery">
     <div class="col">
-        <h2 clss="mb-5">🖼️ gallery</h2>
+        <h2 clss="mb-5">🖼️ Gallery</h2>
         <p></p>
         
         <p></p>

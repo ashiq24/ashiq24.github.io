@@ -1,0 +1,12 @@
+<div class="affiliation-card">
+    <div class="affiliation-image-container">
+        <img src="{{ affiliation.image }}" class="affiliation-image" alt="{{ affiliation.institution }}">
+    </div>
+    <div class="affiliation-content">
+        <h5 class="affiliation-institution">{{ affiliation.institution }}</h5>
+        <p class="affiliation-period">{{ affiliation.period }}</p>
+        {% if affiliation.description %}
+            <p class="affiliation-description">{{ affiliation.description }}</p>
+        {% endif %}
+    </div>
+</div>

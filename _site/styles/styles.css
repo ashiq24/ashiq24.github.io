@@ -478,6 +478,310 @@ code {
     margin: 0px;
 }
 
+/* Beautiful Publication Cards */
+.publication-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.light-theme .publication-card {
+    background: #ffffff;
+    border-color: #e9ecef;
+}
+
+.dark-theme .publication-card {
+    background: #2d2d2d;
+    border-color: #495057;
+}
+
+.publication-content {
+    height: 100%;
+}
+
+.publication-header {
+    margin-bottom: 0.75rem;
+}
+
+.system-name {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.publication-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0.25rem 0;
+    color: #333;
+    line-height: 1.4;
+}
+
+.light-theme .publication-title {
+    color: #333;
+}
+
+.dark-theme .publication-title {
+    color: #fff;
+}
+
+.publication-meta {
+    margin-bottom: 0.5rem;
+}
+
+.conference-link {
+    color: #bd5d38;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.conference-link:hover {
+    color: #a0442a;
+    text-decoration: underline;
+}
+
+.status-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.publication-authors {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.publication-links {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-pdf {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.btn-pdf:hover {
+    background: #c82333;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-code {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.btn-code:hover {
+    background: #218838;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-demo {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-demo:hover {
+    background: #0056b3;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-slides {
+    background: #fd7e14;
+    color: white;
+    border-color: #fd7e14;
+}
+
+.btn-slides:hover {
+    background: #e55a00;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-talk {
+    background: #6f42c1;
+    color: white;
+    border-color: #6f42c1;
+}
+
+.btn-talk:hover {
+    background: #5a32a3;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-poster {
+    background: #20c997;
+    color: white;
+    border-color: #20c997;
+}
+
+.btn-poster:hover {
+    background: #1aa179;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-tutorial {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+.btn-tutorial:hover {
+    background: #545b62;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.publication-abstract {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.light-theme .publication-abstract {
+    color: #495057;
+}
+
+.dark-theme .publication-abstract {
+    color: #ced4da;
+}
+
+.abstract-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.light-theme .abstract-label {
+    color: #333;
+}
+
+.dark-theme .abstract-label {
+    color: #fff;
+}
+
+.abstract-toggle {
+    color: #bd5d38;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.abstract-toggle:hover {
+    color: #a0442a;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .publication-card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .publication-links {
+        justify-content: center;
+    }
+    
+    .btn-link {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Publication figure styling with 2:1 aspect ratio */
+.project .col-sm-4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.project .col-sm-4 img {
+    width: 300px !important;
+    height: 150px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    display: block !important;
+}
+
+/* Fallback for browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 2 / 1) {
+    .project .col-sm-4 img {
+        width: 300px !important;
+        height: 150px !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
+/* Additional styling for w-full class used in publications */
+.project .w-full {
+    width: 300px !important;
+    height: 150px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .project .col-sm-4 img,
+    .project .w-full {
+        width: 280px !important;
+        height: 140px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .project .col-sm-4 img,
+    .project .w-full {
+        width: 240px !important;
+        height: 120px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .project .col-sm-4 img,
+    .project .w-full {
+        width: 200px !important;
+        height: 100px !important;
+    }
+}
+
 
 /* Styles for filter buttons */
 #filters-project .filter-button {
@@ -1022,4 +1326,9405 @@ canvas {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+/* Styles for affiliation section *
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+    color: #ccc;
+}
+
+/* Updated Styles for affiliation section - Horizontal Scrolling */
+.affiliations-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.light-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #f1f1f1;
+}
+
+.dark-theme .affiliations-container {
+    scrollbar-color: #bd5d38 #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.light-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-theme .affiliations-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+    border-radius: 4px;
+}
+
+.affiliations-container::-webkit-scrollbar-thumb:hover {
+    background: #a0442a;
+}
+
+.affiliation-card {
+    flex: 0 0 300px;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-card {
+        flex: 0 0 250px;
+        min-width: 240px;
+        max-width: 280px;
+    }
+
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+
+/* Additional styles for affiliations layout */
+#affiliations {
+    width: 100%;
+}
+
+.affiliations-container {
+    flex-wrap: nowrap !important;
+}
+
+/* Updated Styles for affiliation section - Owl Carousel */
+.affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0.8rem;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0 15px;
+    width: 200px;
+    min-width: 180px;
+    max-width: 220px;
+    box-sizing: border-box;
+}
+
+.light-theme .affiliation-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.dark-theme .affiliation-card {
+    background-color: #2d2d2d;
+    border: 1px solid #495057;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.affiliation-image-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.affiliation-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #bd5d38;
+}
+
+.affiliation-content {
+    text-align: center;
+}
+
+.affiliation-institution {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.light-theme .affiliation-institution {
+    color: #333;
+}
+
+.dark-theme .affiliation-institution {
+    color: #fff;
+}
+
+.affiliation-period {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #bd5d38;
+    font-weight: 500;
+}
+
+.affiliation-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.light-theme .affiliation-description {
+    color: #666;
+}
+
+.dark-theme .affiliation-description {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .affiliation-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .affiliation-institution {
+        font-size: 1rem;
+    }
+}
+
+/* Publication Card Styles */
+.publication-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.publication-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.publication-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.publication-image {
+    width: 250px !important;
+    height: 125px !important;
+    object-fit: fill;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    flex-shrink: 0;
+}
+
+.publication-meta {
+    flex: 1;
+    min-width: 280px;
+}
+
+.publication-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.publication-venue {
+    font-style: italic;
+    color: #64748b;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.publication-authors {
+    color: #475569;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    border: 1px solid;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.btn-pdf {
+    background-color: #f8fafc;
+    color: #334155;
+    border-color: #cbd5e1;
+}
+
+.btn-pdf:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.btn-code {
+    background-color: #f0fdf4;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+
+.btn-code:hover {
+    background-color: #dcfce7;
+    border-color: #86efac;
+    color: #14532d;
+    text-decoration: none;
+}
+
+.btn-demo {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border-color: #bfdbfe;
+}
+
+.btn-demo:hover {
+    background-color: #dbeafe;
+    border-color: #93c5fd;
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.btn-slides {
+    background-color: #faf5ff;
+    color: #7c3aed;
+    border-color: #d8b4fe;
+}
+
+.btn-slides:hover {
+    background-color: #f3e8ff;
+    border-color: #c4b5fd;
+    color: #6d28d9;
+    text-decoration: none;
+}
+
+.btn-talk {
+    background-color: #fff7ed;
+    color: #c2410c;
+    border-color: #fed7aa;
+}
+
+.btn-talk:hover {
+    background-color: #ffedd5;
+    border-color: #fdba74;
+    color: #9a3412;
+    text-decoration: none;
+}
+
+.btn-poster {
+    background-color: #fdf2f8;
+    color: #be185d;
+    border-color: #f9a8d4;
+}
+
+.btn-poster:hover {
+    background-color: #fce7f3;
+    border-color: #f472b6;
+    color: #9d174d;
+    text-decoration: none;
+}
+
+.btn-tutorial {
+    background-color: #f0fdfa;
+    color: #0f766e;
+    border-color: #99f6e4;
+}
+
+.btn-tutorial:hover {
+    background-color: #ccfbf1;
+    border-color: #5eead4;
+    color: #134e4a;
+    text-decoration: none;
+}
+
+.publication-abstract {
+    color: #374151;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.publication-abstract strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* Responsive design for publication cards */
+@media (max-width: 768px) {
+    .publication-card {
+        padding: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .publication-header {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .publication-image {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 2/1;
+        object-fit: fill;
+    }
+    
+    .publication-meta {
+        min-width: auto;
+    }
+    
+    .publication-title {
+        font-size: 1rem;
+    }
+    
+    .publication-links {
+        gap: 0.4rem;
+    }
+    
+    .btn-link {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
 }
