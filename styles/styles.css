@@ -684,6 +684,18 @@ code {
     transform: translateY(-1px);
 }
 
+.btn-website {
+    background: #8b5cf6;
+    color: white;
+    border-color: #8b5cf6;
+}
+
+.btn-website:hover {
+    background: #7c3aed;
+    color: white;
+    transform: translateY(-1px);
+}
+
 .publication-abstract {
     font-size: 0.9rem;
     line-height: 1.6;
@@ -1681,6 +1693,19 @@ canvas {
     color: #166534;
     text-decoration: none;
     border-color: #86efac;
+}
+
+.btn-website {
+    background: #faf5ff;
+    color: #6b21a8;
+    border-color: #d8b4fe;
+}
+
+.btn-website:hover {
+    background: #f3e8ff;
+    color: #581c87;
+    text-decoration: none;
+    border-color: #c084fc;
 }
 
 .publication-abstract {

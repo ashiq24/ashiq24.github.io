@@ -12,6 +12,44 @@ categories:
 
 projects:
 
+  - title: CLIPSym: Delving into Symmetry Detection with CLIP
+    system-name:
+    gif: assets/img/paper_fig/clip_sym.png
+    conference: ICCV 2025 
+    conference-web:
+    status:
+    authors: Tinghan Yang, <u>Md Ashiqur Rahman</u>, Raymond A. Yeh
+    pdf: https://arxiv.org/pdf/2508.14197
+    code: https://github.com/timyoung2333/CLIPSym
+    website: 
+    demo: 
+    slides:
+    talk:
+    tutorial: 
+    abstract-less: Symmetry is one of the most fundamental geometric cues in computer vision, and detecting it has been an ongoing challenge. 
+    abstract-more: With the recent advances in vision-language models,~i.e., CLIP, we investigate whether a pre-trained CLIP model can aid symmetry detection by leveraging the additional symmetry cues found in the natural image descriptions. We propose CLIPSym, which leverages CLIP's image and language encoders and a rotation-equivariant decoder based on a hybrid of Transformer and G-Convolution to detect rotation and reflection symmetries. To fully utilize CLIP's language encoder, we have developed a novel prompting technique called Semantic-Aware Prompt Grouping (SAPG), which aggregates a diverse set of frequent object-based prompts to better integrate the semantic cues for symmetry detection. Empirically, we show that CLIPSym outperforms the current state-of-the-art on three standard symmetry detection datasets (DENDI, SDRW, and LDRS). Finally, we conduct detailed ablations verifying the benefits of CLIP's pre-training, the proposed equivariant decoder, and the SAPG technique. 
+    tag: more_equivariance
+    category: Equivariance
+
+  - title: Local Scale Equivariance with Latent Deep Equilibrium Canonicalizer
+    system-name:
+    gif: assets/img/paper_fig/local_scale_logo.png
+    conference: ICCV 2025 
+    conference-web:
+    status:
+    authors: <u>Md Ashiqur Rahman</u>, Chiao-An Yang, Michael N. Cheng, Lim Jun Hao, Jeremiah Jiang, Teck-Yian Lim, Raymond A. Yeh
+    pdf: https://arxiv.org/pdf/2508.14187
+    code: https://github.com/ashiq24/local-scale-equivariance
+    website: https://ashiq24.github.io/local-scale-equivariance/
+    demo: 
+    slides:
+    talk:
+    tutorial: 
+    abstract-less: Scale variation is a fundamental challenge in computer vision. Objects of the same class can have different sizes 
+    abstract-more: and their perceived size is further affected by the distance from the camera. These variations are local to the objects, i.e., different object sizes may change differently within the same image. To effectively handle scale variations, we present a deep equilibrium canonicalizer (DEC) to improve the local scale equivariance of a model. DEC can be easily incorporated into existing network architectures and can be adapted to a pre-trained model. Notably, we show that on the competitive ImageNet benchmark, DEC improves both model performance and local scale consistency across four popular pre-trained deep-nets, e.g., ViT, DeiT, Swin, and BEiT. 
+    tag: more_equivariance
+    category: Equivariance
+
   - title: Group Downsampling with Equivariant Anti-aliasing
     system-name:
     gif: assets/img/paper_fig/group_dwn.jpg
@@ -25,8 +63,8 @@ projects:
     slides: 
     talk:
     tutorial: https://huggingface.co/blog/ashiq24/group-sampling
-    abstract-less: Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing.
-    abstract-more:  This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
+    abstract-less: Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. 
+    abstract-more: In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing. This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
     tag: more_equivariance
     category: Equivariance
 
@@ -78,8 +116,8 @@ projects:
     slides: 
     talk: 
     poster: 
-    abstract-less: Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces. Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations.
-    abstract-more:  Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
+    abstract-less: Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces.
+    abstract-more: Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations. Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameters choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
     tag: more_neural_operator
     category: Neural Operator
 
