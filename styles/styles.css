@@ -737,7 +737,7 @@ code {
     width: 300px !important;
     height: 150px !important;
     max-width: 100% !important;
-    object-fit: cover !important;
+    object-fit: fill !important;
     border-radius: 8px !important;
     display: block !important;
 }
@@ -748,7 +748,7 @@ code {
         width: 300px !important;
         height: 150px !important;
         max-width: 100% !important;
-        object-fit: cover !important;
+        object-fit: fill !important;
     }
 }
 
@@ -757,7 +757,7 @@ code {
     width: 300px !important;
     height: 150px !important;
     max-width: 100% !important;
-    object-fit: cover !important;
+    object-fit: fill !important;
 }
 
 /* Responsive adjustments for smaller screens */
