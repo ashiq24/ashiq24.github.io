@@ -727,7 +727,7 @@ code {
     }
 }
 
-/* Publication figure styling with 2:1 aspect ratio */
+/* Publication figure styling with 5:3 aspect ratio (300x180) */
 .project .col-sm-4 {
     position: relative;
     overflow: hidden;
@@ -735,7 +735,7 @@ code {
 
 .project .col-sm-4 img {
     width: 300px !important;
-    height: 150px !important;
+    height: 180px !important;
     max-width: 100% !important;
     object-fit: fill !important;
     border-radius: 8px !important;
@@ -746,7 +746,7 @@ code {
 @supports not (aspect-ratio: 2 / 1) {
     .project .col-sm-4 img {
         width: 300px !important;
-        height: 150px !important;
+        height: 180px !important;
         max-width: 100% !important;
         object-fit: fill !important;
     }
@@ -755,7 +755,7 @@ code {
 /* Additional styling for w-full class used in publications */
 .project .w-full {
     width: 300px !important;
-    height: 150px !important;
+    height: 180px !important;
     max-width: 100% !important;
     object-fit: fill !important;
 }
@@ -765,7 +765,7 @@ code {
     .project .col-sm-4 img,
     .project .w-full {
         width: 280px !important;
-        height: 140px !important;
+        height: 168px !important;
     }
 }
 
@@ -773,7 +773,7 @@ code {
     .project .col-sm-4 img,
     .project .w-full {
         width: 240px !important;
-        height: 120px !important;
+        height: 144px !important;
     }
 }
 
@@ -781,7 +781,7 @@ code {
     .project .col-sm-4 img,
     .project .w-full {
         width: 200px !important;
-        height: 100px !important;
+        height: 120px !important;
     }
 }
 
