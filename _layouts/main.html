@@ -52,26 +52,26 @@
         <!-- Dismissal area for assistant icon -->
         <div class="dismissal-area" id="dismissalArea">&#10006;</div>
 
-        <!-- Navigation bar -->
+        <!-- Side Navigation bar -->
         <!-- Fusion of jQuery slidebar (https://codepen.io/BeshoyRomany/pen/qmNPwN) and animated hamburger menu (https://codepen.io/amberweinberg/pen/yeqJgG) -->
-        <nav>
-            <a class="nav-toggle-btn" onclick="toggleNav()">
+        <nav class="side-nav">
+            <a class="nav-toggle-btn" onclick="toggleNav()" style="display: none;">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             <ul>
-                <li><p onclick="scrollToTopDiv('html')"><span class="emoji">🏡</span> <span class="text">home</span></p></li>
-                <li><p onclick="scrollToTopDiv('#updates')"><span class="emoji">📜</span> <span class="text">updates</span></p></li>
-                <li><p onclick="scrollToTopDiv('#research')"><span class="emoji">📚</span> <span class="text">publications</span></p></li>
-                <li><p onclick="scrollToTopDiv('#outreach')"><span class="emoji">🧩</span> <span class="text">outreach</span></p></li>
-                <li><p onclick="scrollToTopDiv('#resources')"><span class="emoji">⛏️</span> <span class="text">resources</span></p></li>
-                <!-- <li><p onclick="scrollToTopDiv('#gallery')"><span class="emoji">🖼️</span> <span class="text">gallery</span></p></li> -->
+                <li><p onclick="scrollToTopDiv('html')"><span class="nav-icon"><i class="fas fa-home"></i></span> <span class="text">home</span></p></li>
+                <li><p onclick="scrollToTopDiv('#updates')"><span class="nav-icon"><i class="fas fa-newspaper"></i></span> <span class="text">updates</span></p></li>
+                <li><p onclick="scrollToTopDiv('#research')"><span class="nav-icon"><i class="fas fa-graduation-cap"></i></span> <span class="text">publications</span></p></li>
+                <li><p onclick="scrollToTopDiv('#outreach')"><span class="nav-icon"><i class="fas fa-users"></i></span> <span class="text">outreach</span></p></li>
+                <li><p onclick="scrollToTopDiv('#resources')"><span class="nav-icon"><i class="fas fa-tools"></i></span> <span class="text">resources</span></p></li>
+                <!-- <li><p onclick="scrollToTopDiv('#gallery')"><span class="nav-icon"><i class="fas fa-images"></i></span> <span class="text">gallery</span></p></li> -->
             </ul>
         </nav>
 
         <!-- Content -->
-        <div class="container" style="padding-top: 3rem;">
+        <div class="container" style="padding-top: 1.5rem;">
             {{ content }}
         </div>
 

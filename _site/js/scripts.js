@@ -70,7 +70,7 @@ function initializeOwlCarousel() {
     $('.owl-carousel').owlCarousel({
         loop: false,
         rewind: false,
-        margin: 10,
+        margin: 5,
         nav: true,
         dots: false,
         lazyLoad: false,
@@ -634,34 +634,15 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Animate the particles
-// animate();
+// Animate the particles only in dark mode
+// function checkAndAnimate() {
+//     if (document.body.classList.contains('dark-theme')) {
+//         animate();
+//     } else {
+//         ctx.clearRect(0, 0, canvas.width, canvas.height);
+//         requestAnimationFrame(checkAndAnimate);
+//     }
+// }
 
-// Additional fix for carousel layout
-$(document).ready(function() {
-    // Force reinitialize carousels
-    setTimeout(function() {
-        $('.owl-carousel').each(function() {
-            var $this = $(this);
-            if ($this.hasClass('owl-loaded')) {
-                $this.trigger('destroy.owl.carousel');
-            }
-            $this.owlCarousel({
-                loop: false,
-                rewind: false,
-                margin: 10,
-                nav: true,
-                dots: false,
-                lazyLoad: false,
-                slideBy: 'page',
-                autoWidth: false,
-                responsive: {
-                    0: {items: 1.75},
-                    600: {items: 3},
-                    900: {items: 5},
-                    1200: {items: 6}
-                }
-            });
-        });
-    }, 100);
-});
+// Start checking for theme
+// checkAndAnimate();

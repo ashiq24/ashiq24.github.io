@@ -137,10 +137,6 @@
     font-weight: 500;
 }
 
-.affiliations-carousel .affiliation-description {
-    display: none; /* Hide description to maintain uniform card height */
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .affiliations-carousel .affiliation-card {
@@ -182,10 +178,9 @@
 
 .owl-carousel .owl-stage {
     position: relative !important;
-    -ms-transform: translate3d(0px, 0px, 0px) !important;
     transform: translate3d(0px, 0px, 0px) !important;
+    transition: all 0s ease 0s !important;
     width: auto !important;
-    display: flex !important;
 }
 
 .owl-carousel .owl-item {
@@ -193,38 +188,12 @@
     min-height: 1px !important;
     float: left !important;
     -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
+}
+
+.owl-carousel .owl-item.active {
     display: inline-block !important;
-}
-
-/* Force all carousels to display items horizontally */
-.owl-carousel.owl-loaded .owl-item {
-    display: inline-block !important;
-    float: left !important;
-    width: auto !important;
-}
-
-/* Ensure news cards don't stack */
-.owl-carousel .owl-item .news-card {
-    display: block !important;
-    float: none !important;
-}
-
-/* Ensure affiliation cards don't stack */
-.owl-carousel .owl-item .affiliation-card {
-    display: block !important;
-    float: none !important;
-}
-
-/* Override any Bootstrap or other framework interference */
-.owl-carousel .owl-item:before,
-.owl-carousel .owl-item:after {
-    content: none !important;
-    display: none !important;
-}
-
-.owl-carousel .owl-item {
-    -webkit-box-sizing: border-box !important;
-    -moz-box-sizing: border-box !important;
-    box-sizing: border-box !important;
+    zoom: 1 !important;
 }
