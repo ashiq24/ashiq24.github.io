@@ -36,7 +36,7 @@ gem install bundler jekyll
 Now, you can use Jekyll locally as a website (static) generator on your laptop.
 
 <!-- USAGE -->
-
+  
 ## Usage
 
 This usage contains 4 relatively simple steps to make your own website.
