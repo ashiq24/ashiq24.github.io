@@ -379,6 +379,8 @@ function initializeIsotopeProjects() {
 document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('github-cards');
+    if (!container) return; // Exit if resources section is not present
+
     const repoElements = container.querySelectorAll('div[data-url]');
 
     repoElements.forEach(repoElement => {
@@ -560,6 +562,9 @@ function initializeIsotopeGithub() {
 // });
 // This version is faster --> re-layout when all the images are fully loaded not neccessarily all the gifs
 $(document).ready(function () {
+    // Initialize Owl Carousel immediately to prevent layout issues!
+    initializeOwlCarousel();
+
     var Images = $('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]').get();
     var imageLoadPromises = Images.map(function (img) {
         return new Promise(function (resolve) {
@@ -573,7 +578,7 @@ $(document).ready(function () {
     });
 
     Promise.all(imageLoadPromises).then(function () {
-        initializeOwlCarousel();
+        // Only Isotope needs to wait for images because it calculates layout positions based on element sizes
         initializeIsotopeProjects();
         // initializeIsotopeGithub(); // Disabled to use flexbox layout instead
     });
