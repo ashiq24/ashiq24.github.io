@@ -18,7 +18,7 @@ projects:             # delete "show" or leave it blank to hide this icon
 location: 
 codepen: 
 orcid: 
-contact: show            # delete "show" or leave it blank to hide this icon
+contact:             # delete "show" or leave it blank to hide this icon
 
 # information for contact card
 dept: cs @ Purdue
