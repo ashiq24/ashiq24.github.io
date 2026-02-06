@@ -1,28 +1,32 @@
-// Back-to-top button
-var btn = $('#back-to-top-button');
+// Back-to-top button and other DOM-dependent code wrapped in document.ready
+$(document).ready(function () {
+    var btn = $('#back-to-top-button');
 
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-    } else {
-        btn.removeClass('show');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        const speechBalloon = document.querySelector('.speech-balloon');
+        const clickSound = new Audio('assets/sounds/collision_sound.wav');
+        $('html, body').animate({ scrollTop: 0 }, '300');
+        speechBalloon.innerText = 'back to top!';
+        clickSound.play();
+    });
+
+    // Play pronunciation audio when the emoji is clicked
+    var volumeEmoji = document.getElementById('volumeEmoji');
+    if (volumeEmoji) {
+        volumeEmoji.addEventListener('click', function () {
+            const pronunicationAudio = new Audio('assets/sounds/khang.mp3');
+            pronunicationAudio.play();
+        });
     }
-});
-
-btn.on('click', function (e) {
-    e.preventDefault();
-    const speechBalloon = document.querySelector('.speech-balloon');
-    const clickSound = new Audio('assets/sounds/collision_sound.wav');
-    $('html, body').animate({ scrollTop: 0 }, '300');
-    speechBalloon.innerText = 'back to top!';
-    clickSound.play();
-});
-
-
-// Play pronunciation audio when the emoji is clicked
-document.getElementById('volumeEmoji').addEventListener('click', function () {
-    const pronunicationAudio = new Audio('assets/sounds/khang.mp3');
-    pronunicationAudio.play();
 });
 
 
@@ -48,8 +52,10 @@ function toggleText(linkElement) {
 
 
 // Initialize the toggleText function for each link
-document.querySelectorAll('[data-toggle="collapse"]').forEach(function (linkElement) {
-    toggleText(linkElement);
+$(document).ready(function () {
+    document.querySelectorAll('[data-toggle="collapse"]').forEach(function (linkElement) {
+        toggleText(linkElement);
+    });
 });
 
 
@@ -196,91 +202,101 @@ function progressBar() {
 
 
 // Scripts to activate/deactivate contact info card 
-var overlaybg = document.getElementById('overlay-bg');
+$(document).ready(function () {
+    var overlaybg = document.getElementById('overlay-bg');
+    var contactTrigger = document.getElementById('contact-card-trigger');
+    var frontEndCard = document.getElementById('front_end_card');
 
-document.getElementById('contact-card-trigger').onclick = function () {
-    overlaybg.style.display = 'flex';
-};
-
-overlaybg.addEventListener('click', function (event) {
-    if (event.target === overlaybg) {
-        overlaybg.style.display = 'none';
+    if (contactTrigger) {
+        contactTrigger.onclick = function () {
+            overlaybg.style.display = 'flex';
+        };
     }
-});
 
+    if (overlaybg) {
+        overlaybg.addEventListener('click', function (event) {
+            if (event.target === overlaybg) {
+                overlaybg.style.display = 'none';
+            }
+        });
+    }
 
-// Play the flipping-card sound when user flips the contact info card
-document.getElementById('front_end_card').addEventListener('click', function () {
-    this.classList.toggle('flip');
-    const flipAudio = new Audio('assets/sounds/flipcard_sound.mp3');
-    flipAudio.play();
+    if (frontEndCard) {
+        frontEndCard.addEventListener('click', function () {
+            this.classList.toggle('flip');
+            const flipAudio = new Audio('assets/sounds/flip_sound.wav');
+            flipAudio.play();
+        });
+    }
 });
 
 
 // Get all filter buttons and change their active status as user clicks
-var filterButtonsProject = document.querySelectorAll('#filters-project .filter-button');
-var filterButtonsGithub = document.querySelectorAll('#filters-resources .filter-button');
-var speechBalloon = document.querySelector('.speech-balloon');
+$(document).ready(function () {
+    var filterButtonsProject = document.querySelectorAll('#filters-project .filter-button');
+    var filterButtonsGithub = document.querySelectorAll('#filters-resources .filter-button');
+    var speechBalloon = document.querySelector('.speech-balloon');
 
-filterButtonsProject.forEach(function (filterButtonProject) {
-    filterButtonProject.addEventListener('click', function () {
-        filterButtonsProject.forEach(function (flrbtn) {
-            flrbtn.classList.remove('active');
+    filterButtonsProject.forEach(function (filterButtonProject) {
+        filterButtonProject.addEventListener('click', function () {
+            filterButtonsProject.forEach(function (flrbtn) {
+                flrbtn.classList.remove('active');
+            });
+            this.classList.add('active');
+            if (this.textContent === "perception + manipulation") {
+                speechBalloon.innerText = 'see RoPM projects!';
+            } else {
+                speechBalloon.innerText = 'see ' + this.textContent + ' projects!';
+            }
+            speechBalloon.classList.remove('hidden');
         });
-        this.classList.add('active');
-        if (this.textContent === "perception + manipulation") {
-            speechBalloon.innerText = 'see RoPM projects!';
-        } else {
-            speechBalloon.innerText = 'see ' + this.textContent + ' projects!';
-        }
-        speechBalloon.classList.remove('hidden');
     });
-});
 
-filterButtonsGithub.forEach(function (filterButtonGithub) {
-    filterButtonGithub.addEventListener('click', function () {
-        filterButtonsGithub.forEach(function (flrbtn) {
-            flrbtn.classList.remove('active');
+    filterButtonsGithub.forEach(function (filterButtonGithub) {
+        filterButtonGithub.addEventListener('click', function () {
+            filterButtonsGithub.forEach(function (flrbtn) {
+                flrbtn.classList.remove('active');
+            });
+            this.classList.add('active');
+            speechBalloon.innerText = 'see ' + this.textContent + ' repos!';
+            speechBalloon.classList.remove('hidden');
         });
-        this.classList.add('active');
-        speechBalloon.innerText = 'see ' + this.textContent + ' repos!';
-        speechBalloon.classList.remove('hidden');
-    });
-});
-
-
-// Function to update Isotope layout with smooth transitions
-function updateLayout(collapseElement, isExpanding) {
-
-    // Initialize Isotope with vertical layout
-    var iso = new Isotope('#projects', {
-        itemSelector: '.project',
-        layoutMode: 'vertical'
     });
 
-    if (isExpanding) {
-        $(collapseElement).css('display', 'none');
-        iso.arrange();
-        setTimeout(function () {
-            $(collapseElement).css('display', '');
-            iso.arrange();
-        }, 300);
-    } else {
-        iso.arrange();
-        setTimeout(function () {
+
+    // Function to update Isotope layout with smooth transitions
+    function updateLayout(collapseElement, isExpanding) {
+
+        // Initialize Isotope with vertical layout
+        var iso = new Isotope('#projects', {
+            itemSelector: '.project',
+            layoutMode: 'vertical'
+        });
+
+        if (isExpanding) {
             $(collapseElement).css('display', 'none');
             iso.arrange();
-        }, 300);
+            setTimeout(function () {
+                $(collapseElement).css('display', '');
+                iso.arrange();
+            }, 300);
+        } else {
+            iso.arrange();
+            setTimeout(function () {
+                $(collapseElement).css('display', 'none');
+                iso.arrange();
+            }, 300);
+        }
     }
-}
 
 
-// Bind updateLayout function to the collapsible elements' events
-$('.collapse').on('show.bs.collapse', function () {
-    updateLayout(this, true);
-}).on('hide.bs.collapse', function () {
-    updateLayout(this, false);
-});
+    // Bind updateLayout function to the collapsible elements' events
+    $('.collapse').on('show.bs.collapse', function () {
+        updateLayout(this, true);
+    }).on('hide.bs.collapse', function () {
+        updateLayout(this, false);
+    });
+});  // Close the $(document).ready block that started at line 235
 
 
 // Modified from https://codepen.io/SohRonery/pen/wvvBLyP
@@ -619,86 +635,94 @@ $(window).on('load', function () {
 
 
 // Automatically update year in footer
-document.getElementById("currentYear").textContent = new Date().getFullYear();
+$(document).ready(function () {
+    var currentYearEl = document.getElementById("currentYear");
+    if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+    }
+});
 
 
 // Canvas for particle moves
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const particles = [];
+$(document).ready(function () {
+    const canvas = document.getElementById('canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const particles = [];
 
 
-// Resize canvas width and height
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-
-// Class for Particle
-class Particle {
-
-    constructor() {
-        this.reset();
+    // Resize canvas width and height
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
 
-    reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
-        this.color = 'rgba(255, 255, 255, ' + 0.7 + ')';
-        this.lifespan = 100;
-    }
 
-    update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.color = 'rgba(255, 255, 255, ' + this.lifespan-- / 100 + ')';
+    // Class for Particle
+    class Particle {
 
-        if (this.lifespan <= 0) {
+        constructor() {
             this.reset();
+        }
+
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 2;
+            this.vy = (Math.random() - 0.5) * 2;
+            this.color = 'rgba(255, 255, 255, ' + 0.7 + ')';
+            this.lifespan = 100;
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.color = 'rgba(255, 255, 255, ' + this.lifespan-- / 100 + ')';
+
+            if (this.lifespan <= 0) {
+                this.reset();
+            }
+        }
+
+        draw(ctx) {
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+            ctx.fill();
         }
     }
 
-    draw(ctx) {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-        ctx.fill();
+
+    // Initialize 101 particles
+    for (let i = 0; i < 101; i++) {
+        particles.push(new Particle());
     }
-}
 
 
-// Initialize 101 particles
-for (let i = 0; i < 101; i++) {
-    particles.push(new Particle());
-}
+    // Make the particles move
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw(ctx);
+        });
 
-// Make the particles move
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+        requestAnimationFrame(animate);
+    }
 
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw(ctx);
-    });
+    // Animate the particles only in dark mode
+    // function checkAndAnimate() {
+    //     if (document.body.classList.contains('dark-theme')) {
+    //         animate();
+    //     } else {
+    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //         requestAnimationFrame(checkAndAnimate);
+    //     }
+    // }
 
-    requestAnimationFrame(animate);
-}
-
-// Animate the particles only in dark mode
-// function checkAndAnimate() {
-//     if (document.body.classList.contains('dark-theme')) {
-//         animate();
-//     } else {
-//         ctx.clearRect(0, 0, canvas.width, canvas.height);
-//         requestAnimationFrame(checkAndAnimate);
-//     }
-// }
-
-// Start checking for theme
-// checkAndAnimate();
+    // Start checking for theme
+    // checkAndAnimate();
+});  // Close the $(document).ready block for canvas that started at line 647
