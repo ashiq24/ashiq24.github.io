@@ -67,21 +67,44 @@ function scrollToTopDiv(divTag) {
 
 // Owl carousel for updates
 function initializeOwlCarousel() {
-    $('.owl-carousel').owlCarousel({
-        loop: false,
-        rewind: false,
-        margin: 5,
-        nav: true,
-        dots: false,
-        lazyLoad: false,
-        slideBy: 'page',
-        responsive: {
-            0: { items: 1.75 },
-            600: { items: 3 },
-            900: { items: 5 },
-            1200: { items: 6 }
+    try {
+        // Check if OwlCarousel plugin is loaded
+        if (typeof $.fn.owlCarousel === 'undefined') {
+            console.error('OwlCarousel plugin not loaded yet, retrying in 500ms...');
+            setTimeout(initializeOwlCarousel, 500);
+            return;
         }
-    });
+
+        var $carousels = $('.owl-carousel');
+        if ($carousels.length === 0) {
+            console.warn('No .owl-carousel elements found in DOM');
+            return;
+        }
+
+        console.log('Initializing OwlCarousel for', $carousels.length, 'carousel(s)');
+
+        $carousels.owlCarousel({
+            loop: false,
+            rewind: false,
+            margin: 5,
+            nav: true,
+            dots: false,
+            lazyLoad: false,
+            slideBy: 'page',
+            responsive: {
+                0: { items: 1.75 },
+                600: { items: 3 },
+                900: { items: 5 },
+                1200: { items: 6 }
+            }
+        });
+
+        console.log('OwlCarousel initialized successfully');
+    } catch (error) {
+        console.error('Error initializing OwlCarousel:', error);
+        // Try again after a delay
+        setTimeout(initializeOwlCarousel, 1000);
+    }
 }
 
 // Touch and mouse event listeners
@@ -582,6 +605,16 @@ $(document).ready(function () {
         initializeIsotopeProjects();
         // initializeIsotopeGithub(); // Disabled to use flexbox layout instead
     });
+});
+
+
+// Fallback: Re-initialize carousel on window.load if it didn't work on document.ready
+$(window).on('load', function () {
+    // Check if carousel was successfully initialized
+    if ($('.owl-carousel').length > 0 && !$('.owl-carousel').hasClass('owl-loaded')) {
+        console.warn('OwlCarousel not initialized on document.ready, trying again on window.load');
+        initializeOwlCarousel();
+    }
 });
 
 
