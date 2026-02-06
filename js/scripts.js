@@ -414,6 +414,19 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.error('Error fetching repository data for', repoUrl, error);
+                // Fallback content in case of API, CORS, or rate limit issues
+                const fallbackName = repoUrl.split('/').pop();
+                const fallbackLink = repoUrl.replace('api.github.com/repos', 'github.com');
+                repoElement.innerHTML = `
+                    <div class="repo-header">
+                        <i class="far fa-bookmark bookmark-icon"></i>
+                        <a href="${fallbackLink}" target="_blank" class="repo-name">${fallbackName}</a>
+                    </div>
+                    <div class="repo-description">Unable to load details (API Limit or Error).</div>
+                    <div class="repo-stats">
+                        <a href="${fallbackLink}" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                `;
             });
     });
 });
@@ -554,6 +567,7 @@ $(document).ready(function () {
                 resolve();
             } else {
                 img.onload = resolve;
+                img.onerror = resolve; // Continue even if image fails to load
             }
         });
     });
