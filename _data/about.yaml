@@ -12,6 +12,7 @@ desc-emoji:
 scholar: https://scholar.google.com/citations?user=isCWj28AAAAJ&hl=en
 researchgate:
 github: https://github.com/ashiq24
+huggingface: https://huggingface.co/ashiq24
 youtube:
 resume: assets/doc/cv_ashiq.pdf
 projects:             # delete "show" or leave it blank to hide this icon
