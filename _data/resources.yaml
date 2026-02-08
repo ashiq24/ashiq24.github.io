@@ -21,6 +21,26 @@ links:
     git-api: https://api.github.com/repos/neuraloperator/neuraloperator
     category: open-source
 
+  - type: huggingface
+    hf-type: dataset  # or 'model'
+    hf-id: https://huggingface.co/datasets/ashiq24/Multi_Scale_ImageNet
+    category: research
+  
+  - type: huggingface
+    hf-type: dataset  # or 'model'
+    hf-id: https://huggingface.co/datasets/ashiq24/Rayleigh_Benard_Convection
+    category: research
+
+  - type: huggingface
+    hf-type: dataset  # or 'model'
+    hf-id: https://huggingface.co/datasets/ashiq24/FSI-pde-dataset
+    category: research
+
+  - type: huggingface
+    hf-type: model  # or 'model'
+    hf-id: https://huggingface.co/ashiq24/lse-dinov2-base
+    category: research
+
   - type: github
     git-api: https://api.github.com/repos/ashiq24/Scale_Equivarinat_Fourier_Layer
     category: research
@@ -42,10 +62,7 @@ links:
     category: miscellaneous
 
   # HuggingFace examples (uncomment and add your actual HuggingFace resources):
-  # - type: huggingface
-  #   hf-type: dataset  # or 'model'
-  #   hf-id: ashiq24/your-dataset-name
-  #   category: research
+  
   
   # - type: huggingface
   #   hf-type: model
