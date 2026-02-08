@@ -13,23 +13,41 @@ categories:
 
 links:
 
-  - git-api: https://api.github.com/repos/neuraloperator/CoDA-NO
+  - type: github
+    git-api: https://api.github.com/repos/neuraloperator/CoDA-NO
     category: research
 
-  - git-api: https://api.github.com/repos/neuraloperator/neuraloperator
+  - type: github
+    git-api: https://api.github.com/repos/neuraloperator/neuraloperator
     category: open-source
 
-  - git-api: https://api.github.com/repos/ashiq24/Scale_Equivarinat_Fourier_Layer
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/Scale_Equivarinat_Fourier_Layer
     category: research
   
-  - git-api: https://api.github.com/repos/ashiq24/UNO
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/UNO
     category: research
   
-  - git-api: https://api.github.com/repos/ashiq24/BEENE
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/BEENE
     category: research
   
-  - git-api: https://api.github.com/repos/ashiq24/Copula
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/Copula
     category: open-source
   
-  - git-api: https://api.github.com/repos/ashiq24/Python-Tool-to-Visualize-Fractals
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/Python-Tool-to-Visualize-Fractals
     category: miscellaneous
+
+  # HuggingFace examples (uncomment and add your actual HuggingFace resources):
+  # - type: huggingface
+  #   hf-type: dataset  # or 'model'
+  #   hf-id: ashiq24/your-dataset-name
+  #   category: research
+  
+  # - type: huggingface
+  #   hf-type: model
+  #   hf-id: ashiq24/your-model-name
+  #   category: research

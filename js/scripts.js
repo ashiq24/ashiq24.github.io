@@ -414,63 +414,122 @@ function initializeIsotopeProjects() {
 }
 
 
-// Function load GitHub repositories
+// Function to load GitHub repositories and HuggingFace resources
 document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('github-cards');
     if (!container) return; // Exit if resources section is not present
 
-    const repoElements = container.querySelectorAll('div[data-url]');
+    const repoElements = container.querySelectorAll('div[data-url], div[data-hf-id]');
 
     repoElements.forEach(repoElement => {
-        const repoUrl = repoElement.getAttribute('data-url');
+        const dataType = repoElement.getAttribute('data-type');
 
-        axios.get(repoUrl)
-            .then(response => {
-                const { name, description, html_url, stargazers_count, forks_count, language } = response.data;
-                const cardHtml = `
+        if (dataType === 'github') {
+            // Handle GitHub repositories
+            const repoUrl = repoElement.getAttribute('data-url');
+
+            axios.get(repoUrl)
+                .then(response => {
+                    const { name, description, html_url, stargazers_count, forks_count, language } = response.data;
+                    const cardHtml = `
+                            <div class="repo-header">
+                                <i class="far fa-bookmark bookmark-icon"></i>
+                                <a href="${html_url}" target="_blank" class="repo-name">${name}</a>
+                            </div>
+                            <div class="repo-description">${description || 'No description provided.'}</div>
+                            <div class="repo-stats">
+                                <i class="fas fa-code language-icon"></i>
+                                <span class="language">${language}</span>
+                                <div>
+                                    <i class="fas fa-star star-icon"></i>
+                                    <span class="stats-number">${stargazers_count}</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-code-branch fork-icon"></i>
+                                    <span class="stats-number">${forks_count}</span>
+                                </div>
+                            </div>
+                    `;
+
+                    repoElement.innerHTML = cardHtml;
+                })
+                .catch(error => {
+                    console.error('Error fetching repository data for', repoUrl, error);
+                    const fallbackName = repoUrl.split('/').pop();
+                    const fallbackLink = repoUrl.replace('api.github.com/repos', 'github.com');
+                    repoElement.innerHTML = `
                         <div class="repo-header">
                             <i class="far fa-bookmark bookmark-icon"></i>
-                            <a href="${html_url}" target="_blank" class="repo-name">${name}</a>
+                            <a href="${fallbackLink}" target="_blank" class="repo-name">${fallbackName}</a>
                         </div>
-                        <div class="repo-description">${description || 'No description provided.'}</div>
+                        <div class="repo-description">Unable to load details (API Limit or Error).</div>
                         <div class="repo-stats">
-                            <i class="fas fa-code language-icon"></i>
-                            <span class="language">${language}</span>
-                            <div>
-                                <i class="fas fa-star star-icon"></i>
-                                <span class="stats-number">${stargazers_count}</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-code-branch fork-icon"></i>
-                                <span class="stats-number">${forks_count}</span>
-                            </div>
+                            <a href="${fallbackLink}" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
                         </div>
-                `;
+                    `;
+                });
+        } else if (dataType === 'huggingface') {
+            // Handle HuggingFace datasets and models
+            const hfId = repoElement.getAttribute('data-hf-id');
+            const hfType = repoElement.getAttribute('data-hf-type'); // 'dataset' or 'model'
 
-                repoElement.innerHTML = cardHtml; // Use innerHTML to preserve the .github-card wrapper
+            const apiUrl = hfType === 'dataset'
+                ? `https://huggingface.co/api/datasets/${hfId}`
+                : `https://huggingface.co/api/models/${hfId}`;
 
-                // Isotope layout call removed - using flexbox instead
+            const webUrl = hfType === 'dataset'
+                ? `https://huggingface.co/datasets/${hfId}`
+                : `https://huggingface.co/${hfId}`;
 
-            })
-            .catch(error => {
-                console.error('Error fetching repository data for', repoUrl, error);
-                // Fallback content in case of API, CORS, or rate limit issues
-                const fallbackName = repoUrl.split('/').pop();
-                const fallbackLink = repoUrl.replace('api.github.com/repos', 'github.com');
-                repoElement.innerHTML = `
-                    <div class="repo-header">
-                        <i class="far fa-bookmark bookmark-icon"></i>
-                        <a href="${fallbackLink}" target="_blank" class="repo-name">${fallbackName}</a>
-                    </div>
-                    <div class="repo-description">Unable to load details (API Limit or Error).</div>
-                    <div class="repo-stats">
-                        <a href="${fallbackLink}" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                `;
-            });
+            axios.get(apiUrl)
+                .then(response => {
+                    const data = response.data;
+                    const name = hfId.split('/').pop();
+                    const description = data.description || data.cardData?.description || 'No description provided.';
+                    const downloads = data.downloads || 0;
+                    const likes = data.likes || 0;
+
+                    const cardHtml = `
+                            <div class="repo-header">
+                                <img src="assets/img/huggingface-icon.webp" alt="HuggingFace" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
+                                <a href="${webUrl}" target="_blank" class="repo-name">${name}</a>
+                            </div>
+                            <div class="repo-description">${description}</div>
+                            <div class="repo-stats">
+                                <i class="fas fa-database language-icon"></i>
+                                <span class="language">${hfType}</span>
+                                <div>
+                                    <i class="fas fa-download star-icon"></i>
+                                    <span class="stats-number">${downloads.toLocaleString()}</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-heart fork-icon" style="color: #ff6b6b;"></i>
+                                    <span class="stats-number">${likes}</span>
+                                </div>
+                            </div>
+                    `;
+
+                    repoElement.innerHTML = cardHtml;
+                })
+                .catch(error => {
+                    console.error('Error fetching HuggingFace data for', hfId, error);
+                    const fallbackName = hfId.split('/').pop();
+                    repoElement.innerHTML = `
+                        <div class="repo-header">
+                            <img src="assets/img/huggingface-icon.webp" alt="HuggingFace" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
+                            <a href="${webUrl}" target="_blank" class="repo-name">${fallbackName}</a>
+                        </div>
+                        <div class="repo-description">Unable to load details (API Limit or Error).</div>
+                        <div class="repo-stats">
+                            <a href="${webUrl}" target="_blank">View on HuggingFace <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    `;
+                });
+        }
     });
 });
+
 
 
 // Modified from https://codepen.io/SohRonery/pen/wvvBLyP

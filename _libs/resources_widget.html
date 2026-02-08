@@ -1,3 +1,7 @@
 <div class="github-card" data-filter="{{ link.category }}">
-    <div data-url="{{ link.git-api }}"></div>
+    {% if link.type == 'github' %}
+    <div data-url="{{ link.git-api }}" data-type="github"></div>
+    {% elsif link.type == 'huggingface' %}
+    <div data-hf-id="{{ link.hf-id }}" data-hf-type="{{ link.hf-type }}" data-type="huggingface"></div>
+    {% endif %}
 </div>
