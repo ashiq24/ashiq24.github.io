@@ -14,10 +14,26 @@ title: Md Ashiqur Rahman
 info: phd cs @ Purdue
 icon-pic: assets/img/mandu_icon.png
 
+# SEO Settings
+description: "Md Ashiqur Rahman - PhD student in Computer Science at Purdue University specializing in robust machine learning, equivariance, geometric deep learning, and neural operators. Research on scale-equivariant networks, operator learning, and AI for scientific discovery."
+url: "https://ashiq24.github.io"
+baseurl: ""
+author:
+  name: "Md Ashiqur Rahman"
+  email: "rahman79@purdue.edu"
+  twitter: ""  # Add your Twitter handle if you have one
+  github: "ashiq24"
+  scholar: "isCWj28AAAAJ"
+  orcid: ""  # Add your ORCID if you have one
+
+# Social sharing defaults
+og_image: "assets/img/profile_pic_3.jpeg"
+twitter_card: "summary"
+
 # GitHub Pages configurations
 remote_theme: pages-themes/minimal # or your specific theme
-repository: ashiq24/ashiq24.github.io  # Add this line
-github: [metadata]  # Add this line
+repository: ashiq24/ashiq24.github.io
+github: [metadata]
 
 # Build settings
 markdown: kramdown
@@ -36,3 +52,6 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
+  - HUGGINGFACE_RESOURCES_GUIDE.md
+  - DEPLOYMENT_FIX_SUMMARY.md
+  - plan.txt

@@ -4,12 +4,38 @@
 
 <head>
 
-    <!-- Metadata -->
+    <!-- Basic Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="website" />
-    <meta name="author" content="Md Ashiqur Rahman" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
     <title>{{ site.title }} | {{ site.info }}</title>
+    <meta name="description"
+        content="Md Ashiqur Rahman - PhD student in Computer Science at Purdue University specializing in robust machine learning, equivariance, geometric deep learning, and neural operators. Published at NeurIPS, ICLR, ICCV." />
+    <meta name="keywords"
+        content="Md Ashiqur Rahman, machine learning, equivariance, geometric deep learning, neural operators, scale equivariance, Purdue University, computer vision, AI research, deep learning, scientific machine learning, operator learning" />
+    <meta name="author" content="{{ site.author.name }}" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{{ site.title }} - Machine Learning Researcher" />
+    <meta property="og:description"
+        content="PhD student at Purdue University researching robust machine learning, equivariance, and geometric deep learning. Publications at NeurIPS, ICLR, ICCV." />
+    <meta property="og:image" content="{{ site.url }}/{{ site.og_image }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ site.url }}" />
+    <meta name="twitter:title" content="{{ site.title }} - Machine Learning Researcher" />
+    <meta name="twitter:description"
+        content="PhD student at Purdue University researching robust machine learning, equivariance, and geometric deep learning." />
+    <meta name="twitter:image" content="{{ site.url }}/{{ site.og_image }}" />
+
     <link rel="icon" type="image/x-icon" href="{{ site.icon-pic }}" />
 
     <!-- Font Awesome icons -->
@@ -30,6 +56,44 @@
     <!-- Core theme CSS -->
     <link href="styles/styles.css?v=2.0" rel="stylesheet" />
     <link href="styles/affiliations_fix.css?v=2.0" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD for Rich Snippets and LLM Understanding -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.data.about.name }}",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}/{{ site.data.about.profile-pic }}",
+      "jobTitle": "PhD Student in Computer Science",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Purdue University",
+        "department": "Computer Science"
+      },
+      "email": "{{ site.data.about.email }}",
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Bangladesh University of Engineering and Technology"
+      },
+      "sameAs": [
+        "{{ site.data.about.github }}",
+        "{{ site.data.about.scholar }}",
+        "{{ site.data.about.huggingface }}"
+      ],
+      "knowsAbout": [
+        "Machine Learning",
+        "Equivariance",
+        "Geometric Deep Learning",
+        "Neural Operators",
+        "Computer Vision",
+        "Scientific Machine Learning",
+        "Operator Learning",
+        "Deep Learning"
+      ],
+      "description": "{{ site.data.about.first-paragraph }}"
+    }
+    </script>
 
 </head>
 

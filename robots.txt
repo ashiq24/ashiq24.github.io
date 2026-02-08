@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /vendor/
+Disallow: /.git/
+Disallow: /.jekyll-cache/
+Disallow: /_site/
+
+# Sitemap location
+Sitemap: https://ashiq24.github.io/sitemap.xml
+
+# Crawl delay (optional, helps prevent overloading)
+Crawl-delay: 1
