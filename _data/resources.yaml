@@ -5,10 +5,10 @@ categories:
   - data-filter: research
     category-name: research
   
-  - data-filter: misc
+  - data-filter: miscellaneous
     category-name: miscellaneous
 
-  - data-filter: Open Source
+  - data-filter: open-source
     category-name: open-source
 
 links:
@@ -22,23 +22,23 @@ links:
     category: open-source
 
   - type: huggingface
-    hf-type: dataset  # or 'model'
-    hf-id: https://huggingface.co/datasets/ashiq24/Multi_Scale_ImageNet
+    hf-type: dataset
+    hf-id: ashiq24/Multi_Scale_ImageNet
     category: research
   
   - type: huggingface
-    hf-type: dataset  # or 'model'
-    hf-id: https://huggingface.co/datasets/ashiq24/Rayleigh_Benard_Convection
+    hf-type: dataset
+    hf-id: ashiq24/Rayleigh_Benard_Convection
     category: research
 
   - type: huggingface
-    hf-type: dataset  # or 'model'
-    hf-id: https://huggingface.co/datasets/ashiq24/FSI-pde-dataset
+    hf-type: dataset
+    hf-id: ashiq24/FSI-pde-dataset
     category: research
 
   - type: huggingface
-    hf-type: model  # or 'model'
-    hf-id: https://huggingface.co/ashiq24/lse-dinov2-base
+    hf-type: model
+    hf-id: ashiq24/lse-dinov2-base
     category: research
 
   - type: github

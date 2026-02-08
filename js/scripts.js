@@ -678,7 +678,7 @@ $(document).ready(function () {
     Promise.all(imageLoadPromises).then(function () {
         // Only Isotope needs to wait for images because it calculates layout positions based on element sizes
         initializeIsotopeProjects();
-        // initializeIsotopeGithub(); // Disabled to use flexbox layout instead
+        initializeIsotopeGithub(); // Re-enabled to support filtering
     });
 });
 
