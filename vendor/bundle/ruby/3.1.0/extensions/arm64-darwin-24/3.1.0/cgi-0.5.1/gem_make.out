@@ -1,0 +1,15 @@
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.1/ext/cgi/escape
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/bin/ruby -I /Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20260206-56951-2zr51b.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\= clean
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\=
+compiling escape.c
+linking shared-object cgi/escape.bundle
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 escape.bundle ./.gem.20260206-56951-8azt36/cgi

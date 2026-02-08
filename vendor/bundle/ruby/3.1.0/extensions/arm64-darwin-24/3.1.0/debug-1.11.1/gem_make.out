@@ -1,0 +1,16 @@
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/debug-1.11.1/ext/debug
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/bin/ruby -I /Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20260206-56951-z8zhi0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= clean
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20260206-56951-s3m8y0/debug

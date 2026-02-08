@@ -169,7 +169,7 @@ DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "c
 ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
 Undefined symbols for architecture arm64:
   "_rb_thread_blocking_region", referenced from:
-      _t in conftest-3295ac.o
+      _t in conftest-237c32.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -336,7 +336,7 @@ DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "c
 ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
 Undefined symbols for architecture arm64:
   "_rb_enable_interrupt", referenced from:
-      _t in conftest-0cda90.o
+      _t in conftest-28ed3c.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -520,7 +520,7 @@ DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "c
 ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
 Undefined symbols for architecture arm64:
   "_pipe2", referenced from:
-      _t in conftest-8f257f.o
+      _t in conftest-a86fc8.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -577,7 +577,7 @@ DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "c
 ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
 Undefined symbols for architecture arm64:
   "_accept4", referenced from:
-      _t in conftest-c26a61.o
+      _t in conftest-bd02cf.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
