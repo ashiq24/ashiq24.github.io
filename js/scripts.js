@@ -486,7 +486,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(response => {
                     const data = response.data;
                     const name = hfId.split('/').pop();
-                    const description = data.description || data.cardData?.description || 'No description provided.';
+
+                    // Get description and truncate to 2-3 lines (approximately 200 characters)
+                    let description = data.description || data.cardData?.description || 'No description provided.';
+
+                    // Remove markdown headers, links, and excessive whitespace
+                    description = description
+                        .replace(/^#+\s+/gm, '') // Remove markdown headers
+                        .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove markdown links but keep text
+                        .replace(/\n+/g, ' ') // Replace newlines with spaces
+                        .replace(/\s+/g, ' ') // Normalize whitespace
+                        .trim();
+
+                    // Truncate to approximately 200 characters (2-3 lines)
+                    const maxLength = 200;
+                    if (description.length > maxLength) {
+                        description = description.substring(0, maxLength).trim() + '...';
+                    }
+
                     const downloads = data.downloads || 0;
                     const likes = data.likes || 0;
 
