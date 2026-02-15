@@ -1,9 +1,7 @@
-<div class="affiliation-card">
-    <div class="affiliation-image-container">
-        <img src="{{ affiliation.image }}" class="affiliation-image" alt="{{ affiliation.institution }}">
-    </div>
-    <div class="affiliation-content">
-        <h5 class="affiliation-institution">{{ affiliation.institution }}</h5>
-        <p class="affiliation-period">{{ affiliation.period }}</p>
+<div class="affiliation-badge">
+    <img src="{{ affiliation.image }}" class="affiliation-logo" alt="{{ affiliation.institution }}">
+    <div class="affiliation-info">
+        <span class="affiliation-name">{{ affiliation.institution }}</span>
+        <span class="affiliation-dates">{{ affiliation.period }}</span>
     </div>
 </div>
