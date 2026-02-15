@@ -585,6 +585,10 @@ code {
 
 .project {
     margin: 0px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Beautiful Publication Cards */
