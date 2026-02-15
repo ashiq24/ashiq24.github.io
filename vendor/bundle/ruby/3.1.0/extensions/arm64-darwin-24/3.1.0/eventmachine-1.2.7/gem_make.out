@@ -1,7 +1,7 @@
 current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext
-/Users/mdashiqurrahman/.rbenv/versions/3.1.2/bin/ruby -I /Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20260208-84034-jjk6vt.rb extconf.rb
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/bin/ruby -I /Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20260214-31412-qvvt8k.rb extconf.rb
 -----
-Using OpenSSL from pkg-config -I/opt/homebrew/Cellar/openssl@3/3.4.0/include  && -L/opt/homebrew/Cellar/openssl@3/3.4.0/lib && -lssl -lcrypto
+Using OpenSSL from pkg-config -I/opt/homebrew/Cellar/openssl@3/3.6.1/include  && -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib && -lssl -lcrypto
 -----
 checking for -lcrypto... yes
 checking for -lssl... yes
