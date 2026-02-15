@@ -1933,35 +1933,43 @@ nav ul li:hover .nav-icon i {
 }
 
 .btn-pdf i {
-    color: #dc2626;
+    color: #a53f4c !important;
+    /* Matte brick red */
 }
 
 .btn-code i {
-    color: #059669;
+    color: #4a7c59 !important;
+    /* Matte sage green */
 }
 
 .btn-website i {
-    color: #2563eb;
+    color: #7b68a6 !important;
+    /* Matte lavender grey */
 }
 
 .btn-demo i {
-    color: #7c3aed;
+    color: #3d5a80 !important;
+    /* Matte slate blue */
 }
 
 .btn-slides i {
-    color: #ea580c;
+    color: #c7763e !important;
+    /* Matte burnt sienna */
 }
 
 .btn-talk i {
-    color: #0891b2;
+    color: #6b5b95 !important;
+    /* Matte purple */
 }
 
 .btn-poster i {
-    color: #be185d;
+    color: #4a9b7f !important;
+    /* Matte forest teal */
 }
 
 .btn-tutorial i {
-    color: #65a30d;
+    color: #6c757d !important;
+    /* Matte charcoal */
 }
 
 /* Dark theme adaptations */
