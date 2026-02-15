@@ -3,7 +3,7 @@ layout: main
 ---
 
 {% include_relative _sections/about.html %}
-<hr class="my-3">
+<hr class="my-1">
 <div class="row">
     <div class="col-md-6" id="affiliations">
         {% include_relative _sections/affiliations.html %}
