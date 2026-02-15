@@ -2430,16 +2430,39 @@ footer a:hover {
     }
 }
 
+/* Scrollable Updates Container */
+.updates-container {
+    max-height: 170px;
+    /* Approx height for 3 items */
+    overflow-y: auto;
+    padding-right: 8px;
+    /* Space for scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+.updates-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.updates-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.updates-container::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 4px;
+}
+
 /* Updates Styling for Uniformity */
 .update-item {
-    padding: 6px 0;
-    /* Reduced from 10px */
+    padding: 8px 0;
+    /* Slightly increased for touch target */
     border-bottom: 1px solid #f1f5f9;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: auto;
-    /* Removed fixed min-height of 57px */
 }
 
 .update-item:last-child {
