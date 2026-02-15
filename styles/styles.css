@@ -1932,42 +1932,50 @@ nav ul li:hover .nav-icon i {
     vertical-align: middle;
 }
 
-.btn-link.btn-pdf i {
+.btn-link.btn-pdf i,
+.btn-link.btn-pdf svg {
     color: #a53f4c !important;
     /* Matte brick red */
 }
 
-.btn-link.btn-code i {
+.btn-link.btn-code i,
+.btn-link.btn-code svg {
     color: #4a7c59 !important;
     /* Matte sage green */
 }
 
-.btn-link.btn-website i {
+.btn-link.btn-website i,
+.btn-link.btn-website svg {
     color: #7b68a6 !important;
     /* Matte lavender grey */
 }
 
-.btn-link.btn-demo i {
+.btn-link.btn-demo i,
+.btn-link.btn-demo svg {
     color: #3d5a80 !important;
     /* Matte slate blue */
 }
 
-.btn-link.btn-slides i {
+.btn-link.btn-slides i,
+.btn-link.btn-slides svg {
     color: #c7763e !important;
     /* Matte burnt sienna */
 }
 
-.btn-link.btn-talk i {
+.btn-link.btn-talk i,
+.btn-link.btn-talk svg {
     color: #6b5b95 !important;
     /* Matte purple */
 }
 
-.btn-link.btn-poster i {
+.btn-link.btn-poster i,
+.btn-link.btn-poster svg {
     color: #4a9b7f !important;
     /* Matte forest teal */
 }
 
-.btn-link.btn-tutorial i {
+.btn-link.btn-tutorial i,
+.btn-link.btn-tutorial svg {
     color: #6c757d !important;
     /* Matte charcoal */
 }
