@@ -4,87 +4,87 @@ updates:
     time: Aug 2025
 
   - picture: assets/img/updates_fig/autodesk_1.png
-    desc: I will spend my summer as AI Research Intern at <highlight>Autodesk</hightlight>!
+    desc: I will spend my summer as AI Research Intern at <highlight>Autodesk</highlight>!
     time: May 2025
 
   - picture: assets/img/updates_fig/iclr_png_singa.png
-    desc: I will attend ICLR 2025 in <highlight>Singapore</hightlight>.
+    desc: I will attend ICLR 2025 in <highlight>Singapore</highlight>.
     time: April 2025
     
   - picture: assets/img/updates_fig/confernec.png
-    desc: I will attend NeurIPS 2024 in <highlight>Vancouver, Canada</hightlight>.
+    desc: I will attend NeurIPS 2024 in <highlight>Vancouver, Canada</highlight>.
     time: December 2024
 
 
 
   # - picture: assets/img/updates_fig/iclr.png
-  #   desc: I will be the GTA for <highlight>CSE 4360 (Robotics) course</hightlight> this semester!
+  #   desc: I will be the GTA for <highlight>CSE 4360 (Robotics) course</highlight> this semester!
   #   time: August 2024
 
   # - picture: assets/img/updates_gan/scanner_bots.jpg
-  #   desc: <highlight>V3D-SLAM</hightlight> and <highlight>Refined PanMap</hightlight> papers are accepted at IROS 2024!
+  #   desc: <highlight>V3D-SLAM</highlight> and <highlight>Refined PanMap</highlight> papers are accepted at IROS 2024!
   #   time: June 2024
 
   # - picture: assets/img/updates_gan/lab_boy.jpg
-  #   desc: I will continue my <highlight>PhD studies in robotics</hightlight> at the LEARN Lab. 
+  #   desc: I will continue my <highlight>PhD studies in robotics</highlight> at the LEARN Lab. 
   #   time: May 2024
 
   # - picture: assets/img/updates_gan/graduation_boy.jpg
-  #   desc: I finished my <highlight>undergrad studies in computer science</hightlight> at UTA.
+  #   desc: I finished my <highlight>undergrad studies in computer science</highlight> at UTA.
   #   time: May 2024
 
   # - picture: assets/img/updates_gan/city_boy.jpg
-  #   desc: I will attend IROS 2023 in <highlight>Detroit, Michigan</hightlight>. 
+  #   desc: I will attend IROS 2023 in <highlight>Detroit, Michigan</highlight>. 
   #   time: October 2023
   
   # - picture: assets/img/updates_gan/travel_boy.jpg
-  #   desc: I will present at ISR 2023 in <highlight>Stuttgart, Germany</hightlight>. 
+  #   desc: I will present at ISR 2023 in <highlight>Stuttgart, Germany</highlight>. 
   #   time: September 2023
 
   # - picture: assets/img/updates_gan/holding_can_robot.jpg
-  #   desc: The <highlight>deformable object classification</hightlight> paper is accepted at ISR 2023!
+  #   desc: The <highlight>deformable object classification</highlight> paper is accepted at ISR 2023!
   #   time: June 2023
 
   # - picture: assets/img/updates_gan/calibrating_robot.jpg
-  #   desc: The <highlight>multiplanar self-calibration</hightlight> paper is accepted at IROS 2023!
+  #   desc: The <highlight>multiplanar self-calibration</highlight> paper is accepted at IROS 2023!
   #   time: June 2023
 
   # - picture: assets/img/updates_gan/fireworks_robot.jpg
-  #   desc: My <highlight>thesis proposal</hightlight> is approved by the Honors College!
+  #   desc: My <highlight>thesis proposal</highlight> is approved by the Honors College!
   #   time: June 2023
 
   # - picture: assets/img/updates_gan/reading_boy_2.jpg
-  #   desc: I am invited to review papers at <highlight>CASE 2023</hightlight>.
+  #   desc: I am invited to review papers at <highlight>CASE 2023</highlight>.
   #   time: April 2023
 
   # - picture: assets/img/updates_gan/happy_robot.jpg
-  #   desc: The <highlight>PerFC</hightlight> paper is accepted at FLAIRS-36!
+  #   desc: The <highlight>PerFC</highlight> paper is accepted at FLAIRS-36!
   #   time: March 2023
 
   # - picture: assets/img/updates_gan/reading_boy.jpg
-  #   desc: I am invited to review papers at <highlight>UR 2023</hightlight>.
+  #   desc: I am invited to review papers at <highlight>UR 2023</highlight>.
   #   time: February 2023
   
   # - picture: assets/img/updates_gan/spider_bot.jpg
-  #   desc: <highlight>Spidey</hightlight> won sponsorship prizes at HackMIT 2022! 
+  #   desc: <highlight>Spidey</highlight> won sponsorship prizes at HackMIT 2022! 
   #   time: October 2022
 
   # - picture: assets/img/updates_gan/boy_robot.jpg
-  #   desc: I joined the <highlight>Learning and Adaptive Robotics (LEARN) Lab</hightlight> at UTA.
+  #   desc: I joined the <highlight>Learning and Adaptive Robotics (LEARN) Lab</highlight> at UTA.
   #   time: August 2022
     
   # - picture: assets/img/updates_gan/happy_tree.jpg
-  #   desc: The <highlight>IoTree</hightlight> paper is accepted at MobiCom 2022!
+  #   desc: The <highlight>IoTree</highlight> paper is accepted at MobiCom 2022!
   #   time: June 2022
 
   # - picture: assets/img/updates_gan/farm_bot.jpg
-  #   desc: <highlight>iPlanter</hightlight> won prizes at GaTech RoboTech Hackathon 2022!
+  #   desc: <highlight>iPlanter</highlight> won prizes at GaTech RoboTech Hackathon 2022!
   #   time: April 2022
     
   # - picture: assets/img/updates_gan/boy_systems.jpg
-  #   desc: I joined the <highlight>Wireless and Sensor Systems Lab (WSSL)</hightlight> at UTA.
+  #   desc: I joined the <highlight>Wireless and Sensor Systems Lab (WSSL)</highlight> at UTA.
   #   time: August 2021
 
   # - picture: assets/img/updates_gan/boy_school.jpg
-  #   desc: I started my undergrad at the <highlight>University of Texas at Arlington (UTA)</hightlight>.
+  #   desc: I started my undergrad at the <highlight>University of Texas at Arlington (UTA)</highlight>.
   #   time: August 2020
