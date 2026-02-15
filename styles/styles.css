@@ -1932,42 +1932,42 @@ nav ul li:hover .nav-icon i {
     vertical-align: middle;
 }
 
-.btn-pdf i {
+.btn-link.btn-pdf i {
     color: #a53f4c !important;
     /* Matte brick red */
 }
 
-.btn-code i {
+.btn-link.btn-code i {
     color: #4a7c59 !important;
     /* Matte sage green */
 }
 
-.btn-website i {
+.btn-link.btn-website i {
     color: #7b68a6 !important;
     /* Matte lavender grey */
 }
 
-.btn-demo i {
+.btn-link.btn-demo i {
     color: #3d5a80 !important;
     /* Matte slate blue */
 }
 
-.btn-slides i {
+.btn-link.btn-slides i {
     color: #c7763e !important;
     /* Matte burnt sienna */
 }
 
-.btn-talk i {
+.btn-link.btn-talk i {
     color: #6b5b95 !important;
     /* Matte purple */
 }
 
-.btn-poster i {
+.btn-link.btn-poster i {
     color: #4a9b7f !important;
     /* Matte forest teal */
 }
 
-.btn-tutorial i {
+.btn-link.btn-tutorial i {
     color: #6c757d !important;
     /* Matte charcoal */
 }
