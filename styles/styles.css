@@ -1932,52 +1932,61 @@ nav ul li:hover .nav-icon i {
     vertical-align: middle;
 }
 
-.btn-link.btn-pdf i,
-.btn-link.btn-pdf svg {
+/* Nuclear Specificity Fix for Icon Colors */
+html body .publication-links .btn-link.btn-pdf i,
+html body .publication-links .btn-link.btn-pdf svg,
+html body .publication-links .btn-link.btn-pdf svg path {
     color: #a53f4c !important;
-    /* Matte brick red */
+    fill: #a53f4c !important;
 }
 
-.btn-link.btn-code i,
-.btn-link.btn-code svg {
+html body .publication-links .btn-link.btn-code i,
+html body .publication-links .btn-link.btn-code svg,
+html body .publication-links .btn-link.btn-code svg path {
     color: #4a7c59 !important;
-    /* Matte sage green */
+    fill: #4a7c59 !important;
 }
 
-.btn-link.btn-website i,
-.btn-link.btn-website svg {
+html body .publication-links .btn-link.btn-website i,
+html body .publication-links .btn-link.btn-website svg,
+html body .publication-links .btn-link.btn-website svg path {
     color: #7b68a6 !important;
-    /* Matte lavender grey */
+    fill: #7b68a6 !important;
 }
 
-.btn-link.btn-demo i,
-.btn-link.btn-demo svg {
+html body .publication-links .btn-link.btn-demo i,
+html body .publication-links .btn-link.btn-demo svg,
+html body .publication-links .btn-link.btn-demo svg path {
     color: #3d5a80 !important;
-    /* Matte slate blue */
+    fill: #3d5a80 !important;
 }
 
-.btn-link.btn-slides i,
-.btn-link.btn-slides svg {
+html body .publication-links .btn-link.btn-slides i,
+html body .publication-links .btn-link.btn-slides svg,
+html body .publication-links .btn-link.btn-slides svg path {
     color: #c7763e !important;
-    /* Matte burnt sienna */
+    fill: #c7763e !important;
 }
 
-.btn-link.btn-talk i,
-.btn-link.btn-talk svg {
+html body .publication-links .btn-link.btn-talk i,
+html body .publication-links .btn-link.btn-talk svg,
+html body .publication-links .btn-link.btn-talk svg path {
     color: #6b5b95 !important;
-    /* Matte purple */
+    fill: #6b5b95 !important;
 }
 
-.btn-link.btn-poster i,
-.btn-link.btn-poster svg {
+html body .publication-links .btn-link.btn-poster i,
+html body .publication-links .btn-link.btn-poster svg,
+html body .publication-links .btn-link.btn-poster svg path {
     color: #4a9b7f !important;
-    /* Matte forest teal */
+    fill: #4a9b7f !important;
 }
 
-.btn-link.btn-tutorial i,
-.btn-link.btn-tutorial svg {
+html body .publication-links .btn-link.btn-tutorial i,
+html body .publication-links .btn-link.btn-tutorial svg,
+html body .publication-links .btn-link.btn-tutorial svg path {
     color: #6c757d !important;
-    /* Matte charcoal */
+    fill: #6c757d !important;
 }
 
 /* Dark theme adaptations */
