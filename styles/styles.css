@@ -2435,23 +2435,17 @@ footer a:hover {
     max-height: 170px;
     /* Approx height for 3 items */
     overflow-y: auto;
-    padding-right: 8px;
-    /* Space for scrollbar */
-    scrollbar-width: thin;
-    scrollbar-color: #cbd5e1 transparent;
+    padding-right: 0;
+    /* No space needed for hidden scrollbar */
+    scrollbar-width: none;
+    /* Firefox: Hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE/Edge: Hide scrollbar */
 }
 
+/* Chrome/Safari/Opera: Hide scrollbar */
 .updates-container::-webkit-scrollbar {
-    width: 4px;
-}
-
-.updates-container::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.updates-container::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
-    border-radius: 4px;
+    display: none;
 }
 
 /* Updates Styling for Uniformity */
