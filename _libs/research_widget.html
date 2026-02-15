@@ -39,9 +39,9 @@
                 </div>
 
                 <div class="publication-abstract">
-                    <a href="#{{ project.tag }}" data-toggle="collapse" onclick="toggleAbstract(this)"
-                        id="link-{{ project.tag }}" class="abstract-toggle">See Abstract</a>
-                    <div class="collapse" id="{{ project.tag }}">
+                    <a href="#abstract-{{ forloop.index }}" data-toggle="collapse" onclick="toggleAbstract(this)"
+                        id="link-abstract-{{ forloop.index }}" class="abstract-toggle">See Abstract</a>
+                    <div class="collapse" id="abstract-{{ forloop.index }}">
                         <span class="abstract-label">Abstract:</span>
                         {{ project.abstract-less }}{{ project.abstract-more }}
                     </div>
