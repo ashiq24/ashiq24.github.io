@@ -2435,18 +2435,18 @@ footer a:hover {
 .updates-container {
     max-height: 170px;
     /* Approx height for 3 items */
-    overflow-y: auto;
-    padding-right: 8px;
-    /* Space for scrollbar */
-    /* Custom scrollbar styling */
-    scrollbar-width: thin;
+    overflow-y: scroll;
+    /* Force scrollbar track to be visible */
+    padding-right: 6px;
+    scrollbar-width: auto;
+    /* Standard width for visibility */
     scrollbar-color: #cbd5e1 transparent;
 }
 
 /* Chrome/Safari/Opera: Custom Scrollbar */
 .updates-container::-webkit-scrollbar {
-    width: 6px;
-    /* Slightly wider for better visibility */
+    width: 8px;
+    /* Wide enough to be easily seen/clicked */
     display: block;
 }
 
