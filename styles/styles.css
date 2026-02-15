@@ -79,7 +79,7 @@ a:not(.btn-link):not(.social-icon):not(.nav-link):hover::after {
     width: 100%;
 }
 
-hightlight {
+.highlight {
     color: #ff6347;
     text-decoration: none;
     background-color: transparent;

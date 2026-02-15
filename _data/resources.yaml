@@ -1,4 +1,4 @@
-introduction: all software releases of the above projects can also be found here!
+introduction: All software releases of the above projects can also be found here!
 
 categories:
 
@@ -42,7 +42,7 @@ links:
     category: research
 
   - type: github
-    git-api: https://api.github.com/repos/ashiq24/Scale_Equivarinat_Fourier_Layer
+    git-api: https://api.github.com/repos/ashiq24/Scale_Equivariant_Fourier_Layer
     category: research
   
   - type: github

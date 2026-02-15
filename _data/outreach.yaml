@@ -9,7 +9,7 @@
 #     post: 
 #     code: 
 #     demo: 
-#     description: We build a versatile software module for semantic scene understanding for broadly vision-based automation applications, including robots or unmanned vehicles installed with the Intel RealSense camera family with resource-constraint computing platforms. The video demonstrates the Sawyer manipulator to "see" the bottle, pick it, and put it into a destination box.
+#     description: We built a versatile software module for semantic scene understanding for broadly vision-based automation applications, including robots or unmanned vehicles installed with the Intel RealSense camera family with resource-constraint computing platforms. The video demonstrates the Sawyer manipulator to "see" the bottle, pick it, and put it into a destination box.
 #     prize: 
 
 #   - title: Autonomous Waypoint Navigation with GPS and ArduRover
@@ -21,7 +21,7 @@
 #     post: 
 #     code: 
 #     demo: https://youtu.be/5QHfGqPYY8Y
-#     description: We design the rover platform with hardware-software integration for autonomous waypoint navigation using Here3 GPS and ArduRover for outdoor activities. The video demonstrates the rover's mission to go through 10 defined waypoints on the UTA campus through Mission Planner via wireless communication through the Hex cube (Pixhawk 2.1) controller.
+#     description: We designed the rover platform with hardware-software integration for autonomous waypoint navigation using Here3 GPS and ArduRover for outdoor activities. The video demonstrates the rover's mission to go through 10 defined waypoints on the UTA campus through Mission Planner via wireless communication through the Hex cube (Pixhawk 2.1) controller.
 #     prize: 
 
 #   - title: An Autonomous Spatial Voice Localization Crawling Robot
