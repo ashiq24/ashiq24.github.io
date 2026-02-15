@@ -2398,8 +2398,48 @@ footer a:hover {
 .affiliation-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    line-height: 1.1;
+}
+
+/* Side-by-Side Layout Refinements */
+@media (min-width: 768px) {
+    #affiliations {
+        border-right: 1px solid #e2e8f0;
+        padding-right: 2rem;
+    }
+
+    #updates {
+        padding-left: 2rem;
+    }
+}
+
+/* Updates Styling for Uniformity */
+.update-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.update-item:last-child {
+    border-bottom: none;
+}
+
+.update-date {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.update-content {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+justify-content: center;
+line-height: 1.1;
 }
 
 .affiliation-name {
