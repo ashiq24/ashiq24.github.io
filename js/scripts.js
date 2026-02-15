@@ -51,13 +51,13 @@ function toggleText(linkElement) {
 }
 
 
-// Toggle abstract visibility with "Abstract" and "Hide Abstract" text
+// Toggle abstract visibility with "See Abstract" and "Hide Abstract" text
 function toggleAbstract(linkElement) {
     var collapseId = linkElement.getAttribute('href').substring(1);
     var collapseElement = document.getElementById(collapseId);
 
     $(collapseElement).on('hidden.bs.collapse', function () {
-        linkElement.textContent = 'Abstract';
+        linkElement.textContent = 'See Abstract';
     });
     $(collapseElement).on('shown.bs.collapse', function () {
         linkElement.textContent = 'Hide Abstract';
@@ -66,10 +66,15 @@ function toggleAbstract(linkElement) {
 
 
 
-// Initialize the toggleText function for each link
+// Initialize the toggleText function for each link (excluding abstract toggles)
 $(document).ready(function () {
-    document.querySelectorAll('[data-toggle="collapse"]').forEach(function (linkElement) {
+    document.querySelectorAll('[data-toggle="collapse"]:not(.abstract-toggle)').forEach(function (linkElement) {
         toggleText(linkElement);
+    });
+
+    // Initialize abstract toggles separately
+    document.querySelectorAll('.abstract-toggle').forEach(function (linkElement) {
+        toggleAbstract(linkElement);
     });
 });
 
