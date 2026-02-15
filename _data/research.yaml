@@ -68,7 +68,7 @@ projects:
     tag: more_equivariance
     category: Equivariance
 
-  - title: Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs.
+  - title: Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs
     system-name: 
     gif: assets/img/paper_fig/codano.png
     conference: NeurIPS 2024 
@@ -85,7 +85,7 @@ projects:
     tag: more_neural_operator
     category: Neural Operator
 
-  - title: Truly Scale-Equivariant Deep Nets with Fourier Layers.
+  - title: Truly Scale-Equivariant Deep Nets with Fourier Layers
     system-name:
     gif: assets/img/paper_fig/scale_eq.png
     conference: NeurIPS 2023 
@@ -121,7 +121,7 @@ projects:
     tag: more_neural_operator
     category: Neural Operator
 
-  - title: Generative Adversarial Neural Operators.
+  - title: Generative Adversarial Neural Operators
     system-name: 
     gif: assets/img/paper_fig/gano.jpg
     conference: Transactions on Machine Learning Research 2022
@@ -139,7 +139,7 @@ projects:
     tag: more_neural_operator
     category: Neural Operator
   
-  - title: 'PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators.'
+  - title: 'PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators'
     system-name: 
     gif: assets/img/paper_fig/pacmo.jpg
     conference: ArXiv 2022
@@ -175,7 +175,7 @@ projects:
     tag: more_bioinformatics
     category: Bioinformatics
 
-  - title: 'CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments.'
+  - title: 'CHAPAO: Likelihood and hierarchical reference-based representation of biomolecular sequences and applications to compressing multiple sequence alignments'
     system-name: 
     gif: assets/img/paper_fig/chapao.jpg
     conference: PLOS ONE 2022
