@@ -38,14 +38,6 @@
                         class="btn-link btn-tutorial"><i class="fas fa-book-open"></i> TUTORIAL</a> {% endif %}
                 </div>
 
-                <div class="publication-abstract">
-                    <a href="#abstract-{{ forloop.index }}" data-toggle="collapse" onclick="toggleAbstract(this)"
-                        id="link-abstract-{{ forloop.index }}" class="abstract-toggle">See Abstract</a>
-                    <div class="collapse" id="abstract-{{ forloop.index }}">
-                        <span class="abstract-label">Abstract:</span>
-                        {{ project.abstract-less }}{{ project.abstract-more }}
-                    </div>
-                </div>
             </div>
         </div>
     </div>
