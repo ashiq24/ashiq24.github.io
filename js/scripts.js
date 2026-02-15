@@ -51,6 +51,21 @@ function toggleText(linkElement) {
 }
 
 
+// Toggle abstract visibility with "Abstract" and "Hide Abstract" text
+function toggleAbstract(linkElement) {
+    var collapseId = linkElement.getAttribute('href').substring(1);
+    var collapseElement = document.getElementById(collapseId);
+
+    $(collapseElement).on('hidden.bs.collapse', function () {
+        linkElement.textContent = 'Abstract';
+    });
+    $(collapseElement).on('shown.bs.collapse', function () {
+        linkElement.textContent = 'Hide Abstract';
+    });
+}
+
+
+
 // Initialize the toggleText function for each link
 $(document).ready(function () {
     document.querySelectorAll('[data-toggle="collapse"]').forEach(function (linkElement) {

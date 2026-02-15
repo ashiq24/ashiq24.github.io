@@ -6,37 +6,47 @@
         <div class="col-sm-8">
             <div class="publication-content">
                 <div class="publication-header">
-                    {% if project.system-name %} <span class="system-name"><i>{{ project.system-name }}</i>:</span> {% endif %}
+                    {% if project.system-name %} <span class="system-name"><i>{{ project.system-name }}</i>:</span> {%
+                    endif %}
                     <h4 class="publication-title">{{ project.title }}</h4>
                 </div>
-                
+
                 <div class="publication-meta">
-                    <i><a href="{{ project.conference-web }}" target="_blank" rel="noopener" class="conference-link">{{ project.conference }}</a></i> 
+                    <i><a href="{{ project.conference-web }}" target="_blank" rel="noopener" class="conference-link">{{
+                            project.conference }}</a></i>
                     {% if project.status %} <span class="status-badge">[{{ project.status }}]</span> {% endif %}
                 </div>
-                
+
                 <div class="publication-authors">{{ project.authors }}</div>
-                
+
                 <div class="publication-links">
-                    {% if project.pdf %} <a href="{{ project.pdf }}" target="_blank" rel="noopener" class="btn-link btn-pdf"><i class="fas fa-file-pdf"></i> PDF</a> {% endif %}
-                    {% if project.code %} <a href="{{ project.code }}" target="_blank" rel="noopener" class="btn-link btn-code"><i class="fab fa-github"></i> CODE</a> {% endif %}
-                    {% if project.website %} <a href="{{ project.website }}" target="_blank" rel="noopener" class="btn-link btn-website"><i class="fas fa-external-link-alt"></i> WEBSITE</a> {% endif %}
-                    {% if project.demo %} <a href="{{ project.demo }}" target="_blank" rel="noopener" class="btn-link btn-demo"><i class="fas fa-play-circle"></i> DEMO</a> {% endif %}
-                    {% if project.slides %} <a href="{{ project.slides }}" target="_blank" rel="noopener" class="btn-link btn-slides"><i class="fas fa-presentation"></i> SLIDES</a> {% endif %}
-                    {% if project.talk %} <a href="{{ project.talk }}" target="_blank" rel="noopener" class="btn-link btn-talk"><i class="fas fa-microphone"></i> TALK</a> {% endif %}
-                    {% if project.poster %} <a href="{{ project.poster }}" target="_blank" rel="noopener" class="btn-link btn-poster"><i class="fas fa-image"></i> POSTER</a> {% endif %}
-                    {% if project.tutorial %} <a href="{{ project.tutorial }}" target="_blank" rel="noopener" class="btn-link btn-tutorial"><i class="fas fa-book-open"></i> TUTORIAL</a> {% endif %}
+                    {% if project.pdf %} <a href="{{ project.pdf }}" target="_blank" rel="noopener"
+                        class="btn-link btn-pdf"><i class="fas fa-file-pdf"></i> PDF</a> {% endif %}
+                    {% if project.code %} <a href="{{ project.code }}" target="_blank" rel="noopener"
+                        class="btn-link btn-code"><i class="fab fa-github"></i> CODE</a> {% endif %}
+                    {% if project.website %} <a href="{{ project.website }}" target="_blank" rel="noopener"
+                        class="btn-link btn-website"><i class="fas fa-external-link-alt"></i> WEBSITE</a> {% endif %}
+                    {% if project.demo %} <a href="{{ project.demo }}" target="_blank" rel="noopener"
+                        class="btn-link btn-demo"><i class="fas fa-play-circle"></i> DEMO</a> {% endif %}
+                    {% if project.slides %} <a href="{{ project.slides }}" target="_blank" rel="noopener"
+                        class="btn-link btn-slides"><i class="fas fa-presentation"></i> SLIDES</a> {% endif %}
+                    {% if project.talk %} <a href="{{ project.talk }}" target="_blank" rel="noopener"
+                        class="btn-link btn-talk"><i class="fas fa-microphone"></i> TALK</a> {% endif %}
+                    {% if project.poster %} <a href="{{ project.poster }}" target="_blank" rel="noopener"
+                        class="btn-link btn-poster"><i class="fas fa-image"></i> POSTER</a> {% endif %}
+                    {% if project.tutorial %} <a href="{{ project.tutorial }}" target="_blank" rel="noopener"
+                        class="btn-link btn-tutorial"><i class="fas fa-book-open"></i> TUTORIAL</a> {% endif %}
                 </div>
-                
+
                 <div class="publication-abstract">
-                    <span class="abstract-label">Abstract:</span> 
-                    {{ project.abstract-less }}
-                    <span class="collapse" id="{{ project.tag }}">
-                        {{ project.abstract-more }}
-                    </span> 
-                    <span> <a href="#{{ project.tag }}" data-toggle="collapse" onclick="toggleText(this)" id="link-{{ project.tag }}" class="abstract-toggle">... See More</a></span>
+                    <a href="#{{ project.tag }}" data-toggle="collapse" onclick="toggleAbstract(this)"
+                        id="link-{{ project.tag }}" class="abstract-toggle">Abstract</a>
+                    <div class="collapse" id="{{ project.tag }}">
+                        <span class="abstract-label">Abstract:</span>
+                        {{ project.abstract-less }}{{ project.abstract-more }}
+                    </div>
                 </div>
             </div>
-        </div>                       
+        </div>
     </div>
 </div>
