@@ -2427,6 +2427,7 @@ footer a:hover {
     #updates {
         padding-left: 1.25rem;
         /* Further reduced from 1.5rem */
+
     }
 }
 
@@ -2435,17 +2436,27 @@ footer a:hover {
     max-height: 170px;
     /* Approx height for 3 items */
     overflow-y: auto;
-    padding-right: 0;
-    /* No space needed for hidden scrollbar */
-    scrollbar-width: none;
-    /* Firefox: Hide scrollbar */
-    -ms-overflow-style: none;
-    /* IE/Edge: Hide scrollbar */
+    padding-right: 8px;
+    /* Space for scrollbar */
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
 }
 
-/* Chrome/Safari/Opera: Hide scrollbar */
+/* Chrome/Safari/Opera: Custom Scrollbar */
 .updates-container::-webkit-scrollbar {
-    display: none;
+    width: 6px;
+    /* Slightly wider for better visibility */
+    display: block;
+}
+
+.updates-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.updates-container::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 4px;
 }
 
 /* Updates Styling for Uniformity */
