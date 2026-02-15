@@ -471,7 +471,7 @@ code {
     transition: transform 0.5s;
     transform-style: preserve-3d;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 6px;
     box-shadow: 0 0 5px #000;
 }
 
@@ -486,7 +486,7 @@ code {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -515,7 +515,7 @@ code {
     background: transparent;
     color: white;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 6px;
 }
 
 .code-line {
@@ -595,7 +595,7 @@ code {
 .publication-card {
     background: #ffffff;
     border: 1px solid #e9ecef;
-    border-radius: 12px;
+    border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -716,107 +716,107 @@ code {
 }
 
 .btn-pdf {
-    background: linear-gradient(135deg, #dc3545, #c82333);
+    background: #a53f4c;
     color: white;
-    border-color: #dc3545;
+    border-color: #a53f4c;
 }
 
 .btn-pdf:hover {
-    background: linear-gradient(135deg, #c82333, #b02a37);
+    background: #8e3540;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+    box-shadow: 0 4px 12px rgba(165, 63, 76, 0.25);
 }
 
 .btn-code {
-    background: linear-gradient(135deg, #28a745, #1e7e34);
+    background: #4a7c59;
     color: white;
-    border-color: #28a745;
+    border-color: #4a7c59;
 }
 
 .btn-code:hover {
-    background: linear-gradient(135deg, #1e7e34, #155724);
+    background: #3d6a4b;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 4px 12px rgba(74, 124, 89, 0.25);
 }
 
 .btn-demo {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: #3d5a80;
     color: white;
-    border-color: #007bff;
+    border-color: #3d5a80;
 }
 
 .btn-demo:hover {
-    background: linear-gradient(135deg, #0056b3, #004085);
+    background: #2e4463;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(61, 90, 128, 0.25);
 }
 
 .btn-slides {
-    background: linear-gradient(135deg, #fd7e14, #e55a00);
+    background: #c7763e;
     color: white;
-    border-color: #fd7e14;
+    border-color: #c7763e;
 }
 
 .btn-slides:hover {
-    background: linear-gradient(135deg, #e55a00, #cc4a00);
+    background: #a86234;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(253, 126, 20, 0.3);
+    box-shadow: 0 4px 12px rgba(199, 118, 62, 0.25);
 }
 
 .btn-talk {
-    background: linear-gradient(135deg, #6f42c1, #5a32a3);
+    background: #6b5b95;
     color: white;
-    border-color: #6f42c1;
+    border-color: #6b5b95;
 }
 
 .btn-talk:hover {
-    background: linear-gradient(135deg, #5a32a3, #4c2a85);
+    background: #584a7a;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.3);
+    box-shadow: 0 4px 12px rgba(107, 91, 149, 0.25);
 }
 
 .btn-poster {
-    background: linear-gradient(135deg, #20c997, #1aa179);
+    background: #4a9b7f;
     color: white;
-    border-color: #20c997;
+    border-color: #4a9b7f;
 }
 
 .btn-poster:hover {
-    background: linear-gradient(135deg, #1aa179, #138061);
+    background: #3d8168;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(32, 201, 151, 0.3);
+    box-shadow: 0 4px 12px rgba(74, 155, 127, 0.25);
 }
 
 .btn-tutorial {
-    background: linear-gradient(135deg, #6c757d, #545b62);
+    background: #6c757d;
     color: white;
     border-color: #6c757d;
 }
 
 .btn-tutorial:hover {
-    background: linear-gradient(135deg, #545b62, #454d55);
+    background: #5a6268;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.25);
 }
 
 .btn-website {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    background: #7b68a6;
     color: white;
-    border-color: #8b5cf6;
+    border-color: #7b68a6;
 }
 
 .btn-website:hover {
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    background: #65578a;
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(123, 104, 166, 0.25);
 }
 
 .publication-abstract {
@@ -906,7 +906,7 @@ code {
     height: 180px !important;
     max-width: 100% !important;
     object-fit: fill !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     display: block !important;
 }
 
@@ -959,7 +959,7 @@ code {
 #filters-project .filter-button {
     padding: 4px 7px;
     border: 1px solid #333333;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: transparent;
     color: #333333;
     cursor: pointer;
@@ -1003,7 +1003,7 @@ code {
     background-color: transparent;
     border: 1px solid #333333;
     margin: 0 5px;
-    border-radius: 7px;
+    border-radius: 6px;
     transition: 0.5s;
 }
 
