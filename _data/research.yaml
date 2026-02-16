@@ -87,7 +87,7 @@ projects:
 
   - title: Truly Scale-Equivariant Deep Nets with Fourier Layers
     system-name:
-    gif: assets/img/paper_fig/scale_eq.png
+    gif: assets/img/paper_fig/scale_eq.gif
     conference: NeurIPS 2023 
     conference-web:
     status:
