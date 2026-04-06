@@ -11,7 +11,24 @@ categories:
 
 
 projects:
-
+  - title: "Tunable Soft Equivariance with Guarantees"
+    system-name:
+    gif: assets/img/paper_fig/tunable_softeq.png
+    conference: CVPR 2026
+    conference-web:
+    status:
+    authors: <u>Md Ashiqur Rahman</u>, Lim Jun Hao, Jeremiah Jiang, Teck-Yian Lim, Raymond A. Yeh.
+    pdf: https://arxiv.org/pdf/2603.26657
+    code: https://github.com/ashiq24/soft-equivariance
+    demo: 
+    slides: 
+    talk:
+    poster: 
+    abstract-less: Equivariance is a fundamental property in computer vision models, yet strict equivariance is rarely satisfied in real-world data, which can limit a model's performance. Controlling the degree of equivariance is therefore desirable. We propose a general framework for constructing soft equivariant models 
+    abstract-more: by projecting the model weights into a designed subspace. The method applies to any pre-trained architecture and provides theoretical bounds on the induced equivariance error. Empirically, we demonstrate the effectiveness of our method on multiple pre-trained backbones, including ViT and ResNet, across image classification, semantic segmentation, and human-trajectory prediction tasks. Notably, our approach improves the performance while simultaneously reducing equivariance error on the competitive ImageNet benchmark.
+    tag: more_equivariance
+    category: Equivariance
+    
   - title: "CLIPSym: Delving into Symmetry Detection with CLIP"
     system-name:
     gif: assets/img/paper_fig/clip_sym.png

@@ -1,5 +1,9 @@
 updates:
   - picture: assets/img/updates_fig/iccv.png
+    desc: Paper on tunable soft equivariance accepted at <highlight>CVPR 2026</highlight>!
+    time: April 2026
+    
+  - picture: assets/img/updates_fig/iccv.png
     desc: Two papers accepted at <highlight>ICCV 2025</highlight>!
     time: Aug 2025
 
