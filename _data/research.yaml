@@ -13,7 +13,7 @@ categories:
 projects:
   - title: "Tunable Soft Equivariance with Guarantees"
     system-name:
-    gif: assets/img/paper_fig/tunable_softeq.png
+    gif: assets/img/paper_fig/softeq_combined.gif
     conference: CVPR 2026
     conference-web:
     status:
