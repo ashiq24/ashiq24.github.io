@@ -56,12 +56,12 @@
 }
 
 .affiliations-carousel .affiliation-card {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background-color: #faf8f5;
+    border: 1px solid #e8e4df;
     border-radius: 10px;
     padding: 0.6rem;
     transition: 0.3s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(120,100,80,0.08);
     margin: 0 3px;
     width: 160px !important;
     min-width: 160px !important;
@@ -75,18 +75,18 @@
 }
 
 .light-theme .affiliations-carousel .affiliation-card {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background-color: #faf8f5;
+    border: 1px solid #e8e4df;
 }
 
 .dark-theme .affiliations-carousel .affiliation-card {
-    background-color: #2d2d2d;
-    border: 1px solid #495057;
+    background-color: #292524;
+    border: 1px solid #44403c;
 }
 
 .affiliations-carousel .affiliation-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(120,100,80,0.15);
 }
 
 .affiliations-carousel .affiliation-image-container {
@@ -100,7 +100,7 @@
     height: 70px !important;
     border-radius: 8px;
     object-fit: contain;
-    border: 2px solid #bd5d38;
+    border: 2px solid #c45d3e;
     background-color: #ffffff;
     padding: 4px;
     box-sizing: border-box;
@@ -118,22 +118,22 @@
     margin: 0 0 0.3rem 0;
     font-size: 0.85rem;
     font-weight: bold;
-    color: #333;
+    color: #1a1a1a;
     line-height: 1.2;
 }
 
 .light-theme .affiliations-carousel .affiliation-institution {
-    color: #333;
+    color: #1a1a1a;
 }
 
 .dark-theme .affiliations-carousel .affiliation-institution {
-    color: #fff;
+    color: #fafaf9;
 }
 
 .affiliations-carousel .affiliation-period {
     margin: 0;
     font-size: 0.75rem;
-    color: #bd5d38;
+    color: #c45d3e;
     font-weight: 500;
 }
 

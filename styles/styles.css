@@ -5,22 +5,23 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.5;
     letter-spacing: -0.01em;
 }
 
 body.light-theme {
-    background-color: #fdfdfd;
-    /* Slightly softer white */
-    color: #2c3e50;
-    /* Softer dark grey */
+    background-color: #faf8f5;
+    /* Warm cream */
+    color: #37352f;
+    /* Warm charcoal */
     transition: 0.5s;
 }
 
 body.dark-theme {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background-color: #1c1917;
+    /* Warm charcoal (stone-900) */
+    color: #e7e5e4;
     transition: 0.5s;
 }
 
@@ -32,13 +33,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Source Serif 4', 'Georgia', serif;
     font-weight: 700;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
     /* Tighter layout for headings */
-    color: #111;
+    color: #1a1a1a;
 }
 
 p {
@@ -51,7 +52,7 @@ ol {
 }
 
 a {
-    color: #0056b3;
+    color: #c45d3e;
     text-decoration: none;
     background-color: transparent;
     position: relative;
@@ -59,7 +60,7 @@ a {
 }
 
 a:hover {
-    color: #003d82;
+    color: #a84832;
     text-decoration: none;
 }
 
@@ -71,7 +72,7 @@ a:not(.btn-link):not(.social-icon):not(.nav-link)::after {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #0056b3;
+    background-color: #c45d3e;
     transition: width 0.3s ease;
 }
 
@@ -80,31 +81,31 @@ a:not(.btn-link):not(.social-icon):not(.nav-link):hover::after {
 }
 
 .highlight {
-    color: #ff6347;
+    color: #d4845a;
     text-decoration: none;
     background-color: transparent;
 }
 
 .text-primary {
-    color: #007bff !important;
+    color: #c45d3e !important;
     font-size: 29px;
 }
 
 
 /* Styles for user selection */
 ::selection {
-    background-color: #ffb699;
+    background-color: #f0ddd0;
     transition: 0.5s;
 }
 
 /* Light theme style for user selection */
 .light-theme ::selection {
-    background-color: #ffb699;
+    background-color: #f0ddd0;
 }
 
 /* Dark theme style for user selection */
 .dark-theme ::selection {
-    background-color: #545454;
+    background-color: #44403c;
 }
 
 
@@ -112,7 +113,7 @@ a:not(.btn-link):not(.social-icon):not(.nav-link):hover::after {
 /* Sidebar Navigation Styles */
 nav {
     position: fixed;
-    background-color: #f5f5f5;
+    background-color: #f5f2ed;
     width: 250px;
     /* Wider for better readability */
     top: 0px;
@@ -142,26 +143,26 @@ nav {
 }
 
 .light-theme .nav-toggle-btn {
-    background: linear-gradient(135deg, #f5f5f5, #e9e9e9);
+    background: linear-gradient(135deg, #f5f2ed, #ede9e3);
     color: black;
-    border: 2px solid #ddd;
+    border: 2px solid #d4cfc8;
 }
 
 .light-theme .nav-toggle-btn:hover {
-    background: linear-gradient(135deg, #e9e9e9, #ddd);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ede9e3, #d4cfc8);
+    box-shadow: 0 4px 12px rgba(120, 100, 80, 0.15);
     transform: translateY(-1px);
 }
 
 .dark-theme .nav-toggle-btn {
-    background: linear-gradient(135deg, #333333, #2a2a2a);
+    background: linear-gradient(135deg, #292524, #1c1917);
     color: white;
-    border: 2px solid #555;
+    border: 2px solid #44403c;
 }
 
 .dark-theme .nav-toggle-btn:hover {
-    background: linear-gradient(135deg, #2a2a2a, #222);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #1c1917, #0c0a09);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
     transform: translateY(-1px);
 }
 
@@ -215,7 +216,7 @@ nav ul li {
 }
 
 nav ul li p {
-    color: #bd5d38;
+    color: #c45d3e;
     display: block;
     padding: 10px 0px;
     font-size: medium;
@@ -226,12 +227,12 @@ nav ul li p {
 
 nav ul li p span.text {
     text-decoration: underline;
-    color: #bd5d38;
+    color: #c45d3e;
     cursor: pointer;
 }
 
 nav ul li p:hover span.text {
-    color: #824027;
+    color: #a84832;
     cursor: pointer;
 }
 
@@ -267,7 +268,7 @@ code {
 .codebox {
     font-family: "Consolas";
     color: #333;
-    border-left: 4px solid #4a5568;
+    border-left: 4px solid #c45d3e;
     padding: 0.25rem 0 0.25rem 0.75rem;
     opacity: 0.85;
     font-size: 89%;
@@ -277,8 +278,8 @@ code {
 }
 
 .light-theme .codebox {
-    color: #333;
-    background-color: #f5f5f5;
+    color: #37352f;
+    background-color: #faf7f4;
 }
 
 .dark-theme .codebox {
@@ -609,11 +610,11 @@ code {
 /* Beautiful Publication Cards */
 .publication-card {
     background: #ffffff;
-    border: 1px solid #e9ecef;
+    border: 1px solid #e8e4df;
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(120, 100, 80, 0.08);
     transition: all 0.3s ease;
     max-width: 1000px;
     margin-left: auto;
@@ -622,17 +623,17 @@ code {
 
 .publication-card:hover {
     transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(120, 100, 80, 0.14);
 }
 
 .light-theme .publication-card {
     background: #ffffff;
-    border-color: #e9ecef;
+    border-color: #e8e4df;
 }
 
 .dark-theme .publication-card {
-    background: #2d2d2d;
-    border-color: #495057;
+    background: #292524;
+    border-color: #44403c;
 }
 
 .publication-content {
@@ -665,17 +666,17 @@ code {
     font-size: 1.1rem;
     font-weight: bold;
     margin: 0.25rem 0;
-    color: #333;
+    color: #1a1a1a;
     line-height: 1.4;
     text-align: left;
 }
 
 .light-theme .publication-title {
-    color: #333;
+    color: #1a1a1a;
 }
 
 .dark-theme .publication-title {
-    color: #fff;
+    color: #fafaf9;
 }
 
 .publication-meta {
@@ -683,13 +684,13 @@ code {
 }
 
 .conference-link {
-    color: #bd5d38;
+    color: #c45d3e;
     text-decoration: none;
     font-style: italic;
 }
 
 .conference-link:hover {
-    color: #a0442a;
+    color: #a84832;
     text-decoration: underline;
 }
 
@@ -854,13 +855,13 @@ code {
 }
 
 .abstract-toggle {
-    color: #bd5d38;
+    color: #c45d3e;
     text-decoration: none;
     font-weight: 500;
 }
 
 .abstract-toggle:hover {
-    color: #a0442a;
+    color: #a84832;
     text-decoration: underline;
 }
 
@@ -944,34 +945,37 @@ code {
 
 #filters-project .filter-button {
     padding: 4px 7px;
-    border: 1px solid #333333;
+    border: 1px solid #d4cfc8;
     border-radius: 6px;
     background-color: transparent;
-    color: #333333;
+    color: #37352f;
     cursor: pointer;
-    transition: background-color 0.5s, box-shadow 0.5s;
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 #filters-project .filter-button:hover {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.08);
+    border-color: #c45d3e;
 }
 
 #filters-project .filter-button.active {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.1);
+    border-color: #c45d3e;
+    color: #c45d3e;
 }
 
 
 /* Light theme styles for filter button */
 .light-theme #filters-project .filter-button {
-    border: 1px solid #333333;
-    color: #333333;
+    border: 1px solid #d4cfc8;
+    color: #37352f;
 }
 
 
 /* Dark theme styles for filter button */
 .dark-theme #filters-project .filter-button {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #57534e;
+    color: #e7e5e4;
 }
 
 
@@ -987,33 +991,34 @@ code {
     display: block;
     padding: 4px 7px;
     background-color: transparent;
-    border: 1px solid #333333;
+    border: 1px solid #d4cfc8;
     margin: 0 5px;
     border-radius: 6px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .isotope-pager-project .pager:hover {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.08);
+    border-color: #c45d3e;
     cursor: pointer;
 }
 
 .isotope-pager-project .pager.active {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.1);
 }
 
 
 /* Light theme styles for pager button */
 .light-theme .isotope-pager-project .pager {
-    border: 1px solid #333333;
-    color: #333333;
+    border: 1px solid #d4cfc8;
+    color: #37352f;
 }
 
 
 /* Dark theme styles for pager button */
 .dark-theme .isotope-pager-project .pager {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #57534e;
+    color: #e7e5e4;
 }
 
 
@@ -1039,33 +1044,34 @@ code {
     display: block;
     padding: 4px 7px;
     background-color: transparent;
-    border: 1px solid #333333;
+    border: 1px solid #d4cfc8;
     margin: 0 5px;
     border-radius: 7px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .isotope-pager-github .pager:hover {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.08);
+    border-color: #c45d3e;
     cursor: pointer;
 }
 
 .isotope-pager-github .pager.active {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.1);
 }
 
 
 /* Light theme styles for pager button */
 .light-theme .isotope-pager-github .pager {
-    border: 1px solid #333333;
-    color: #333333;
+    border: 1px solid #d4cfc8;
+    color: #37352f;
 }
 
 
 /* Dark theme styles for pager button */
 .dark-theme .isotope-pager-github .pager {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #57534e;
+    color: #e7e5e4;
 }
 
 
@@ -1088,34 +1094,37 @@ code {
 /* Styles for filter buttons */
 #filters-resources .filter-button {
     padding: 4px 7px;
-    border: 1px solid #333333;
+    border: 1px solid #d4cfc8;
     border-radius: 10px;
     background-color: transparent;
-    color: #333333;
+    color: #37352f;
     cursor: pointer;
-    transition: background-color 0.5s, box-shadow 0.5s;
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 #filters-resources .filter-button:hover {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.08);
+    border-color: #c45d3e;
 }
 
 #filters-resources .filter-button.active {
-    background-color: rgba(194, 194, 194, 0.45);
+    background-color: rgba(196, 93, 62, 0.1);
+    border-color: #c45d3e;
+    color: #c45d3e;
 }
 
 
 /* Light theme styles for filter button */
 .light-theme #filters-resources .filter-button {
-    border: 1px solid #333333;
-    color: #333333;
+    border: 1px solid #d4cfc8;
+    color: #37352f;
 }
 
 
 /* Dark theme styles for filter button */
 .dark-theme #filters-resources .filter-button {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #57534e;
+    color: #e7e5e4;
 }
 
 
@@ -1353,7 +1362,7 @@ div.news-card img {
 }
 
 .language-icon {
-    color: #007bff;
+    color: #c45d3e;
     margin-right: 8px;
     transition: 0.5s;
 }
@@ -1873,9 +1882,9 @@ canvas {
 /* Point 5: Subtle Border & Shadow Enhancements */
 
 .publication-card {
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e8e4df;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(120, 100, 80, 0.08);
     padding: 1rem;
     margin-bottom: 1rem;
     background: #ffffff;
@@ -1883,35 +1892,35 @@ canvas {
 }
 
 .publication-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(120, 100, 80, 0.15);
     transform: translateY(-2px);
 }
 
 .affiliation-card {
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e8e4df;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(120, 100, 80, 0.08);
     padding: 1rem;
     background: #ffffff;
     transition: all 0.3s ease;
 }
 
 .affiliation-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(120, 100, 80, 0.15);
     transform: translateY(-1px);
 }
 
 .information_card {
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e8e4df;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(120, 100, 80, 0.12);
     background: #ffffff;
 }
 
 .contact-info-card {
     border-radius: 6px;
-    border: 1px solid #f3f4f6;
-    background: #fafbfc;
+    border: 1px solid #ede9e3;
+    background: #faf8f5;
     transition: all 0.2s ease;
 }
 
@@ -2002,8 +2011,8 @@ html body .publication-links .btn-link.btn-tutorial svg path {
 .dark-theme .publication-card,
 .dark-theme .affiliation-card,
 .dark-theme .information_card {
-    background: #2d3748;
-    border-color: #4a5568;
+    background: #292524;
+    border-color: #44403c;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -2013,16 +2022,16 @@ html body .publication-links .btn-link.btn-tutorial svg path {
 }
 
 .dark-theme .contact-info-card {
-    background: #1a202c;
-    border-color: #2d3748;
+    background: #1c1917;
+    border-color: #292524;
 }
 
 .dark-theme .nav-icon i {
-    color: #9ca3af;
+    color: #a8a29e;
 }
 
 .dark-theme nav ul li:hover .nav-icon i {
-    color: #60a5fa;
+    color: #e8845a;
 }
 
 
@@ -2031,21 +2040,21 @@ html body .publication-links .btn-link.btn-tutorial svg path {
 .publication-authors,
 .affiliation-period,
 .text-secondary {
-    color: #6b7280;
+    color: #6b6560;
 }
 
 /* Enhanced conference links */
 .conference-link {
-    color: var(--academic-blue);
+    color: #c45d3e;
 }
 
 .conference-link:hover {
-    color: var(--link-hover);
+    color: #a84832;
 }
 
 /* Status badges with refined colors */
 .status-badge {
-    background: var(--academic-blue);
+    background: #c45d3e;
     color: white;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
@@ -2054,17 +2063,17 @@ html body .publication-links .btn-link.btn-tutorial svg path {
 
 /* Dark theme adaptations for refined colors */
 .dark-theme .row:nth-child(even) {
-    background: rgba(45, 55, 72, 0.3);
+    background: rgba(41, 37, 36, 0.3);
 }
 
 .dark-theme .row:nth-child(odd) {
-    background: rgba(26, 32, 44, 0.3);
+    background: rgba(28, 25, 23, 0.3);
 }
 
 .dark-theme .text-secondary,
 .dark-theme .publication-authors,
 .dark-theme .affiliation-period {
-    color: #9ca3af;
+    color: #a8a29e;
 }
 
 /* ===== PROFESSIONAL SPACING & ALIGNMENT ===== */
@@ -2193,7 +2202,7 @@ h6 {
 .update-date,
 .news-time,
 .news-desc {
-    color: #6b7280;
+    color: #6b6560;
     font-size: 0.9rem;
     font-weight: normal;
 }
@@ -2206,7 +2215,7 @@ h6 {
 .dark-theme #outreach,
 .dark-theme #resources,
 .dark-theme #gallery {
-    border-top-color: #495057;
+    border-top-color: #44403c;
 }
 
 .dark-theme .publication-venue,
@@ -2215,7 +2224,7 @@ h6 {
 .dark-theme .update-date,
 .dark-theme .news-time,
 .dark-theme .news-desc {
-    color: #9ca3af;
+    color: #a8a29e;
 }
 
 /* ===== PROFESSIONAL FOOTER POLISH ===== */
@@ -2223,8 +2232,8 @@ h6 {
 
 /* Subtle footer background */
 footer {
-    background: #f8fafc;
-    border-top: 1px solid #e5e7eb;
+    background: #f5f2ed;
+    border-top: 1px solid #e8e4df;
     margin-top: 3rem;
     padding: 2rem 0 1rem 0;
     position: relative;
@@ -2232,8 +2241,8 @@ footer {
 
 /* Dark theme footer */
 .dark-theme footer {
-    background: #2d2d2d;
-    border-top-color: #495057;
+    background: #1c1917;
+    border-top-color: #44403c;
 }
 
 /* Footer content styling */
@@ -2245,33 +2254,33 @@ footer .row {
 /* Copyright styling */
 footer .h6 {
     margin-bottom: 0.5rem;
-    color: #495057;
+    color: #6b6560;
     font-weight: 500;
 }
 
 .dark-theme footer .h6 {
-    color: #ced4da;
+    color: #d6d3d1;
 }
 
 /* Footer links */
 footer a {
-    color: #6b7280;
+    color: #6b6560;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #007bff;
+    color: #c45d3e;
     text-decoration: none;
 }
 
 .dark-theme footer a {
-    color: #9ca3af;
+    color: #a8a29e;
 }
 
 .dark-theme footer a:hover {
-    color: #3b82f6;
+    color: #e8845a;
 }
 
 /* Horizontal social links layout */
@@ -2358,7 +2367,7 @@ footer a:hover {
     align-items: center;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #ede9e3;
     padding: 6px 0;
     /* Reduced from 10px */
     transition: all 0.2s ease;
@@ -2372,7 +2381,7 @@ footer a:hover {
 
 .affiliation-badge:hover {
     background: transparent;
-    border-color: #f1f5f9;
+    border-color: #ede9e3;
     box-shadow: none;
     transform: translateX(4px);
 }
@@ -2384,7 +2393,7 @@ footer a:hover {
     border-radius: 4px;
     object-fit: contain;
     background: #fff;
-    border: 1px solid #f1f5f9;
+    border: 1px solid #ede9e3;
     margin-right: 10px;
     /* Reduced from 12px */
 }
@@ -2398,7 +2407,7 @@ footer a:hover {
 
 .affiliation-name {
     font-weight: 600;
-    color: #1e293b;
+    color: #1a1a1a;
     font-size: 0.9rem;
     /* Reduced from 0.95rem */
 }
@@ -2406,14 +2415,14 @@ footer a:hover {
 .affiliation-dates {
     font-size: 0.75rem;
     /* Reduced from 0.8rem */
-    color: #64748b;
+    color: #6b6560;
     font-family: 'Fira Code', monospace;
 }
 
 /* Side-by-Side Layout Refinements */
 @media (min-width: 768px) {
     #affiliations {
-        border-right: 1px solid #e2e8f0;
+        border-right: 1px solid #e8e4df;
         padding-right: 1.25rem;
         /* Further reduced from 1.5rem */
     }
@@ -2432,37 +2441,37 @@ footer a:hover {
 .affiliation-name {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #1a1a1a;
 }
 
 .affiliation-dates {
     font-size: 0.7rem;
-    color: #64748b;
+    color: #6b6560;
     font-weight: 500;
 }
 
 /* Dark Theme for Affiliations */
 body.dark-theme .affiliation-badge {
-    background: #1e293b;
-    border-color: #334155;
+    background: #1c1917;
+    border-color: #44403c;
 }
 
 body.dark-theme .affiliation-badge:hover {
-    background: #2d3748;
-    border-color: #475569;
+    background: #292524;
+    border-color: #57534e;
 }
 
 body.dark-theme .affiliation-logo {
-    background: #0f172a;
-    border-color: #334155;
+    background: #0c0a09;
+    border-color: #44403c;
 }
 
 body.dark-theme .affiliation-name {
-    color: #e2e8f0;
+    color: #e7e5e4;
 }
 
 body.dark-theme .affiliation-dates {
-    color: #94a3b8;
+    color: #a8a29e;
 }
 
 
@@ -2472,14 +2481,14 @@ body.dark-theme .affiliation-dates {
     flex-direction: column;
     gap: 0;
     margin-bottom: 2rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #e8e4df;
     border-radius: 8px;
     background: #fff;
     max-height: 450px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
-    scrollbar-color: #cbd5e1 transparent;
+    scrollbar-color: #d4cfc8 transparent;
 }
 
 /* Custom Scrollbar for Webkit Browsers */
@@ -2493,20 +2502,20 @@ body.dark-theme .affiliation-dates {
 }
 
 .updates-container::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
+    background-color: #d4cfc8;
     border-radius: 5px;
     border: 2px solid transparent;
     background-clip: content-box;
 }
 
 .updates-container::-webkit-scrollbar-thumb:hover {
-    background-color: #94a3b8;
+    background-color: #a8a29e;
 }
 
 .update-item {
     display: flex;
     padding: 6px 16px;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #ede9e3;
     align-items: baseline;
     font-size: 0.85rem;
     transition: background 0.1s ease;
@@ -2517,51 +2526,51 @@ body.dark-theme .affiliation-dates {
 }
 
 .update-item:hover {
-    background: #f8fafc;
+    background: #faf7f4;
 }
 
 .update-date {
     min-width: 100px;
     font-family: 'SF Mono', 'Fira Code', monospace;
     font-size: 0.75rem;
-    color: #64748b;
+    color: #6b6560;
     font-weight: 500;
     padding-right: 16px;
     flex-shrink: 0;
 }
 
 .update-content {
-    color: #334155;
+    color: #37352f;
     line-height: 1.5;
 }
 
 /* Dark Theme for Updates */
 body.dark-theme .updates-container {
-    background: #1e293b;
-    border-color: #334155;
-    scrollbar-color: #475569 transparent;
+    background: #1c1917;
+    border-color: #44403c;
+    scrollbar-color: #57534e transparent;
 }
 
 body.dark-theme .updates-container::-webkit-scrollbar-thumb {
-    background-color: #475569;
+    background-color: #57534e;
 }
 
 body.dark-theme .updates-container::-webkit-scrollbar-thumb:hover {
-    background-color: #64748b;
+    background-color: #78716c;
 }
 
 body.dark-theme .update-item {
-    border-bottom-color: #334155;
+    border-bottom-color: #44403c;
 }
 
 body.dark-theme .update-item:hover {
-    background: #2d3748;
+    background: #292524;
 }
 
 body.dark-theme .update-date {
-    color: #94a3b8;
+    color: #a8a29e;
 }
 
 body.dark-theme .update-content {
-    color: #e2e8f0;
+    color: #e7e5e4;
 }
