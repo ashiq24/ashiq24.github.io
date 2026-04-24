@@ -2425,64 +2425,7 @@ footer a:hover {
     }
 }
 
-/* Scrollable Updates Container */
-.updates-container {
-    max-height: 170px;
-    /* Approx height for 3 items */
-    overflow-y: scroll;
-    /* Force scrollbar track to be visible */
-    padding-right: 6px;
-    scrollbar-width: auto;
-    /* Standard width for visibility */
-    scrollbar-color: #cbd5e1 transparent;
-}
 
-/* Chrome/Safari/Opera: Custom Scrollbar */
-.updates-container::-webkit-scrollbar {
-    width: 8px;
-    /* Wide enough to be easily seen/clicked */
-    display: block;
-}
-
-.updates-container::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.updates-container::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
-    border-radius: 4px;
-}
-
-/* Updates Styling for Uniformity */
-.update-item {
-    padding: 8px 0;
-    /* Slightly increased for touch target */
-    border-bottom: 1px solid #f1f5f9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: auto;
-}
-
-.update-item:last-child {
-    border-bottom: none;
-}
-
-.update-date {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.75rem;
-    /* Reduced from 0.8rem */
-    color: #64748b;
-    margin-bottom: 2px;
-    /* Reduced from 4px */
-    font-weight: 500;
-}
-
-.update-content {
-    font-size: 0.95rem;
-    color: #334155;
-    line-height: 1.5;
-}
 
 
 
@@ -2532,7 +2475,7 @@ body.dark-theme .affiliation-dates {
     border: 1px solid #e2e8f0;
     border-radius: 8px;
     background: #fff;
-    max-height: 300px;
+    max-height: 450px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
