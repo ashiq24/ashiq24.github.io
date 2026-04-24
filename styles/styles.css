@@ -429,7 +429,7 @@ code {
     justify-content: center;
     height: 3.70rem;
     width: 3.70rem;
-    color: #495057;
+    color: #6b6560;
     border-radius: 100%;
     font-size: 1.5rem;
     margin-right: 0.25rem;
@@ -717,7 +717,7 @@ code {
 }
 
 .publication-authors {
-    color: #6b7280;
+    color: #6b6560;
     margin-bottom: 1rem;
     font-size: 0.9rem;
     line-height: 1.4;
@@ -753,12 +753,12 @@ code {
 .btn-poster,
 .btn-tutorial,
 .btn-website {
-    background: rgba(241, 245, 249, 0.8) !important;
-    /* Soft grey with transparency */
-    color: #1e293b !important;
-    /* Dark charcoal text */
-    border-color: #cbd5e1 !important;
-    /* Subtle border */
+    background: rgba(245, 242, 237, 0.8) !important;
+    /* Warm cream with transparency */
+    color: #37352f !important;
+    /* Warm charcoal text */
+    border-color: #d4cfc8 !important;
+    /* Warm subtle border */
 }
 
 .btn-pdf:hover,
@@ -769,12 +769,12 @@ code {
 .btn-poster:hover,
 .btn-tutorial:hover,
 .btn-website:hover {
-    background: rgba(226, 232, 240, 0.95) !important;
-    /* Slightly darker on hover */
-    color: #0f172a !important;
-    border-color: #94a3b8 !important;
+    background: rgba(237, 233, 227, 0.95) !important;
+    /* Warm slightly darker on hover */
+    color: #1a1a1a !important;
+    border-color: #a8a29e !important;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(120, 100, 80, 0.1);
 }
 
 /* Icon colors for quick identification - the ONLY colored elements */
@@ -821,7 +821,7 @@ code {
 .publication-abstract {
     font-size: 0.9rem;
     line-height: 1.6;
-    color: #495057;
+    color: #6b6560;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -846,24 +846,24 @@ code {
 }
 
 .light-theme .publication-abstract {
-    color: #495057;
+    color: #6b6560;
 }
 
 .dark-theme .publication-abstract {
-    color: #ced4da;
+    color: #d6d3d1;
 }
 
 .abstract-label {
     font-weight: 600;
-    color: #333;
+    color: #1a1a1a;
 }
 
 .light-theme .abstract-label {
-    color: #333;
+    color: #1a1a1a;
 }
 
 .dark-theme .abstract-label {
-    color: #fff;
+    color: #fafaf9;
 }
 
 .abstract-toggle {
@@ -1509,9 +1509,9 @@ div.news-card img {
 
 /* Dark theme for speech balloon */
 .dark-theme .speech-balloon {
-    background-color: #495057;
+    background-color: #44403c;
     color: white;
-    border: 2px solid #555;
+    border: 2px solid #57534e;
 }
 
 
