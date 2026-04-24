@@ -15,7 +15,7 @@ $(document).ready(function () {
         const speechBalloon = document.querySelector('.speech-balloon');
         const clickSound = new Audio('assets/sounds/collision_sound.wav');
         $('html, body').animate({ scrollTop: 0 }, '300');
-        speechBalloon.innerText = 'back to top!';
+        if (speechBalloon) speechBalloon.innerText = 'back to top!';
         clickSound.play();
     });
 
@@ -133,81 +133,87 @@ function initializeOwlCarousel() {
     }
 }
 
-// Touch and mouse event listeners
+// Touch and mouse event listeners for popup icon (only if present)
 let isDragging = false;
 let isMobile = 'ontouchstart' in window;
 let startEvent = isMobile ? 'touchstart' : 'mousedown';
 let moveEvent = isMobile ? 'touchmove' : 'mousemove';
 let endEvent = isMobile ? 'touchend' : 'mouseup';
 
+if (typeof popupIconContainer !== 'undefined' && popupIconContainer) {
 
-// Capture mouse down (desktop) or touch start (mobile) events
-popupIconContainer.addEventListener(startEvent, (e) => {
-    e.preventDefault();
-    isDragging = true;
-    let clientX = isMobile ? e.touches[0].clientX : e.clientX;
-    let clientY = isMobile ? e.touches[0].clientY : e.clientY;
+    // Capture mouse down (desktop) or touch start (mobile) events
+    popupIconContainer.addEventListener(startEvent, (e) => {
+        e.preventDefault();
+        isDragging = true;
+        let clientX = isMobile ? e.touches[0].clientX : e.clientX;
+        let clientY = isMobile ? e.touches[0].clientY : e.clientY;
 
-    startX = clientX;
-    startY = clientY;
-    originalX = popupIconContainer.getBoundingClientRect().left;
-    originalY = popupIconContainer.getBoundingClientRect().top;
-    dismissalArea.style.display = 'flex';
+        startX = clientX;
+        startY = clientY;
+        originalX = popupIconContainer.getBoundingClientRect().left;
+        originalY = popupIconContainer.getBoundingClientRect().top;
+        dismissalArea.style.display = 'flex';
 
-    // Hide the speech balloon as users start dragging and drag the icon
-    document.querySelector('.speech-balloon').classList.add('hidden');
-});
-
-
-// Capture mouse move (desktop) or touch move (mobile) events
-document.addEventListener(moveEvent, (e) => {
-    if (!isDragging) {
-        return;
-    }
-
-    let clientX = isMobile ? e.touches[0].clientX : e.clientX;
-    let clientY = isMobile ? e.touches[0].clientY : e.clientY;
-
-    let x = originalX + (clientX - startX);
-    let y = originalY + (clientY - startY);
-    popupIconContainer.style.left = `${x}px`;
-    popupIconContainer.style.bottom = `calc(100% - ${y}px - ${popupIconContainer.offsetHeight}px)`;
-});
+        // Hide the speech balloon as users start dragging and drag the icon
+        var balloon = document.querySelector('.speech-balloon');
+        if (balloon) balloon.classList.add('hidden');
+    });
 
 
-// Capture mouse up (desktop) or touch end (mobile) events
-document.addEventListener(endEvent, (e) => {
-    const clickSound = new Audio('assets/sounds/disappear_sound.wav');
+    // Capture mouse move (desktop) or touch move (mobile) events
+    document.addEventListener(moveEvent, (e) => {
+        if (!isDragging) {
+            return;
+        }
 
-    if (!isDragging) {
-        return;
-    }
+        let clientX = isMobile ? e.touches[0].clientX : e.clientX;
+        let clientY = isMobile ? e.touches[0].clientY : e.clientY;
 
-    let clientX = isMobile ? e.changedTouches[0].clientX : e.clientX;
-    let clientY = isMobile ? e.changedTouches[0].clientY : e.clientY;
-    let centerX = window.innerWidth / 2;
-    let centerY = window.innerHeight;
-
-    // Check if icon is near the middle bottom dismissal area
-    if (Math.abs(clientX - centerX) < 50 && Math.abs(clientY - centerY) < 100) {
-        popupIconContainer.classList.add('hidden');
-        clickSound.play();
-    }
-
-    dismissalArea.style.display = 'none';
-    isDragging = false;
-});
+        let x = originalX + (clientX - startX);
+        let y = originalY + (clientY - startY);
+        popupIconContainer.style.left = `${x}px`;
+        popupIconContainer.style.bottom = `calc(100% - ${y}px - ${popupIconContainer.offsetHeight}px)`;
+    });
 
 
-// Hide speech balloon when scrolling down
-window.addEventListener('scroll', function () {
-    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    if (scrollPosition > 300) {
-        document.querySelector('.speech-balloon').classList.add('hidden');
-    } else {
-        document.querySelector('.speech-balloon').classList.remove('hidden');
-    }
-});
+    // Capture mouse up (desktop) or touch end (mobile) events
+    document.addEventListener(endEvent, (e) => {
+        const clickSound = new Audio('assets/sounds/disappear_sound.wav');
+
+        if (!isDragging) {
+            return;
+        }
+
+        let clientX = isMobile ? e.changedTouches[0].clientX : e.clientX;
+        let clientY = isMobile ? e.changedTouches[0].clientY : e.clientY;
+        let centerX = window.innerWidth / 2;
+        let centerY = window.innerHeight;
+
+        // Check if icon is near the middle bottom dismissal area
+        if (Math.abs(clientX - centerX) < 50 && Math.abs(clientY - centerY) < 100) {
+            popupIconContainer.classList.add('hidden');
+            clickSound.play();
+        }
+
+        dismissalArea.style.display = 'none';
+        isDragging = false;
+    });
+
+
+    // Hide speech balloon when scrolling down
+    window.addEventListener('scroll', function () {
+        let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        var balloon = document.querySelector('.speech-balloon');
+        if (balloon) {
+            if (scrollPosition > 300) {
+                balloon.classList.add('hidden');
+            } else {
+                balloon.classList.remove('hidden');
+            }
+        }
+    });
+}
 
 
 // Update progress bar as user scrolls down
@@ -264,11 +270,11 @@ $(document).ready(function () {
             });
             this.classList.add('active');
             if (this.textContent === "perception + manipulation") {
-                speechBalloon.innerText = 'see RoPM projects!';
+                if (speechBalloon) speechBalloon.innerText = 'see RoPM projects!';
             } else {
-                speechBalloon.innerText = 'see ' + this.textContent + ' projects!';
+                if (speechBalloon) speechBalloon.innerText = 'see ' + this.textContent + ' projects!';
             }
-            speechBalloon.classList.remove('hidden');
+            if (speechBalloon) speechBalloon.classList.remove('hidden');
         });
     });
 
@@ -278,8 +284,8 @@ $(document).ready(function () {
                 flrbtn.classList.remove('active');
             });
             this.classList.add('active');
-            speechBalloon.innerText = 'see ' + this.textContent + ' repos!';
-            speechBalloon.classList.remove('hidden');
+            if (speechBalloon) speechBalloon.innerText = 'see ' + this.textContent + ' repos!';
+            if (speechBalloon) speechBalloon.classList.remove('hidden');
         });
     });
 
