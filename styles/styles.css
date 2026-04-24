@@ -1452,13 +1452,7 @@ div.news-card img {
 
 /* Container for the assistant icon */
 .popup-icon-container {
-    position: fixed;
-    left: 10px;
-    bottom: 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    z-index: 1000;
+    display: none;
 }
 
 
@@ -2538,7 +2532,7 @@ body.dark-theme .affiliation-dates {
     border: 1px solid #e2e8f0;
     border-radius: 8px;
     background: #fff;
-    max-height: 220px;
+    max-height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -2568,10 +2562,10 @@ body.dark-theme .affiliation-dates {
 
 .update-item {
     display: flex;
-    padding: 12px 16px;
+    padding: 6px 16px;
     border-bottom: 1px solid #f1f5f9;
     align-items: baseline;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: background 0.1s ease;
 }
 
