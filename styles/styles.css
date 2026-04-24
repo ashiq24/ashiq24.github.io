@@ -336,6 +336,13 @@ code {
     padding: 4px;
     box-sizing: border-box;
     background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     mask-composite: exclude;
 }
 
@@ -357,7 +364,7 @@ code {
 }
 
 .dark-theme .hollow-ring {
-    background-color: #333333;
+    background-color: #1c1917;
 }
 
 .profile-image {
@@ -378,7 +385,7 @@ code {
 }
 
 .dark-theme .profile-image {
-    border: 5px solid #333333
+    border: 5px solid #1c1917
 }
 
 
@@ -2153,14 +2160,8 @@ p,
     transform: scale(1.05);
 }
 
-/* Gentle scale for profile image */
-.profile-image {
-    transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.02);
-}
+/* Gentle scale for profile image — disabled to prevent position jump */
+/* .profile-image:hover uses translate for centering, scale conflicts */
 
 /* Subtle scale for filter buttons */
 .filter-button {
