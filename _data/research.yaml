@@ -17,6 +17,7 @@ projects:
     conference: CVPR 2026
     conference-web:
     status:
+    website: https://ashiq24.github.io/soft-equivariance/
     authors: <u>Md Ashiqur Rahman</u>, Lim Jun Hao, Jeremiah Jiang, Teck-Yian Lim, Raymond A. Yeh.
     pdf: https://arxiv.org/pdf/2603.26657
     code: https://github.com/ashiq24/soft-equivariance
