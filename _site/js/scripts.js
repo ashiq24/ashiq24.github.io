@@ -431,7 +431,7 @@ function initializeIsotopeProjects() {
 }
 
 
-// Function to load GitHub repositories and HuggingFace resources
+// Function to load GitHub repositories and Hugging Face resources
 document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('github-cards');
@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                 });
         } else if (dataType === 'huggingface') {
-            // Handle HuggingFace datasets and models
+            // Handle Hugging Face datasets and models
             const hfId = repoElement.getAttribute('data-hf-id');
             const hfType = repoElement.getAttribute('data-hf-type'); // 'dataset' or 'model'
 
@@ -527,7 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const cardHtml = `
                             <div class="repo-header">
-                                <img src="assets/img/huggingface-icon.webp" alt="HuggingFace" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
+                                <img src="assets/img/huggingface-icon.webp" alt="Hugging Face" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
                                 <a href="${webUrl}" target="_blank" rel="noopener" class="repo-name">${name}</a>
                             </div>
                             <div class="repo-description">${description}</div>
@@ -548,16 +548,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     repoElement.innerHTML = cardHtml;
                 })
                 .catch(error => {
-                    console.error('Error fetching HuggingFace data for', hfId, error);
+                    console.error('Error fetching Hugging Face data for', hfId, error);
                     const fallbackName = hfId.split('/').pop();
                     repoElement.innerHTML = `
                         <div class="repo-header">
-                            <img src="assets/img/huggingface-icon.webp" alt="HuggingFace" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
+                            <img src="assets/img/huggingface-icon.webp" alt="Hugging Face" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
                             <a href="${webUrl}" target="_blank" rel="noopener" class="repo-name">${fallbackName}</a>
                         </div>
                         <div class="repo-description">Unable to load details (API Limit or Error).</div>
                         <div class="repo-stats">
-                            <a href="${webUrl}" target="_blank" rel="noopener">View on HuggingFace <i class="fas fa-external-link-alt"></i></a>
+                            <a href="${webUrl}" target="_blank" rel="noopener">View on Hugging Face <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     `;
                 });
@@ -693,7 +693,7 @@ function initializeIsotopeGithub() {
 //     initializeOwlCarousel();
 //     initializeIsotopeProjects();
 // });
-// This version is faster --> re-layout when all the images are fully loaded not neccessarily all the gifs
+// This version is faster --> re-layout when all the images are fully loaded, not necessarily all the gifs
 $(document).ready(function () {
     // Initialize Owl Carousel immediately to prevent layout issues!
     initializeOwlCarousel();

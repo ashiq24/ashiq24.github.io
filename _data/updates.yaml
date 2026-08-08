@@ -1,7 +1,7 @@
 updates:
 
   - picture: 
-    desc: I will do my internship at <highlight>Eli Lilly</highlight> as research intern in their <highlight>Advanced Intelligence (AI)</highlight> team.
+    desc: I will do my internship at <highlight>Eli Lilly</highlight>, working on automating drug manufacturing processes.
     time: May 2026
 
   - picture: 
@@ -17,7 +17,7 @@ updates:
     time: Aug 2025
 
   - picture: assets/img/updates_fig/autodesk_1.png
-    desc: I will spend my summer as AI Research Intern at <highlight>Autodesk</highlight>!
+    desc: I will spend my summer as an AI Research Intern at <highlight>Autodesk</highlight>!
     time: May 2025
 
   - picture: assets/img/updates_fig/iclr_png_singa.png

@@ -35,7 +35,7 @@ Then visit `http://localhost:8000/`.
 | Publication section wrapper / filters | `_sections/research.html` |
 | News / updates | `_data/updates.yaml` |
 | Affiliations / institutions | `_data/affiliations.yaml` |
-| Resources, GitHub repos, HuggingFace models/datasets | `_data/resources.yaml` |
+| Resources, GitHub repos, Hugging Face models/datasets | `_data/resources.yaml` |
 | Resource card layout shell | `_libs/resources_widget.html` |
 | Resource dynamic rendering | `js/scripts.js` |
 | Footer links/text | `_data/footer.yaml` |
@@ -100,7 +100,7 @@ For GitHub:
     category: research
 ```
 
-For HuggingFace:
+For Hugging Face:
 
 ```yaml
   - type: huggingface
