@@ -1,0 +1,27 @@
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.2/ext/cgi/escape
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/bin/ruby -I /Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20260807-13705-o40r00.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.2/ext/cgi/escape
+make DESTDIR\= clean
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.2/ext/cgi/escape
+make DESTDIR\=
+compiling escape.c
+In file included from escape.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+linking shared-object cgi/escape.bundle
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/cgi-0.5.2/ext/cgi/escape
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 escape.bundle ./.gem.20260807-13705-9z8qvk/cgi
