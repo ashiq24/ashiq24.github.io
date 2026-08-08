@@ -1,15 +1,15 @@
-introduction: Released resources and open-sourced projects.
+introduction: Released resources, datasets, models, and open-source projects.
 
 categories:
 
   - data-filter: research
-    category-name: research
+    category-name: Research
   
   - data-filter: miscellaneous
-    category-name: miscellaneous
+    category-name: Miscellaneous
 
   - data-filter: open-source
-    category-name: open-source
+    category-name: Open Source
 
 links:
 

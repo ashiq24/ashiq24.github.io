@@ -1,19 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <!-- Tighter background square with rounded corners -->
+  <!-- Background square with rounded corners -->
   <rect x="2" y="2" width="76" height="76" rx="10" fill="#7952b3" stroke="#5a3d8a" stroke-width="2"/>
   
-  <!-- Envelope icon at top - more compact -->
-  <g transform="translate(40, 22) scale(0.35)">
+  <!-- Smaller envelope icon at top -->
+  <g transform="translate(40, 18) scale(0.28)">
     <path d="M-40 -20 L0 10 L40 -20" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="-40" y="-20" width="80" height="50" rx="4" fill="none" stroke="white" stroke-width="5"/>
   </g>
   
   <!-- Incognito mask overlay on envelope -->
-  <ellipse cx="40" cy="18" rx="10" ry="6" fill="white" opacity="0.9"/>
-  <ellipse cx="35" cy="18" rx="2.5" ry="4" fill="#7952b3"/>
-  <ellipse cx="45" cy="18" rx="2.5" ry="4" fill="#7952b3"/>
+  <ellipse cx="40" cy="15" rx="8" ry="5" fill="white" opacity="0.9"/>
+  <ellipse cx="36" cy="15" rx="2" ry="3" fill="#7952b3"/>
+  <ellipse cx="44" cy="15" rx="2" ry="3" fill="#7952b3"/>
   
-  <!-- Tighter "ANON MSG" text at bottom -->
-  <text x="40" y="52" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="0.5">ANON</text>
-  <text x="40" y="68" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="0.5">MSG</text>
+  <!-- Semi-transparent background for text area -->
+  <rect x="8" y="38" width="64" height="36" rx="6" fill="#000000" opacity="0.25"/>
+  
+  <!-- Larger, more readable "ANON MSG" text -->
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">ANON</text>
+  <text x="40" y="72" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">MSG</text>
 </svg>

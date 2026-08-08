@@ -126,8 +126,10 @@
         </h2>
         <p></p>
         {{ site.data.about.first-paragraph }}
+        {% if site.data.about.second-paragraph %}
         <p></p>
         {{ site.data.about.second-paragraph }}
+        {% endif %}
         <p></p>
         <div class="codebox">
             {{ site.data.about.research-introduction }}

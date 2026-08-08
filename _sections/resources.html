@@ -4,8 +4,7 @@
 <div class="row" id="resources">
     <div class="col">
         <h2 class="mb-2 mt-1">Resources</h2>
-        {{ site.data.resources.introduction }}
-        <p></p>
+        <p class="section-intro resources-intro">{{ site.data.resources.introduction }}</p>
         <div id="filters-resources">
             <button class="filter-button active" data-filter="*">all</button>
             {% for category in site.data.resources.categories %}

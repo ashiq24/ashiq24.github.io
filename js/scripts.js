@@ -139,10 +139,11 @@ let isMobile = 'ontouchstart' in window;
 let startEvent = isMobile ? 'touchstart' : 'mousedown';
 let moveEvent = isMobile ? 'touchmove' : 'mousemove';
 let endEvent = isMobile ? 'touchend' : 'mouseup';
+const popupIconContainer = document.querySelector('.popup-icon-container');
+const dismissalArea = document.querySelector('.dismissal-area');
+const dragSpeechBalloon = document.querySelector('.speech-balloon');
 
-if (typeof popupIconContainer !== 'undefined' && popupIconContainer) {
-
-    // Capture mouse down (desktop) or touch start (mobile) events
+if (popupIconContainer) {
     popupIconContainer.addEventListener(startEvent, (e) => {
         e.preventDefault();
         isDragging = true;
@@ -153,15 +154,11 @@ if (typeof popupIconContainer !== 'undefined' && popupIconContainer) {
         startY = clientY;
         originalX = popupIconContainer.getBoundingClientRect().left;
         originalY = popupIconContainer.getBoundingClientRect().top;
-        dismissalArea.style.display = 'flex';
+        if (dismissalArea) dismissalArea.style.display = 'flex';
 
-        // Hide the speech balloon as users start dragging and drag the icon
-        var balloon = document.querySelector('.speech-balloon');
-        if (balloon) balloon.classList.add('hidden');
+        if (dragSpeechBalloon) dragSpeechBalloon.classList.add('hidden');
     });
 
-
-    // Capture mouse move (desktop) or touch move (mobile) events
     document.addEventListener(moveEvent, (e) => {
         if (!isDragging) {
             return;
@@ -176,8 +173,6 @@ if (typeof popupIconContainer !== 'undefined' && popupIconContainer) {
         popupIconContainer.style.bottom = `calc(100% - ${y}px - ${popupIconContainer.offsetHeight}px)`;
     });
 
-
-    // Capture mouse up (desktop) or touch end (mobile) events
     document.addEventListener(endEvent, (e) => {
         const clickSound = new Audio('assets/sounds/disappear_sound.wav');
 
@@ -190,26 +185,22 @@ if (typeof popupIconContainer !== 'undefined' && popupIconContainer) {
         let centerX = window.innerWidth / 2;
         let centerY = window.innerHeight;
 
-        // Check if icon is near the middle bottom dismissal area
         if (Math.abs(clientX - centerX) < 50 && Math.abs(clientY - centerY) < 100) {
             popupIconContainer.classList.add('hidden');
             clickSound.play();
         }
 
-        dismissalArea.style.display = 'none';
+        if (dismissalArea) dismissalArea.style.display = 'none';
         isDragging = false;
     });
 
-
-    // Hide speech balloon when scrolling down
     window.addEventListener('scroll', function () {
         let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-        var balloon = document.querySelector('.speech-balloon');
-        if (balloon) {
+        if (dragSpeechBalloon) {
             if (scrollPosition > 300) {
-                balloon.classList.add('hidden');
+                dragSpeechBalloon.classList.add('hidden');
             } else {
-                balloon.classList.remove('hidden');
+                dragSpeechBalloon.classList.remove('hidden');
             }
         }
     });
@@ -458,15 +449,16 @@ document.addEventListener('DOMContentLoaded', () => {
             axios.get(repoUrl)
                 .then(response => {
                     const { name, description, html_url, stargazers_count, forks_count, language } = response.data;
+                    const languageLabel = language || 'Code';
                     const cardHtml = `
                             <div class="repo-header">
                                 <i class="far fa-bookmark bookmark-icon"></i>
-                                <a href="${html_url}" target="_blank" class="repo-name">${name}</a>
+                                <a href="${html_url}" target="_blank" rel="noopener" class="repo-name">${name}</a>
                             </div>
                             <div class="repo-description">${description || 'No description provided.'}</div>
                             <div class="repo-stats">
                                 <i class="fas fa-code language-icon"></i>
-                                <span class="language">${language}</span>
+                                <span class="language">${languageLabel}</span>
                                 <div>
                                     <i class="fas fa-star star-icon"></i>
                                     <span class="stats-number">${stargazers_count}</span>
@@ -487,11 +479,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     repoElement.innerHTML = `
                         <div class="repo-header">
                             <i class="far fa-bookmark bookmark-icon"></i>
-                            <a href="${fallbackLink}" target="_blank" class="repo-name">${fallbackName}</a>
+                            <a href="${fallbackLink}" target="_blank" rel="noopener" class="repo-name">${fallbackName}</a>
                         </div>
                         <div class="repo-description">Unable to load details (API Limit or Error).</div>
                         <div class="repo-stats">
-                            <a href="${fallbackLink}" target="_blank">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                            <a href="${fallbackLink}" target="_blank" rel="noopener">View on GitHub <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     `;
                 });
@@ -536,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cardHtml = `
                             <div class="repo-header">
                                 <img src="assets/img/huggingface-icon.webp" alt="HuggingFace" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
-                                <a href="${webUrl}" target="_blank" class="repo-name">${name}</a>
+                                <a href="${webUrl}" target="_blank" rel="noopener" class="repo-name">${name}</a>
                             </div>
                             <div class="repo-description">${description}</div>
                             <div class="repo-stats">
@@ -561,11 +553,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     repoElement.innerHTML = `
                         <div class="repo-header">
                             <img src="assets/img/huggingface-icon.webp" alt="HuggingFace" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
-                            <a href="${webUrl}" target="_blank" class="repo-name">${fallbackName}</a>
+                            <a href="${webUrl}" target="_blank" rel="noopener" class="repo-name">${fallbackName}</a>
                         </div>
                         <div class="repo-description">Unable to load details (API Limit or Error).</div>
                         <div class="repo-stats">
-                            <a href="${webUrl}" target="_blank">View on HuggingFace <i class="fas fa-external-link-alt"></i></a>
+                            <a href="${webUrl}" target="_blank" rel="noopener">View on HuggingFace <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     `;
                 });
