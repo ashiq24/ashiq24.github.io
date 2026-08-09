@@ -111,6 +111,17 @@ For Hugging Face:
 
 Use `hf-type: model` for models.
 
+For Hugging Face collections:
+
+```yaml
+  - type: huggingface
+    hf-type: collection
+    hf-id: https://huggingface.co/collections/ashiq24/COLLECTION_SLUG
+    category: open-weights
+```
+
+For category filtering, `category:` must match a `data-filter:` value in the `categories:` list.
+
 ### Update Bio Or Research Interests
 
 Edit `_data/about.yaml`.

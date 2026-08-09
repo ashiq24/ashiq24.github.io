@@ -10,8 +10,23 @@ categories:
 
   - data-filter: open-source
     category-name: Open Source
+  
+  - data-filter: datasets
+    category-name: Datasets
+  
+  - data-filter: open-weights
+    category-name: Open Weights
 
 links:
+
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/soft-equivariance
+    category: research
+  
+  - type: huggingface
+    hf-type: collection
+    hf-id: https://huggingface.co/collections/ashiq24/soft-equivariant-vision-foundation-models
+    category: open-weights
 
   - type: github
     git-api: https://api.github.com/repos/neuraloperator/CoDA-NO
@@ -24,17 +39,17 @@ links:
   - type: huggingface
     hf-type: dataset
     hf-id: ashiq24/Multi_Scale_ImageNet
-    category: research
+    category: Datasets
   
   - type: huggingface
     hf-type: dataset
     hf-id: ashiq24/Rayleigh_Benard_Convection
-    category: research
+    category: Datasets
 
   - type: huggingface
     hf-type: dataset
     hf-id: ashiq24/FSI-pde-dataset
-    category: research
+    category: Datasets
 
   - type: huggingface
     hf-type: model

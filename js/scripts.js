@@ -445,8 +445,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dataType === 'github') {
             // Handle GitHub repositories
             const repoUrl = repoElement.getAttribute('data-url');
+            const githubMatch = repoUrl.match(/github\.com\/([^\/]+)\/([^\/?#]+)/);
+            const repoApiUrl = githubMatch
+                ? `https://api.github.com/repos/${githubMatch[1]}/${githubMatch[2].replace(/\.git$/, '')}`
+                : repoUrl;
 
-            axios.get(repoUrl)
+            axios.get(repoApiUrl)
                 .then(response => {
                     const { name, description, html_url, stargazers_count, forks_count, language } = response.data;
                     const languageLabel = language || 'Code';
@@ -474,8 +478,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .catch(error => {
                     console.error('Error fetching repository data for', repoUrl, error);
-                    const fallbackName = repoUrl.split('/').pop();
-                    const fallbackLink = repoUrl.replace('api.github.com/repos', 'github.com');
+                    const fallbackName = repoUrl.split('/').pop().replace(/\.git$/, '');
+                    const fallbackLink = githubMatch
+                        ? `https://github.com/${githubMatch[1]}/${githubMatch[2].replace(/\.git$/, '')}`
+                        : repoUrl.replace('api.github.com/repos', 'github.com');
                     repoElement.innerHTML = `
                         <div class="repo-header">
                             <i class="far fa-bookmark bookmark-icon"></i>
@@ -488,9 +494,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                 });
         } else if (dataType === 'huggingface') {
-            // Handle Hugging Face datasets and models
+            // Handle Hugging Face datasets, models, and collections
             const hfId = repoElement.getAttribute('data-hf-id');
-            const hfType = repoElement.getAttribute('data-hf-type'); // 'dataset' or 'model'
+            const hfType = repoElement.getAttribute('data-hf-type'); // 'dataset', 'model', or 'collection'
+
+            if (hfType === 'collection') {
+                const webUrl = hfId.startsWith('http')
+                    ? hfId
+                    : `https://huggingface.co/collections/${hfId}`;
+                const rawName = webUrl.split('/').filter(Boolean).pop() || 'hugging-face-collection';
+                const name = rawName
+                    .replace(/-[a-f0-9]{8,}$/i, '')
+                    .replace(/-/g, ' ')
+                    .replace(/\b\w/g, c => c.toUpperCase());
+
+                repoElement.innerHTML = `
+                    <div class="repo-header">
+                        <img src="assets/img/huggingface-icon.webp" alt="Hugging Face" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
+                        <a href="${webUrl}" target="_blank" rel="noopener" class="repo-name">${name}</a>
+                    </div>
+                    <div class="repo-description">Curated Hugging Face collection of related models, datasets, and resources.</div>
+                    <div class="repo-stats">
+                        <i class="fas fa-layer-group language-icon"></i>
+                        <span class="language">collection</span>
+                        <a href="${webUrl}" target="_blank" rel="noopener">View collection <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                `;
+                return;
+            }
 
             const apiUrl = hfType === 'dataset'
                 ? `https://huggingface.co/api/datasets/${hfId}`
