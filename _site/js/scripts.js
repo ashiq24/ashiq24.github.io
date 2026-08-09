@@ -445,10 +445,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dataType === 'github') {
             // Handle GitHub repositories
             const repoUrl = repoElement.getAttribute('data-url');
-            const githubMatch = repoUrl.match(/github\.com\/([^\/]+)\/([^\/?#]+)/);
-            const repoApiUrl = githubMatch
-                ? `https://api.github.com/repos/${githubMatch[1]}/${githubMatch[2].replace(/\.git$/, '')}`
+            const githubPageMatch = repoUrl.match(/^https?:\/\/(?:www\.)?github\.com\/([^\/]+)\/([^\/?#]+)/);
+            const githubApiMatch = repoUrl.match(/^https?:\/\/api\.github\.com\/repos\/([^\/]+)\/([^\/?#]+)/);
+            const repoOwner = githubPageMatch?.[1] || githubApiMatch?.[1];
+            const repoName = (githubPageMatch?.[2] || githubApiMatch?.[2] || '').replace(/\.git$/, '');
+            const repoApiUrl = githubPageMatch
+                ? `https://api.github.com/repos/${repoOwner}/${repoName}`
                 : repoUrl;
+            const repoPageUrl = repoOwner && repoName
+                ? `https://github.com/${repoOwner}/${repoName}`
+                : repoUrl.replace('api.github.com/repos', 'github.com');
 
             axios.get(repoApiUrl)
                 .then(response => {
@@ -478,18 +484,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .catch(error => {
                     console.error('Error fetching repository data for', repoUrl, error);
-                    const fallbackName = repoUrl.split('/').pop().replace(/\.git$/, '');
-                    const fallbackLink = githubMatch
-                        ? `https://github.com/${githubMatch[1]}/${githubMatch[2].replace(/\.git$/, '')}`
-                        : repoUrl.replace('api.github.com/repos', 'github.com');
+                    const fallbackName = repoName || repoUrl.split('/').pop().replace(/\.git$/, '');
                     repoElement.innerHTML = `
                         <div class="repo-header">
                             <i class="far fa-bookmark bookmark-icon"></i>
-                            <a href="${fallbackLink}" target="_blank" rel="noopener" class="repo-name">${fallbackName}</a>
+                            <a href="${repoPageUrl}" target="_blank" rel="noopener" class="repo-name">${fallbackName}</a>
                         </div>
-                        <div class="repo-description">Unable to load details (API Limit or Error).</div>
+                        <div class="repo-description">GitHub repository. Live stats could not be loaded right now.</div>
                         <div class="repo-stats">
-                            <a href="${fallbackLink}" target="_blank" rel="noopener">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                            <a href="${repoPageUrl}" target="_blank" rel="noopener">View on GitHub <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     `;
                 });
@@ -586,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="assets/img/huggingface-icon.webp" alt="Hugging Face" style="width: 16px; height: 16px; margin-right: 5px; vertical-align: middle;">
                             <a href="${webUrl}" target="_blank" rel="noopener" class="repo-name">${fallbackName}</a>
                         </div>
-                        <div class="repo-description">Unable to load details (API Limit or Error).</div>
+                        <div class="repo-description">Hugging Face resource. Live details could not be loaded right now.</div>
                         <div class="repo-stats">
                             <a href="${webUrl}" target="_blank" rel="noopener">View on Hugging Face <i class="fas fa-external-link-alt"></i></a>
                         </div>
