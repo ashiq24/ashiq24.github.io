@@ -39,17 +39,17 @@ links:
   - type: huggingface
     hf-type: dataset
     hf-id: ashiq24/Multi_Scale_ImageNet
-    category: Datasets
+    category: datasets
   
   - type: huggingface
     hf-type: dataset
     hf-id: ashiq24/Rayleigh_Benard_Convection
-    category: Datasets
+    category: datasets
 
   - type: huggingface
     hf-type: dataset
     hf-id: ashiq24/FSI-pde-dataset
-    category: Datasets
+    category: datasets
 
   - type: huggingface
     hf-type: model
