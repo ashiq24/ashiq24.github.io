@@ -12,7 +12,7 @@ categories:
     category-name: Open Source
   
   - data-filter: datasets
-    category-name: Datasets
+    category-name: datasets
   
   - data-filter: open-weights
     category-name: Open Weights
