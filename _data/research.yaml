@@ -11,6 +11,9 @@ categories:
 
 
 projects:
+  # - title: "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
+  #   authors: Kaivalya Agrawal, <u>Md Ashiqur Rahman</u>, Raymond A. Yeh, Zachary Kingston
+    
   - title: "Tunable Soft Equivariance with Guarantees"
     system-name:
     gif: assets/img/paper_fig/softeq_combined.gif
@@ -29,6 +32,25 @@ projects:
     abstract-more: by projecting the model weights into a designed subspace. The method applies to any pre-trained architecture and provides theoretical bounds on the induced equivariance error. Empirically, we demonstrate the effectiveness of our method on multiple pre-trained backbones, including ViT and ResNet, across image classification, semantic segmentation, and human-trajectory prediction tasks. Notably, our approach improves the performance while simultaneously reducing equivariance error on the competitive ImageNet benchmark.
     tag: more_equivariance
     category: Equivariance
+
+  - title: "Neural Operator: Is Data All You Need to Model the World? An Insight Into the Paradigm of Data-Driven Scientific ML"
+    system-name:
+    gif: assets/img/paper_fig/tpami_neural_operator.png
+    conference: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+    conference-web: https://ieeexplore.ieee.org/document/11478340
+    status:
+    website: 
+    authors: Hrishikesh Viswanath, <u>Md Ashiqur Rahman</u>, Abhijeet Vyas, Andrey Shor, Beatriz Medeiros, Stephanie Hernandez, Suhas Eswarappa Prameela, Aniket Bera
+    pdf: https://arxiv.org/pdf/2301.13331
+    code:
+    demo:
+    slides:
+    talk:
+    poster:
+    abstract-less: Numerical approximations of partial differential equations (PDEs) are routinely employed to formulate the solution of physics, engineering, and mathematical problems involving functions of several variables, such as the propagation of heat or sound, fluid flow, elasticity, electrostatics, electrodynamics, and more. While this has led to solving many complex phenomena, there are some limitations.
+    abstract-more: Conventional approaches such as Finite Element Methods (FEMs) and Finite Difference Methods (FDMs) require considerable time and are computationally expensive. In contrast, data-driven machine learning-based methods, such as neural networks, provide a faster, fairly accurate alternative, and, in particular, focus on neural operators, which have certain advantages such as discretization invariance and resolution invariance. This article aims to provide a comprehensive insight into how data-driven approaches can complement conventional techniques to solve engineering and physics problems, while also noting some of the open problems of machine learning-based approaches. We will note how these new computational approaches can bring immense advantages in tackling many problems in fundamental and applied physics.
+    tag: more_neural_operator
+    category: Neural Operator
     
   - title: "CLIPSym: Delving into Symmetry Detection with CLIP"
     system-name:
