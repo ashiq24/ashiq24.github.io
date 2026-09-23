@@ -16,7 +16,7 @@ categories:
 projects:
   - title: "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
     system-name:
-    gif: assets/img/paper_fig/skipvla.png
+    gif: assets/img/paper_fig/skipvla_vid.mp4
     conference: ArXiv
     conference-web: 
     status:
