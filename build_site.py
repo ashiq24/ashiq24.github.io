@@ -48,6 +48,11 @@ def eval_cond(cond_str, local_ctx, global_ctx):
         l_val = resolve_var(left, local_ctx, global_ctx)
         r_val = resolve_var(right, local_ctx, global_ctx)
         return str(l_val if l_val is not None else '') != str(r_val if r_val is not None else '')
+    elif 'contains' in cond_str:
+        left, right = cond_str.split('contains', 1)
+        l_val = resolve_var(left, local_ctx, global_ctx)
+        r_val = resolve_var(right, local_ctx, global_ctx)
+        return str(r_val if r_val is not None else '') in str(l_val if l_val is not None else '')
     else:
         val = resolve_var(cond_str, local_ctx, global_ctx)
         return bool(val)

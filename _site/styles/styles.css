@@ -1836,7 +1836,8 @@ canvas {
     border-color: #d4cfc8;
 }
 
-.publication-card img {
+.publication-card img,
+.publication-card video {
     border-radius: 6px;
     border: 1px solid #e8e4df;
     object-fit: fill;
@@ -1955,7 +1956,8 @@ canvas {
         margin-bottom: 1.5rem;
     }
 
-    .publication-card img {
+    .publication-card img,
+    .publication-card video {
         aspect-ratio: 2/1;
         margin-bottom: 1rem;
     }
@@ -2764,7 +2766,8 @@ hr {
     margin-bottom: 0 !important;
 }
 
-.publication-card img {
+.publication-card img,
+.publication-card video {
     display: block;
     border: 1px solid #e5e0d8;
     border-radius: 6px;

@@ -1,7 +1,13 @@
 <div class="project publication-card" data-filter="{{ project.category }}">
     <div class="row mb-4">
         <div class="col-sm-4">
+            {% if project.gif contains '.mp4' %}
+            <video width="100%" height="auto" class="w-full rounded-lg" autoplay loop muted playsinline>
+                <source src="{{ project.gif }}" type="video/mp4">
+            </video>
+            {% else %}
             <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}">
+            {% endif %}
         </div>
         <div class="col-sm-8">
             <div class="publication-content">
