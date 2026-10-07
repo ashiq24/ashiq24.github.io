@@ -829,6 +829,7 @@ code {
 /* All buttons share the same neutral foundation */
 .btn-pdf,
 .btn-code,
+.btn-video,
 .btn-demo,
 .btn-slides,
 .btn-talk,
@@ -845,6 +846,7 @@ code {
 
 .btn-pdf:hover,
 .btn-code:hover,
+.btn-video:hover,
 .btn-demo:hover,
 .btn-slides:hover,
 .btn-talk:hover,
@@ -883,6 +885,11 @@ code {
 .btn-talk i {
     color: #6b5b95 !important;
     /* Muted purple icon */
+}
+
+.btn-video i {
+    color: #e02424 !important;
+    /* YouTube red icon */
 }
 
 .btn-poster i {
@@ -1009,6 +1016,83 @@ code {
     height: 228px !important;
     max-width: 100% !important;
     object-fit: fill !important;
+}
+
+/* Interactive Play Overlay on Publication Figures */
+.figure-media-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.figure-play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(15, 23, 42, 0.5) 100%);
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 6px;
+}
+
+.figure-play-overlay .play-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 5px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.figure-play-overlay .play-badge i {
+    color: #ff3333;
+    font-size: 0.88rem;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.figure-media-wrapper:hover .figure-play-overlay {
+    background: rgba(15, 23, 42, 0.35);
+}
+
+.figure-media-wrapper:hover .figure-play-overlay .play-badge {
+    background: #e02424;
+    border-color: #ff4d4d;
+    color: #ffffff !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(224, 36, 36, 0.5);
+}
+
+.figure-media-wrapper:hover .figure-play-overlay .play-badge i {
+    color: #ffffff;
+    transform: scale(1.15);
+}
+
+@media (max-width: 480px) {
+    .figure-play-overlay {
+        padding: 6px 8px;
+    }
+    .figure-play-overlay .play-badge {
+        font-size: 0.7rem;
+        padding: 4px 9px;
+        gap: 5px;
+    }
 }
 
 /* Responsive adjustments for smaller screens */
@@ -2098,6 +2182,13 @@ html body .publication-links .btn-link.btn-talk svg path {
     fill: #6b5b95 !important;
 }
 
+html body .publication-links .btn-link.btn-video i,
+html body .publication-links .btn-link.btn-video svg,
+html body .publication-links .btn-link.btn-video svg path {
+    color: #e02424 !important;
+    fill: #e02424 !important;
+}
+
 html body .publication-links .btn-link.btn-poster i,
 html body .publication-links .btn-link.btn-poster svg,
 html body .publication-links .btn-link.btn-poster svg path {
@@ -2705,6 +2796,7 @@ hr {
 /* Dark theme overrides for publication action buttons */
 .dark-theme .btn-pdf,
 .dark-theme .btn-code,
+.dark-theme .btn-video,
 .dark-theme .btn-demo,
 .dark-theme .btn-slides,
 .dark-theme .btn-talk,
@@ -2718,6 +2810,7 @@ hr {
 
 .dark-theme .btn-pdf:hover,
 .dark-theme .btn-code:hover,
+.dark-theme .btn-video:hover,
 .dark-theme .btn-demo:hover,
 .dark-theme .btn-slides:hover,
 .dark-theme .btn-talk:hover,

@@ -1,13 +1,24 @@
 <div class="project publication-card" data-filter="{{ project.category }}">
     <div class="row mb-4">
         <div class="col-sm-4">
-            {% if project.gif contains '.mp4' %}
-            <video width="100%" height="auto" class="w-full rounded-lg" autoplay loop muted playsinline>
-                <source src="{{ project.gif }}" type="video/mp4">
-            </video>
-            {% else %}
-            <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}">
-            {% endif %}
+            <div class="figure-media-wrapper">
+                {% if project.gif contains '.mp4' %}
+                <video width="100%" height="auto" class="w-full rounded-lg" autoplay loop muted playsinline>
+                    <source src="{{ project.gif }}" type="video/mp4">
+                </video>
+                {% else %}
+                <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}">
+                {% endif %}
+                {% if project.video %}
+                <a href="{{ project.video }}" target="_blank" rel="noopener" class="figure-play-overlay" title="Watch Video">
+                    <span class="play-badge"><i class="fab fa-youtube"></i> Watch Video</span>
+                </a>
+                {% elsif project.youtube %}
+                <a href="{{ project.youtube }}" target="_blank" rel="noopener" class="figure-play-overlay" title="Watch Video">
+                    <span class="play-badge"><i class="fab fa-youtube"></i> Watch Video</span>
+                </a>
+                {% endif %}
+            </div>
         </div>
         <div class="col-sm-8">
             <div class="publication-content">
@@ -38,6 +49,10 @@
                         class="btn-link btn-slides"><i class="fas fa-presentation"></i> Slides</a> {% endif %}
                     {% if project.talk %} <a href="{{ project.talk }}" target="_blank" rel="noopener"
                         class="btn-link btn-talk"><i class="fas fa-microphone"></i> Talk</a> {% endif %}
+                    {% if project.video %} <a href="{{ project.video }}" target="_blank" rel="noopener"
+                        class="btn-link btn-video"><i class="fab fa-youtube"></i> Video</a>
+                    {% elsif project.youtube %} <a href="{{ project.youtube }}" target="_blank" rel="noopener"
+                        class="btn-link btn-video"><i class="fab fa-youtube"></i> Video</a> {% endif %}
                     {% if project.poster %} <a href="{{ project.poster }}" target="_blank" rel="noopener"
                         class="btn-link btn-poster"><i class="fas fa-image"></i> Poster</a> {% endif %}
                     {% if project.tutorial %} <a href="{{ project.tutorial }}" target="_blank" rel="noopener"

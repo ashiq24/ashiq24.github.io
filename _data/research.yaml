@@ -27,6 +27,7 @@ projects:
     demo: 
     slides: 
     talk: 
+    video: 
     poster: 
     abstract-less: Vision-Language-Action (VLA) models are a class of generalist robot policies that map camera images and language instructions directly to robot actions. While promising, these models remain slow at test time, particularly for long-horizon tasks that require many queries to the policy. 
     abstract-more: Recent efforts reduce VLA latency by distilling smaller models, overlapping asynchronous action chunks, or pairing the VLA with a fast low-level policy, but still run a learned policy for the entire task. In contrast to VLA, classical motion planners quickly find collision-free motions, but require an explicit goal and have no semantic understanding of the task. In this work, we present SkipVLA, a hybrid policy that combines a pretrained VLA with a classical motion planner, using the planner for free-space motion and querying the VLA only for contact-rich skills such as grasping and placing. SkipVLA reuses the frozen vision-language backbone of the VLA to predict a target pose for each planned motion, and learns this predictor without additional demonstrations introduced into the system by using what was already learnt by the large VLA. We evaluate SkipVLA with three VLAs on 13 LIBERO tasks in simulation and three pick-and-place tasks on a physical 6-DoF YAM arm, demonstrating up to 2.5x faster task completion and significantly lower energy consumption while achieving the same task success rate.
@@ -43,6 +44,7 @@ projects:
     authors: <u>Md Ashiqur Rahman</u>, Lim Jun Hao, Jeremiah Jiang, Teck-Yian Lim, Raymond A. Yeh.
     pdf: https://arxiv.org/pdf/2603.26657
     code: https://github.com/ashiq24/soft-equivariance
+    video: https://youtu.be/l9ATXk2M8rE?si=OJJ8kYmoADj0m6mV
     demo: 
     slides: 
     talk:
@@ -65,6 +67,7 @@ projects:
     demo:
     slides:
     talk:
+    video: 
     poster:
     abstract-less: Numerical approximations of partial differential equations (PDEs) are routinely employed to formulate the solution of physics, engineering, and mathematical problems involving functions of several variables, such as the propagation of heat or sound, fluid flow, elasticity, electrostatics, electrodynamics, and more. While this has led to solving many complex phenomena, there are some limitations.
     abstract-more: Conventional approaches such as Finite Element Methods (FEMs) and Finite Difference Methods (FDMs) require considerable time and are computationally expensive. In contrast, data-driven machine learning-based methods, such as neural networks, provide a faster, fairly accurate alternative, and, in particular, focus on neural operators, which have certain advantages such as discretization invariance and resolution invariance. This article aims to provide a comprehensive insight into how data-driven approaches can complement conventional techniques to solve engineering and physics problems, while also noting some of the open problems of machine learning-based approaches. We will note how these new computational approaches can bring immense advantages in tackling many problems in fundamental and applied physics.
@@ -84,6 +87,7 @@ projects:
     demo: 
     slides:
     talk:
+    video: 
     tutorial: 
     abstract-less: Symmetry is one of the most fundamental geometric cues in computer vision, and detecting it has been an ongoing challenge. 
     abstract-more: With the recent advances in vision-language models, i.e., CLIP, we investigate whether a pre-trained CLIP model can aid symmetry detection by leveraging the additional symmetry cues found in the natural image descriptions. We propose CLIPSym, which leverages CLIP's image and language encoders and a rotation-equivariant decoder based on a hybrid of Transformer and G-Convolution to detect rotation and reflection symmetries. To fully utilize CLIP's language encoder, we have developed a novel prompting technique called Semantic-Aware Prompt Grouping (SAPG), which aggregates a diverse set of frequent object-based prompts to better integrate the semantic cues for symmetry detection. Empirically, we show that CLIPSym outperforms the current state-of-the-art on three standard symmetry detection datasets (DENDI, SDRW, and LDRS). Finally, we conduct detailed ablations verifying the benefits of CLIP's pre-training, the proposed equivariant decoder, and the SAPG technique. 
@@ -103,6 +107,7 @@ projects:
     demo: 
     slides:
     talk:
+    video: 
     tutorial: 
     abstract-less: Scale variation is a fundamental challenge in computer vision. Objects of the same class can have different sizes 
     abstract-more: and their perceived size is further affected by the distance from the camera. These variations are local to the objects, i.e., different object sizes may change differently within the same image. To effectively handle scale variations, we present a deep equilibrium canonicalizer (DEC) to improve the local scale equivariance of a model. DEC can be easily incorporated into existing network architectures and can be adapted to a pre-trained model. Notably, we show that on the competitive ImageNet benchmark, DEC improves both model performance and local scale consistency across four popular pre-trained deep-nets, e.g., ViT, DeiT, Swin, and BEiT. 
@@ -121,6 +126,7 @@ projects:
     demo: https://colab.research.google.com/drive/1Fkuid94wnVltsgwOblvbuGaVMjLl1YCr?usp=sharing
     slides: 
     talk:
+    video: 
     tutorial: https://huggingface.co/blog/ashiq24/group-sampling
     abstract-less: Downsampling layers are crucial building blocks in CNN architectures, which help to increase the receptive field for learning high-level features and reduce the amount of memory/computation in the model. 
     abstract-more: In this work, we study the generalization of the uniform downsampling layer for group equivariant architectures, e.g., $G$-CNNs. That is, we aim to downsample signals (feature maps) on general finite groups with anti-aliasing. This involves the following (a) Given a finite group and a downsampling rate, we present an algorithm to form a suitable choice of subgroup. (b) Given a group and a subgroup, we study the notion of bandlimited-ness and propose how to perform anti-aliasing. Notably, our method generalizes the notion of downsampling based on classical sampling theory. When the signal is on a cyclic group, i.e., periodic, our method recovers the standard downsampling of an ideal low-pass filter followed by a subsampling operation. Finally, we conducted experiments on image classification tasks demonstrating that the proposed downsampling operation improves accuracy, better preserves equivariance, and reduces model size when incorporated into $G$-equivariant networks.
@@ -138,6 +144,7 @@ projects:
     code: https://github.com/neuraloperator/CoDA-NO
     demo: https://colab.research.google.com/drive/1W6Qy5Mk_vEjZgrA0tWMespXqKEYDOdc6?usp=sharing
     slides:
+    video: 
     poster: 
     abstract-less: Existing neural operator architectures face challenges when solving multiphysics problems with coupled partial differential equations (PDEs), due to complex geometries, 
     abstract-more: interactions between physical variables, and the lack of large amounts of high-resolution training data. To address these issues, we propose Codomain Attention Neural Operator (CoDA-NO), which tokenizes functions along the codomain or channel space, enabling self-supervised learning or pretraining of multiple PDE systems. Specifically, we extend positional encoding, self-attention, and normalization layers to the function space. CoDA-NO can learn representations of different PDE systems with a single model. We evaluate CoDA-NO's potential as a backbone for learning multiphysics PDEs over multiple systems by considering few-shot learning settings. On complex downstream tasks with limited data, such as fluid flow simulations and fluid-structure interactions, we found CoDA-NO to outperform existing methods on the few-shot learning task by over 36%.
@@ -155,6 +162,7 @@ projects:
     code: https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/
     demo: https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing
     slides: 
+    video: 
     talk:
     poster: https://ashiq24.github.io/scale_equivariant_fourier_layer/resource/poster_thumb.pdf
     abstract-less: In computer vision, models must be able to adapt to changes in image resolution to effectively carry out tasks such as image segmentation
@@ -174,6 +182,7 @@ projects:
     demo: https://colab.research.google.com/drive/1f1WYsjAgIjJRFtfQYYnZCZsxl602MMPX?usp=sharing
     slides: 
     talk: 
+    video: 
     poster: 
     abstract-less: Neural operators generalize classical neural networks to maps between infinite-dimensional spaces, e.g., function spaces.
     abstract-more: Prior works on neural operators proposed a series of novel methods to learn such maps and demonstrated unprecedented success in learning solution operators of partial differential equations. Due to their close proximity to fully connected architectures, these models mainly suffer from high memory usage and are generally limited to shallow deep learning models. In this paper, we propose U-shaped Neural Operator (U-NO), a U-shaped memory enhanced architecture that allows for deeper neural operators. U-NOs exploit the problem structures in function predictions and demonstrate fast training, data efficiency, and robustness with respect to hyperparameter choices. We study the performance of U-NO on PDE benchmarks, namely, Darcy's flow law and the Navier-Stokes equations. We show that U-NO results in an average of 26% and 44% prediction improvement on Darcy's flow and turbulent Navier-Stokes equations, respectively, over the state of the art. On Navier-Stokes 3D spatiotemporal operator learning task, we show U-NO provides 37\% improvement over the state of art methods.
@@ -192,6 +201,7 @@ projects:
     demo: 
     slides: 
     talk: 
+    video: 
     poster: 
     abstract-less: We propose the generative adversarial neural operator (GANO), a generative model paradigm for learning probabilities on infinite-dimensional function spaces.
     abstract-more: The natural sciences and engineering are known to have many types of data that are sampled from infinite-dimensional function spaces, where classical finite-dimensional deep generative adversarial networks (GANs) may not be directly applicable. GANO generalizes the GAN framework and allows for the sampling of functions by learning push-forward operator maps in infinite-dimensional spaces. GANO consists of two main components, a generator neural operator and a discriminator neural functional. The inputs to the generator are samples of functions from a user-specified probability measure, e.g., Gaussian random field (GRF), and the generator outputs are synthetic data functions. The input to the discriminator is either a real or synthetic data function. In this work, we instantiate GANO using the Wasserstein criterion and show how the Wasserstein loss can be computed in infinite-dimensional spaces. We empirically study GANO in controlled cases where both input and output functions are samples from GRFs and compare its performance to the finite-dimensional counterpart GAN. We empirically study the efficacy of GANO on real-world function data of volcanic activities and show its superior performance over GAN.
@@ -210,6 +220,7 @@ projects:
     demo:
     slides: 
     talk: 
+    video: 
     poster: 
     abstract-less: We address the problem of generating 3D human motions in dyadic activities. In contrast to the concurrent works, which mainly focus on
     abstract-more: generating the motion of a single actor from the textual description, we generate the motion of one of the actors from the motion of the other participating actor in the action. This is a particularly challenging, under-explored problem, that requires learning intricate relationships between the motion of two actors participating in an action and also identifying the action from the motion of one actor. To address these, we propose partner conditioned motion operator (PaCMO), a neural operator-based generative model which learns the distribution of human motion conditioned by the partner's motion in function spaces through adversarial training. Our model can handle long unlabeled action sequences at arbitrary time resolution. We also introduce the "Functional Frechet Inception Distance" (F2ID) metric for capturing similarity between real and generated data for function spaces. We test PaCMO on NTU RGB+D and DuetDance datasets and our model produces realistic results evidenced by the F2ID score and the conducted user study.
@@ -228,6 +239,7 @@ projects:
     demo: 
     slides: 
     talk: 
+    video: 
     poster: 
     abstract-less: Analyzing large-scale single-cell transcriptomic datasets generated using different technologies is challenging due to the presence of batch-specific systematic variations known as batch effects.
     abstract-more: Since biological and technological differences are often interspersed, detecting and accounting for batch effects in RNA-seq datasets are critical for effective data integration and interpretation. Low-dimensional embeddings, such as principal component analysis (PCA) are widely used in visual inspection and estimation of batch effects. Linear dimensionality reduction methods like PCA are effective in assessing the presence of batch effects, especially when batch effects exhibit linear patterns. However, batch effects are inherently complex and existing linear dimensionality reduction methods could be inadequate and imprecise in the presence of sophisticated nonlinear batch effects. We present Batch Effect Estimation using Nonlinear Embedding (BEENE), a deep nonlinear auto-encoder network which is specially tailored to generate an alternative lower dimensional embedding suitable for both linear and nonlinear batch effects. BEENE simultaneously learns the batch and biological variables from RNA-seq data, resulting in an embedding that is more robust and sensitive than PCA embedding in terms of detecting and quantifying batch effects. BEENE was assessed on a collection of carefully controlled simulated datasets as well as biological datasets, including two technical replicates of mouse embryogenesis cells, peripheral blood mononuclear cells from three largely different experiments and five studies of pancreatic islet cells
@@ -246,6 +258,7 @@ projects:
     demo: 
     slides: 
     talk: 
+    video: 
     poster: 
     abstract-less: High-throughput experimental technologies are generating tremendous amounts of genomic data, offering valuable resources to answer important questions and extract biological insights. Storing this sheer amount of genomic data has become a major concern in bioinformatics.
     abstract-more: General purpose compression techniques (e.g. gzip, bzip2, 7-zip) are being widely used due to their pervasiveness and relatively good speed. However, they are not customized for genomic data and may fail to leverage special characteristics and redundancy of the biomolecular sequences. We present a new lossless compression method CHAPAO (COmpressing Alignments using Hierarchical and Probabilistic Approach), which is especially designed for multiple sequence alignments (MSAs) of biomolecular data and offers very good compression gain. We have introduced a novel hierarchical referencing technique to represent biomolecular sequences which combines likelihood based analyses of the sequence similarities and graph theoretic algorithms. We performed an extensive evaluation study using a collection of real biological data from the avian phylogenomics project, 1000 plants project (1KP), and 16S and 23S rRNA datasets. We report the performance of CHAPAO in comparison with general purpose compression techniques as well as with MFCompress and Nucleotide Archival Format (NAF)—two of the best known methods especially designed for FASTA files. Experimental results suggest that CHAPAO offers significant improvements in compression gain over most other alternative methods.
