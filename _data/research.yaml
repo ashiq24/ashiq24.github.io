@@ -15,7 +15,7 @@ categories:
 
 projects:
   - title: "Neural Implicit Energy Optimization for LiDAR Mapping"
-    system-name: NIEO
+    system-name:
     gif: assets/img/paper_fig/nieo_flyby_ignatius.mp4
     conference: WACV 2027
     conference-web:

@@ -1,0 +1,24 @@
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/date-3.6.0/ext/date
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/bin/ruby -I /Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20261022-73674-lk8hce.rb extconf.rb
+checking for whether -Wno-default-const-init-field-unsafe is accepted as CFLAGS... yes
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+checking for rb_gc_mark_movable() in ruby.h... yes
+checking for RUBY_TYPED_EMBEDDABLE in ruby.h... no
+creating Makefile
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/date-3.6.0/ext/date
+make DESTDIR\= clean
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/date-3.6.0/ext/date
+make DESTDIR\=
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.bundle
+
+current directory: /Users/mdashiqurrahman/Documents/ashiq24.github.io/vendor/bundle/ruby/3.1.0/gems/date-3.6.0/ext/date
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 date_core.bundle ./.gem.20261022-73674-t5t71h

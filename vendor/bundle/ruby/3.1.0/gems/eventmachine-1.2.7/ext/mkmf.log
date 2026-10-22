@@ -1,0 +1,339 @@
+PKG_CONFIG_PATH = /opt/homebrew/opt/openssl@3/lib/pkgconfig
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib PKG_CONFIG_PATH=/opt/homebrew/opt/openssl@3/lib/pkgconfig pkg-config --exists openssl
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib PKG_CONFIG_PATH=/opt/homebrew/opt/openssl@3/lib/pkgconfig {"PKG_CONFIG_PATH"=>"/opt/homebrew/opt/openssl@3/lib/pkgconfig"} pkg-config --libs openssl |
+=> "-L/opt/homebrew/Cellar/openssl@3/3.6.1/lib -lssl -lcrypto\n"
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib     -lruby.3.1   "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib     -lruby.3.1 -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib -lssl -lcrypto  "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib PKG_CONFIG_PATH=/opt/homebrew/opt/openssl@3/lib/pkgconfig {"PKG_CONFIG_PATH"=>"/opt/homebrew/opt/openssl@3/lib/pkgconfig"} pkg-config --cflags-only-I openssl |
+=> "-I/opt/homebrew/Cellar/openssl@3/3.6.1/include\n"
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib PKG_CONFIG_PATH=/opt/homebrew/opt/openssl@3/lib/pkgconfig {"PKG_CONFIG_PATH"=>"/opt/homebrew/opt/openssl@3/lib/pkgconfig"} pkg-config --cflags-only-other openssl |
+=> "\n"
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib PKG_CONFIG_PATH=/opt/homebrew/opt/openssl@3/lib/pkgconfig {"PKG_CONFIG_PATH"=>"/opt/homebrew/opt/openssl@3/lib/pkgconfig"} pkg-config --libs-only-l openssl |
+=> "-lssl -lcrypto\n"
+package configuration for openssl
+incflags: -I/opt/homebrew/Cellar/openssl@3/3.6.1/include
+cflags: 
+ldflags: -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib
+libs: -lssl -lcrypto
+
+have_library: checking for -lcrypto... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe  conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib     -lssl -lcrypto -lruby.3.1  -lssl -lcrypto -lcrypto  "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for -lssl... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe  conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib     -lssl -lcrypto -lcrypto -lruby.3.1  -lssl -lcrypto -lcrypto -lssl  "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for openssl/ssl.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe    -c conftest.c"
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <openssl/ssl.h>
+/* end */
+
+--------------------
+
+have_header: checking for openssl/err.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe    -c conftest.c"
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <openssl/err.h>
+/* end */
+
+--------------------
+
+have_var: checking for rb_trap_immediate in ruby.h,rubysig.h... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe    -c conftest.c"
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+conftest.c:4:10: fatal error: 'rubysig.h' file not found
+    4 | #include <rubysig.h>
+      |          ^~~~~~~~~~~
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: #include <rubysig.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: int t(void) { const volatile void *volatile p; p = &(&rb_trap_immediate)[0]; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe  conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib     -lssl -lcrypto -lcrypto -lssl -lruby.3.1  -lssl -lcrypto -lcrypto -lssl  "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+conftest.c:14:57: error: use of undeclared identifier 'rb_thread_blocking_region'
+   14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe  conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib     -lssl -lcrypto -lcrypto -lssl -lruby.3.1  -lssl -lcrypto -lcrypto -lssl  "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
+Undefined symbols for architecture arm64:
+  "_rb_thread_blocking_region", referenced from:
+      _t in conftest-bf312b.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void rb_thread_blocking_region();
+15: int t(void) { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl() in ruby/thread.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib "clang -o conftest -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/arm64-darwin24 -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/backward -I/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0 -I. -I/opt/homebrew/Cellar/openssl@3/3.6.1/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe  conftest.c  -L. -L/Users/mdashiqurrahman/.rbenv/versions/3.1.2/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong -L/usr/local/lib -L/opt/homebrew/Cellar/openssl@3/3.6.1/lib     -lssl -lcrypto -lcrypto -lssl -lruby.3.1  -lssl -lcrypto -lcrypto -lssl  "
+In file included from conftest.c:1:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/mdashiqurrahman/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/thread.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
+/* end */
+
+--------------------
+
