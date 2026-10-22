@@ -11,4 +11,5 @@ int main(int argc, char **argv)
 
   return !!argv[argc];
 }
-int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_fd_select; return !p; }
+extern void rb_wait_for_single_fd();
+int t(void) { rb_wait_for_single_fd(); return 0; }
