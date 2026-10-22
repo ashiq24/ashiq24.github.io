@@ -989,7 +989,8 @@ code {
     overflow: hidden;
 }
 
-.project .col-sm-4 img {
+.project .col-sm-4 img,
+.project .col-sm-4 video {
     width: 380px !important;
     height: 228px !important;
     max-width: 100% !important;
@@ -2823,7 +2824,8 @@ hr {
 }
 
 /* Dark theme publication images */
-.dark-theme .project .col-sm-4 img {
+.dark-theme .project .col-sm-4 img,
+.dark-theme .project .col-sm-4 video {
     border-color: #44403c !important;
     background: #292524 !important;
 }

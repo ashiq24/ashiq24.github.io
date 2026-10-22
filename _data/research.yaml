@@ -14,6 +14,26 @@ categories:
 
 
 projects:
+  - title: "Neural Implicit Energy Optimization for LiDAR Mapping"
+    system-name: NIEO
+    gif: assets/img/paper_fig/nieo_flyby_ignatius.mp4
+    conference: WACV 2027
+    conference-web:
+    status:
+    website: https://hrishikeshvish.github.io/nieo/index.html
+    authors: Hrishikesh Viswanath, <u>Md Ashiqur Rahman</u>, Chi Lin, Damon Conover, Aniket Bera
+    pdf: https://arxiv.org/pdf/2610.28598
+    code: https://github.com/HrishikeshVish/nieo
+    demo:
+    slides:
+    talk:
+    video:
+    poster:
+    abstract-less: Neural implicit representations provide memory-efficient signed distance field (SDF) parameterizations for large-scale LiDAR scenes, but the geometry recovered from sparse and often noisy inputs carries jitter and artifacts. Classical geometric optimization techniques resolve such artifacts with surface energy functionals, whose minimizers correspond to smooth surfaces.
+    abstract-more: Motivated by this principle, we formulate neural LiDAR mapping as the optimization of energy functionals over the parameter space of neural implicit representations. Specifically, we regularize the signed distance field with an energy functional defined on the shape operator of its level set, which represents the curvature of the surface, thus encouraging smoothness along the surface. This adapts classical geometric priors to the scale of million-point LiDAR maps. Experiments on large-scale datasets show reconstructions with improved smoothness at preserved geometric fidelity, and no additional inference-time cost.
+    tag: more_robotics
+    category: Robotics
+
   - title: "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
     system-name:
     gif: assets/img/paper_fig/skipvla_vid.mp4
