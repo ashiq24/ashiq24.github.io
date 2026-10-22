@@ -317,116 +317,116 @@ $(document).ready(function () {
 
 
 // Modified from https://codepen.io/SohRonery/pen/wvvBLyP
-var itemsPerPageDefault = 5;
-var currentNumberPages = 1;
-var currentPage = 1;
+var featuredProjectsLimit = 7;
+var currentProjectsView = 'featured'; // 'featured' or 'all'
 var currentFilter = '*';
 var filterAtribute = 'data-filter';
-var pageAtribute = 'data-page-project';
-var pagerClass = 'isotope-pager-project';
 var $projects = $('#projects').isotope({
     itemcategory: '.project',
     layoutMode: 'vertical'
 });
 
+// Update publication cards display, counts, and expand button state
+function updatePublicationDisplay() {
+    var $allProjects = $projects.children('.project');
+    var totalAll = $allProjects.length;
+    var $matching = (currentFilter === '*') ?
+        $allProjects :
+        $projects.children('.project[' + filterAtribute + '="' + currentFilter + '"]');
+    
+    var matchCount = $matching.length;
 
-// Filter based on input category
-function filterCategoryProjects(category) {
-    $projects.isotope({
-        filter: category
+    // Index matching items so isotope can filter the top featured items
+    $matching.each(function (index) {
+        $(this).attr('data-featured-rank', index < featuredProjectsLimit ? 'featured' : 'more');
     });
-}
 
+    // Update global count labels
+    $('.all-count-num').text(totalAll);
+    $('.featured-count-num').text(Math.min(featuredProjectsLimit, totalAll));
+    $('#pub-matching-count').text(matchCount);
 
-// Determine items to be categorized and displayed per page
-function showPageProjects(n) {
-    currentPage = n;
-    var category = '.project';
-    category += (currentFilter != '*') ? '[' + filterAtribute + '="' + currentFilter + '"]' : '';
-    category += '[' + pageAtribute + '="' + currentPage + '"]';
-    filterCategoryProjects(category);
-}
+    if (currentProjectsView === 'featured') {
+        var selector = (currentFilter === '*') ?
+            '.project[data-featured-rank="featured"]' :
+            '.project[' + filterAtribute + '="' + currentFilter + '"][data-featured-rank="featured"]';
+        
+        $projects.isotope({ filter: selector });
 
+        var remainingCount = Math.max(0, matchCount - featuredProjectsLimit);
 
-// Update pager indicator when user clicks previous or next button, and disable buttons as needed
-function updatePagerProjects() {
-    var $isotopePager = ($('.' + pagerClass).length == 0) ? $('<div class="' + pagerClass + '"></div>') : $('.' + pagerClass);
-    $isotopePager.html('');
+        // Header view toggle buttons state
+        $('#btn-view-featured').addClass('active');
+        $('#btn-view-all').removeClass('active');
 
-    var $previous = $('<button class="pager" id="previous-page">&#8592; previous</button>');
-    $previous.click(function () {
-        if (currentPage > 1) {
-            showPageProjects(currentPage - 1);
-            updatePagerProjects();
-            scrollToTopDiv('#research');
+        // Bottom expand button
+        if (remainingCount > 0) {
+            $('#pub-expand-container').show();
+            $('#btn-load-more-projects').removeClass('is-expanded');
+            $('#btn-load-more-projects .expand-text').text('Show Remaining');
+            $('#btn-load-more-projects .expand-chevron').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        } else {
+            $('#pub-expand-container').hide();
         }
-    });
-    if (currentPage === 1) {
-        $previous.prop('disabled', true);
-    }
+    } else {
+        // 'all' view
+        var selector = (currentFilter === '*') ?
+            '.project' :
+            '.project[' + filterAtribute + '="' + currentFilter + '"]';
 
-    var $next = $('<button class="pager" id="next-page">next &#8594;</button>');
-    $next.click(function () {
-        if (currentPage < currentNumberPages) {
-            showPageProjects(currentPage + 1);
-            updatePagerProjects();
-            scrollToTopDiv('#research');
+        $projects.isotope({ filter: selector });
+
+        // Header view toggle buttons state
+        $('#btn-view-all').addClass('active');
+        $('#btn-view-featured').removeClass('active');
+
+        // Bottom expand button (offers collapsing back if there are more than featuredLimit items)
+        if (matchCount > featuredProjectsLimit) {
+            $('#pub-expand-container').show();
+            $('#btn-load-more-projects').addClass('is-expanded');
+            $('#btn-load-more-projects .expand-text').text('Show Recent Only');
+            $('#btn-load-more-projects .expand-chevron').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        } else {
+            $('#pub-expand-container').hide();
         }
-    });
-    if (currentPage === currentNumberPages) {
-        $next.prop('disabled', true);
     }
-
-    var $currentPageIndicator = $('<span class="current-page">&nbsp; page ' + currentPage + ' of ' + currentNumberPages + ' &nbsp; </span>');
-
-    $previous.appendTo($isotopePager);
-    $currentPageIndicator.appendTo($isotopePager);
-    $next.appendTo($isotopePager);
-    $projects.after($isotopePager);
 }
-
-
-// Set pagination
-function setPaginationProjects() {
-    var SettingsPagesOnItems = function () {
-        var itemsLength = $projects.children('.project').length;
-        var pages = Math.ceil(itemsLength / itemsPerPageDefault);
-        var item = 1;
-        var page = 1;
-        var category = '.project';
-        category += (currentFilter != '*') ? '[' + filterAtribute + '="' + currentFilter + '"]' : '';
-
-        $projects.children(category).each(function () {
-            if (item > itemsPerPageDefault) {
-                page++;
-                item = 1;
-            }
-            $(this).attr(pageAtribute, page);
-            item++;
-        });
-        currentNumberPages = page;
-    }();
-
-    updatePagerProjects();
-}
-
 
 function initializeIsotopeProjects() {
-    // Set number of pages, return to first page,
-    setPaginationProjects();
-    showPageProjects(1);
+    updatePublicationDisplay();
 
-
-    // Filter projects based on category, including change active buttons, filter projects, 
-    // set the number of pages, return to the first page, and update the pager indicator 
-    $('#filters-project .filter-button').click(function () {
+    // Category Filter clicks
+    $('#filters-project .filter-button').off('click').on('click', function () {
         $('#filters-project .filter-button').removeClass('active');
         $(this).addClass('active');
-        var filter = $(this).attr('data-filter');
-        currentFilter = filter;
-        setPaginationProjects();
-        showPageProjects(1);
-        updatePagerProjects();
+        currentFilter = $(this).attr('data-filter');
+        updatePublicationDisplay();
+    });
+
+    // Top view toggle clicks (Featured vs All)
+    $('#pub-view-switch .view-switch-btn').off('click').on('click', function () {
+        var view = $(this).attr('data-view');
+        if (view === currentProjectsView) return;
+        currentProjectsView = view;
+        updatePublicationDisplay();
+    });
+
+    // Bottom expand/collapse button click
+    $('#btn-load-more-projects').off('click').on('click', function () {
+        if (currentProjectsView === 'featured') {
+            currentProjectsView = 'all';
+            updatePublicationDisplay();
+        } else {
+            currentProjectsView = 'featured';
+            updatePublicationDisplay();
+            // Smoothly scroll back up to the top of research section when collapsing
+            var researchOffset = $('#research').offset();
+            if (researchOffset) {
+                $('html, body').animate({
+                    scrollTop: researchOffset.top - 70
+                }, 400);
+            }
+        }
     });
 }
 

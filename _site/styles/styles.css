@@ -1124,8 +1124,89 @@ code {
     }
 }
 
+/* Publications Header & Modern Controls */
+.publications-header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 0.85rem;
+}
+
+.publication-view-switch {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px;
+    background: #f1ede8;
+    border: 1px solid #e2ded7;
+    border-radius: 20px;
+    gap: 4px;
+}
+
+.publication-view-switch .view-switch-btn {
+    border: none;
+    background: transparent;
+    padding: 5px 13px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b665f;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.2;
+}
+
+.publication-view-switch .view-switch-btn i {
+    font-size: 0.75rem;
+    color: #8c827a;
+}
+
+.publication-view-switch .view-switch-btn:hover {
+    color: #37352f;
+}
+
+.publication-view-switch .view-switch-btn.active {
+    background: #ffffff;
+    color: #c45d3e;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.publication-view-switch .view-switch-btn.active i {
+    color: #c45d3e;
+}
+
+.publications-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+}
+
+.publications-status-pill {
+    font-size: 0.78rem;
+    color: #78716c;
+    padding: 4px 11px;
+    background: #faf8f5;
+    border: 1px solid #ebe6df;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.publications-status-pill strong {
+    color: #37352f;
+    font-weight: 700;
+}
+
 #filters-project .filter-button {
-    padding: 4px 7px;
+    padding: 4px 9px;
     border: 1px solid #d4cfc8;
     border-radius: 6px;
     background-color: transparent;
@@ -1133,7 +1214,7 @@ code {
     cursor: pointer;
     text-transform: capitalize;
     font-size: 0.82rem;
-    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 
 #filters-project .filter-button:hover {
@@ -1145,8 +1226,8 @@ code {
     background-color: rgba(196, 93, 62, 0.1);
     border-color: #c45d3e;
     color: #c45d3e;
+    font-weight: 600;
 }
-
 
 /* Light theme styles for filter button */
 .light-theme #filters-project .filter-button {
@@ -1154,64 +1235,134 @@ code {
     color: #37352f;
 }
 
-
 /* Dark theme styles for filter button */
 .dark-theme #filters-project .filter-button {
     border: 1px solid #57534e;
     color: #e7e5e4;
 }
 
-
-/* Styles for pager buttons */
-.isotope-pager-project {
+/* Modern In-Place Expansion Widget */
+.publications-expand-container {
     display: flex;
-    list-style-type: none;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 1.75rem 0 1rem 0;
 }
 
-.isotope-pager-project .pager {
-    display: block;
-    padding: 4px 7px;
-    background-color: transparent;
-    border: 1px solid #d4cfc8;
-    margin: 0 5px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.isotope-pager-project .pager:hover {
-    background-color: rgba(196, 93, 62, 0.08);
-    border-color: #c45d3e;
-    cursor: pointer;
-}
-
-.isotope-pager-project .pager.active {
-    background-color: rgba(196, 93, 62, 0.1);
-}
-
-
-/* Light theme styles for pager button */
-.light-theme .isotope-pager-project .pager {
-    border: 1px solid #d4cfc8;
+.btn-expand-publications {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    background: #ffffff;
+    border: 1px solid #dcd7ce;
+    border-radius: 28px;
     color: #37352f;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.btn-expand-publications:hover {
+    background: #faf8f5;
+    border-color: #c45d3e;
+    color: #c45d3e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(196, 93, 62, 0.12);
+}
 
-/* Dark theme styles for pager button */
-.dark-theme .isotope-pager-project .pager {
-    border: 1px solid #57534e;
+.btn-expand-publications .expand-badge {
+    background: rgba(196, 93, 62, 0.1);
+    color: #c45d3e;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 12px;
+    letter-spacing: 0.2px;
+}
+
+.btn-expand-publications .expand-chevron {
+    font-size: 0.8rem;
+    transition: transform 0.25s ease;
+    color: #8c827a;
+}
+
+.btn-expand-publications:hover .expand-chevron {
+    color: #c45d3e;
+}
+
+.btn-expand-publications.is-expanded {
+    background: #faf8f5;
+    color: #57534e;
+    border-color: #dcd7ce;
+}
+
+.btn-expand-publications.is-expanded:hover {
+    border-color: #c45d3e;
+    color: #c45d3e;
+}
+
+/* Dark Theme Overrides for Publications Controls */
+.dark-theme .publication-view-switch {
+    background: #201d1b;
+    border-color: #3d3835;
+}
+
+.dark-theme .publication-view-switch .view-switch-btn {
+    color: #a8a29e;
+}
+
+.dark-theme .publication-view-switch .view-switch-btn:hover {
+    color: #f5f5f4;
+}
+
+.dark-theme .publication-view-switch .view-switch-btn.active {
+    background: #2e2a27;
+    color: #f97316;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .publication-view-switch .view-switch-btn.active i {
+    color: #f97316;
+}
+
+.dark-theme .publications-status-pill {
+    background: #201d1b;
+    border-color: #3d3835;
+    color: #a8a29e;
+}
+
+.dark-theme .publications-status-pill strong {
+    color: #f5f5f4;
+}
+
+.dark-theme .btn-expand-publications {
+    background: #24211e;
+    border-color: #44403c;
     color: #e7e5e4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.dark-theme .btn-expand-publications:hover {
+    background: #2c2825;
+    border-color: #f97316;
+    color: #f97316;
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.15);
+}
 
-/* Disabled stye for pager buttons */
-.isotope-pager-project .pager:disabled {
-    background-color: #cccccc;
-    color: #666666;
-    cursor: default;
-    opacity: 0.5;
-    border: 1px solid #aaaaaa;
+.dark-theme .btn-expand-publications .expand-badge {
+    background: rgba(249, 115, 22, 0.18);
+    color: #fb923c;
+}
+
+.dark-theme .btn-expand-publications .expand-chevron {
+    color: #a8a29e;
+}
+
+.dark-theme .btn-expand-publications:hover .expand-chevron {
+    color: #f97316;
 }
 
 

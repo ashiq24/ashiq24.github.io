@@ -57,7 +57,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- Core theme CSS -->
-    <link href="styles/styles.css?v=9.6-a" rel="stylesheet" />
+    <link href="styles/styles.css?v=9.7" rel="stylesheet" />
     <link href="styles/affiliations_fix.css?v=9.6-a" rel="stylesheet" />
 
     <!-- Schema.org JSON-LD for Rich Snippets and LLM Understanding -->
@@ -389,19 +389,33 @@
 <hr class="my-1">
 <div class="row" id="research">
     <div class="col">
-        <h2 class="mb-2 mt-1">Publications</h2>
-        <div id="filters-project">
-            <button class="filter-button active" data-filter="*">all</button>
-            
-            <button class="filter-button" data-filter="Equivariance">Equivariance</button>
-            
-            <button class="filter-button" data-filter="Neural Operator">Neural Operator</button>
-            
-            <button class="filter-button" data-filter="Robotics">Robotics</button>
-            
-            <button class="filter-button" data-filter="Bioinformatics">Bioinformatics</button>
-            
+        <div class="publications-header-wrap">
+            <h2 class="mb-2 mt-1">Publications</h2>
+            <div class="publication-view-switch" id="pub-view-switch">
+                <button type="button" class="view-switch-btn active" data-view="featured" id="btn-view-featured" title="Show recent publications">
+                    <i class="fa fa-star"></i> <span>Recent Papers</span>
+                </button>
+                <button type="button" class="view-switch-btn" data-view="all" id="btn-view-all" title="Show all publications">
+                    <i class="fa fa-th-list"></i> <span>All Papers</span>
+                </button>
+            </div>
         </div>
+
+        <div class="publications-toolbar">
+            <div id="filters-project">
+                <button class="filter-button active" data-filter="*">all</button>
+                
+                <button class="filter-button" data-filter="Equivariance">Equivariance</button>
+                
+                <button class="filter-button" data-filter="Neural Operator">Neural Operator</button>
+                
+                <button class="filter-button" data-filter="Robotics">Robotics</button>
+                
+                <button class="filter-button" data-filter="Bioinformatics">Bioinformatics</button>
+                
+            </div>
+        </div>
+
         <p></p>
         <div id="projects" class="isotope">
             
@@ -1038,6 +1052,14 @@
 
             
         </div>
+
+        <!-- Modern In-Place Show Remaining Expansion Widget -->
+        <div class="publications-expand-container" id="pub-expand-container">
+            <button type="button" class="btn-expand-publications" id="btn-load-more-projects">
+                <span class="expand-text">Show Remaining</span>
+                <i class="fa fa-chevron-down expand-chevron"></i>
+            </button>
+        </div>
         <p></p>
     </div>
 </div>
@@ -1175,11 +1197,10 @@
 
 <!-- Footer section -->
 
-<div>‎</div>
-<footer class="pt-2 my-md-2 pt-md-">
+<footer>
     <div class="row justify-content-center">
         <div class="col-7 col-md text-left align-self-center">
-            <p class="h6">© Md Ashiqur Rahman, 2026</p>
+            <p class="h6">&copy; Md Ashiqur Rahman, 2026</p>
             <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>> web source @github</b></a>
         </div>
         <div class="col col-md text-right">
@@ -1213,7 +1234,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <!-- Core theme JS-->
-    <script src="js/scripts.js?v=2.1"></script>
+    <script src="js/scripts.js?v=3.1"></script>
 
 </body>
 
