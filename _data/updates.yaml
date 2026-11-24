@@ -14,7 +14,7 @@ updates:
 
   - picture: 
     desc: Our survey on neural operators and data-driven scientific ML was published in <highlight>IEEE TPAMI</highlight>.
-    time: 2026
+    time: Aug 2026
 
   - picture: 
     desc: Presented <highlight>'Tunable Soft Equivariance'</highlight> at <highlight>CVPR 2026</highlight> and released soft-equivariant vision foundation models on Hugging Face.
