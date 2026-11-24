@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MP8XG34N12"></script>
@@ -17,9 +19,9 @@
     <!-- SEO Meta Tags -->
     <title>{{ site.title }} | {{ site.info }}</title>
     <meta name="description"
-        content="Md Ashiqur Rahman - PhD student in Computer Science at Purdue University specializing in robust machine learning, equivariance, geometric deep learning, and neural operators. Published at NeurIPS, ICLR, ICCV." />
+        content="Md Ashiqur Rahman - PhD candidate in Computer Science at Purdue University designing robust, physically grounded AI systems: equivariance and symmetry in foundation models, neural operators and physics foundation models, and multimodal LLMs, agents, and vision-language-action models. Published at NeurIPS, CVPR, ICCV, ICLR, and TPAMI." />
     <meta name="keywords"
-        content="Md Ashiqur Rahman, machine learning, equivariance, geometric deep learning, neural operators, scale equivariance, Purdue University, computer vision, AI research, deep learning, scientific machine learning, operator learning" />
+        content="Md Ashiqur Rahman, machine learning, computer vision, equivariance, symmetry, foundation models, neural operators, physics foundation models, scientific machine learning, multimodal LLMs, AI agents, vision-language-action models, embodied AI, robotics, Purdue University, research scientist" />
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
@@ -29,7 +31,7 @@
     <meta property="og:url" content="{{ site.url }}" />
     <meta property="og:title" content="{{ site.title }} - Machine Learning Researcher" />
     <meta property="og:description"
-        content="PhD student at Purdue University researching robust machine learning, equivariance, and geometric deep learning. Publications at NeurIPS, ICLR, ICCV." />
+        content="PhD candidate at Purdue University designing robust, physically grounded AI systems: equivariance, neural operators, multimodal LLMs, and VLAs. Publications at NeurIPS, CVPR, ICCV, ICLR, and TPAMI." />
     <meta property="og:image" content="{{ site.url }}/{{ site.og_image }}" />
     <meta property="og:site_name" content="{{ site.title }}" />
 
@@ -38,7 +40,7 @@
     <meta name="twitter:url" content="{{ site.url }}" />
     <meta name="twitter:title" content="{{ site.title }} - Machine Learning Researcher" />
     <meta name="twitter:description"
-        content="PhD student at Purdue University researching robust machine learning, equivariance, and geometric deep learning." />
+        content="PhD candidate at Purdue University designing robust, physically grounded AI systems: equivariance, neural operators, multimodal LLMs, and VLAs." />
     <meta name="twitter:image" content="{{ site.url }}/{{ site.og_image }}" />
 
     <link rel="icon" type="image/x-icon" href="{{ site.icon-pic }}" />
@@ -57,7 +59,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- Core theme CSS -->
-    <link href="styles/styles.css?v=9.7" rel="stylesheet" />
+    <link href="styles/styles.css?v=10.0" rel="stylesheet" />
     <link href="styles/affiliations_fix.css?v=9.6-a" rel="stylesheet" />
 
     <!-- Schema.org JSON-LD for Rich Snippets and LLM Understanding -->
@@ -68,7 +70,7 @@
       "name": "{{ site.data.about.name }}",
       "url": "{{ site.url }}",
       "image": "{{ site.url }}/{{ site.data.about.profile-pic }}",
-      "jobTitle": "PhD Student in Computer Science",
+      "jobTitle": "PhD Candidate in Computer Science",
       "worksFor": {
         "@type": "Organization",
         "name": "Purdue University",
@@ -82,7 +84,8 @@
       "sameAs": [
         "{{ site.data.about.github }}",
         "{{ site.data.about.scholar }}",
-        "{{ site.data.about.huggingface }}"
+        "{{ site.data.about.huggingface }}",
+        "{{ site.data.about.linkedin }}"
       ],
       "knowsAbout": [
         "Machine Learning",
@@ -92,7 +95,11 @@
         "Computer Vision",
         "Scientific Machine Learning",
         "Operator Learning",
-        "Deep Learning"
+        "Physics Foundation Models",
+        "Multimodal Large Language Models",
+        "AI Agents",
+        "Vision-Language-Action Models",
+        "Embodied AI"
       ],
       "description": "{{ site.data.about.first-paragraph }}"
     }
@@ -135,11 +142,6 @@
             <li>
                 <p onclick="scrollToTopDiv('#research')"><span class="nav-icon"><i
                             class="fas fa-graduation-cap"></i></span> <span class="text">publications</span></p>
-            </li>
-            <li>
-                <p onclick="scrollToTopDiv('#outreach')"><span class="nav-icon"><i class="fas fa-users"></i></span>
-                    <span class="text">outreach</span>
-                </p>
             </li>
             <li>
                 <p onclick="scrollToTopDiv('#resources')"><span class="nav-icon"><i class="fas fa-tools"></i></span>

@@ -139,7 +139,7 @@ def build():
     context = {
         'site': {
             'title': 'Md Ashiqur Rahman',
-            'info': 'phd cs @ Purdue',
+            'info': 'PhD Candidate, Purdue CS',
             'url': '.',
             'og_image': 'assets/img/profile_pic_3.jpeg',
             'icon-pic': 'assets/img/mandu_icon.png',

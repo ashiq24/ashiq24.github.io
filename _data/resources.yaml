@@ -53,11 +53,11 @@ links:
 
   - type: huggingface
     hf-type: model
-    hf-id: ashiq24/lse-dinov2-base
+    hf-id: ashiq24/dinov2-base-lse
     category: research
 
   - type: github
-    git-api: https://api.github.com/repos/ashiq24/Scale_Equivariant_Fourier_Layer
+    git-api: https://api.github.com/repos/ashiq24/scale_equivariant_fourier_layer
     category: research
   
   - type: github
@@ -75,6 +75,23 @@ links:
   - type: github
     git-api: https://api.github.com/repos/ashiq24/Python-Tool-to-Visualize-Fractals
     category: miscellaneous
+
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/local-scale-equivariance
+    category: research
+
+  - type: github
+    git-api: https://api.github.com/repos/ashiq24/Group_Sampling
+    category: research
+
+  - type: github
+    git-api: https://api.github.com/repos/neuraloperator/GANO
+    category: research
+
+  - type: huggingface
+    hf-type: model
+    hf-id: ashiq24/siglip2-base-lse
+    category: open-weights
 
   # Hugging Face examples (uncomment and add your actual Hugging Face resources):
   

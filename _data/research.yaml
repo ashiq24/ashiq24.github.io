@@ -15,7 +15,7 @@ categories:
 
 projects:
   - title: "Neural Implicit Energy Optimization for LiDAR Mapping"
-    gif: assets/img/paper_fig/nieo_flyby_ignatius.mp4
+    gif: assets/img/paper_fig/nieo_teaser.jpg
     conference: WACV 2027
     conference-web:
     status:
@@ -36,7 +36,7 @@ projects:
   - title: "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
     system-name:
     gif: assets/img/paper_fig/skipvla_vid.mp4
-    conference: ArXiv
+    conference: arXiv 2026 (under review)
     conference-web: 
     status:
     website: 
@@ -60,7 +60,7 @@ projects:
     conference-web:
     status:
     website: https://ashiq24.github.io/soft-equivariance/
-    authors: <u>Md Ashiqur Rahman</u>, Lim Jun Hao, Jeremiah Jiang, Teck-Yian Lim, Raymond A. Yeh.
+    authors: <u>Md Ashiqur Rahman</u>, Lim Jun Hao, Jeremiah Jiang, Teck-Yian Lim, Raymond A. Yeh
     pdf: https://arxiv.org/pdf/2603.26657
     code: https://github.com/ashiq24/soft-equivariance
     video: https://youtu.be/l9ATXk2M8rE?si=OJJ8kYmoADj0m6mV
@@ -76,7 +76,7 @@ projects:
   - title: "Neural Operator: Is Data All You Need to Model the World? An Insight Into the Paradigm of Data-Driven Scientific ML"
     system-name:
     gif: assets/img/paper_fig/tpami_neural_operator.png
-    conference: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+    conference: IEEE TPAMI 2026
     conference-web: https://ieeexplore.ieee.org/document/11478340
     status:
     website: 
@@ -135,11 +135,11 @@ projects:
 
   - title: Group Downsampling with Equivariant Anti-aliasing
     system-name:
-    gif: assets/img/paper_fig/group_dwn.jpg
+    gif: assets/img/paper_fig/group_dwn_teaser.jpg
     conference: ICLR 2025 
     conference-web:
     status:
-    authors: <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
+    authors: <u>Md Ashiqur Rahman</u>, Raymond A. Yeh
     pdf: https://openreview.net/pdf?id=sOte83GogU
     code: https://github.com/ashiq24/Group_Sampling
     demo: https://colab.research.google.com/drive/1Fkuid94wnVltsgwOblvbuGaVMjLl1YCr?usp=sharing
@@ -176,9 +176,9 @@ projects:
     conference: NeurIPS 2023 
     conference-web:
     status:
-    authors: <u>Md Ashiqur Rahman</u>, and Raymond A. Yeh.
+    authors: <u>Md Ashiqur Rahman</u>, Raymond A. Yeh
     pdf: https://arxiv.org/pdf/2311.02922
-    code: https://github.com/ashiq24/Scale_Equivarinat_Fourier_Layer/
+    code: https://github.com/ashiq24/scale_equivariant_fourier_layer
     demo: https://colab.research.google.com/drive/1fKHxYw1QxJ1CWpDFGLdl8Im83GnfAbFC?usp=sharing
     slides: 
     video: 
@@ -192,10 +192,10 @@ projects:
   - title: 'U-NO: U-shaped Neural Operators'
     system-name: 
     gif: assets/img/paper_fig/uno.png
-    conference: Transactions on Machine Learning Research 2023
+    conference: TMLR 2023
     conference-web: 
     status:
-    authors: <u>Md Ashiqur Rahman</u>, Zachary E. Ross, Kamyar Azizzadenesheli.
+    authors: <u>Md Ashiqur Rahman</u>, Zachary E. Ross, Kamyar Azizzadenesheli
     pdf: https://openreview.net/pdf?id=j3oQF9coJd
     code: https://github.com/ashiq24/UNO
     demo: https://colab.research.google.com/drive/1f1WYsjAgIjJRFtfQYYnZCZsxl602MMPX?usp=sharing
@@ -211,10 +211,10 @@ projects:
   - title: Generative Adversarial Neural Operators
     system-name: 
     gif: assets/img/paper_fig/gano.jpg
-    conference: Transactions on Machine Learning Research 2022
+    conference: TMLR 2022
     conference-web: 
     status: 
-    authors: <u>Md Ashiqur Rahman</u>, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli.
+    authors: <u>Md Ashiqur Rahman</u>, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli
     pdf: https://openreview.net/pdf?id=X1VzbBU6xZ
     code: https://github.com/neuraloperator/GANO
     demo: 
@@ -230,10 +230,10 @@ projects:
   - title: 'PaCMO: Partner Dependent Human Motion Generation in Dyadic Human Activity using Neural Operators'
     system-name: 
     gif: assets/img/paper_fig/pacmo.jpg
-    conference: ArXiv 2022
+    conference: arXiv 2022
     conference-web: 
     status: 
-    authors: <U>Md Ashiqur Rahman</u>, Jasorsi Ghosh, Hrishikesh Viswanath, Kamyar Azizzadenesheli, Aniket Bera.
+    authors: <u>Md Ashiqur Rahman</u>, Jasorsi Ghosh, Hrishikesh Viswanath, Kamyar Azizzadenesheli, Aniket Bera
     pdf: https://arxiv.org/pdf/2211.16210
     code: 
     demo:
@@ -249,8 +249,8 @@ projects:
   - title: "BEENE: Deep Learning-based Nonlinear Embedding Improves Batch Effect Estimation"
     system-name: 
     gif: assets/img/paper_fig/beene.jpeg
-    conference: Bioinformatics, Volume 39, 2023
-    conference-web: https://academic.oup.com/bioinformatics
+    conference: Bioinformatics 2023
+    conference-web: https://doi.org/10.1093/bioinformatics/btad479
     status: 
     authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Mahfuza Sharmin, Md. Shamsuzzoha Bayzid
     pdf: https://academic.oup.com/bioinformatics/article/39/8/btad479/7240486?login=false
@@ -269,9 +269,9 @@ projects:
     system-name: 
     gif: assets/img/paper_fig/chapao.jpg
     conference: PLOS ONE 2022
-    conference-web: https://journals.plos.org/plosone/
+    conference-web: https://doi.org/10.1371/journal.pone.0265360
     status: 
-    authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Sifat Muhammad Abdullah, Md. Shamsuzzoha Bayzid.
+    authors: <u>Md Ashiqur Rahman</u>, Abdullah Aman Tutul, Sifat Muhammad Abdullah, Md. Shamsuzzoha Bayzid
     pdf: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265360
     code: https://github.com/ashiq24/CHAPAO
     demo: 

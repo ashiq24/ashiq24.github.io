@@ -11,11 +11,11 @@
 
 # Site settings
 title: Md Ashiqur Rahman
-info: phd cs @ Purdue
+info: PhD Candidate, Purdue CS
 icon-pic: assets/img/mandu_icon.png
 
 # SEO Settings
-description: "Md Ashiqur Rahman - PhD student in Computer Science at Purdue University specializing in robust machine learning, equivariance, geometric deep learning, and neural operators. Research on scale-equivariant networks, operator learning, and AI for scientific discovery."
+description: "Md Ashiqur Rahman - PhD candidate in Computer Science at Purdue University designing robust, physically grounded AI systems: equivariance and symmetry in foundation models, neural operators and physics foundation models, and multimodal LLMs, agents, and vision-language-action models."
 url: "https://ashiq24.github.io"
 baseurl: ""
 author:

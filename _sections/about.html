@@ -31,6 +31,9 @@
                     style="width: 35px; height: 35px; border-radius: 50%;">
             </a>
             {% endif %}
+            {% if site.data.about.linkedin %} <a class="social-icon" href="{{ site.data.about.linkedin }}" target="_blank"
+                rel="noopener" title="LinkedIn"><i class="fab fa-linkedin" style="font-size: 35px; color: #0A66C2"></i></a>
+            {% endif %}
             {% if site.data.about.email %} <a class="social-icon" href="mailto:{{ site.data.about.email }}"
                 title="Email"><i class="fas fa-envelope" style="font-size: 35px; color: #5f6f7d"></i></a> {% endif %}
             {% if site.data.about.youtube %} <a class="social-icon" href="{{ site.data.about.youtube }}" target="_blank"

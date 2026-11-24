@@ -1,32 +1,40 @@
 updates:
 
   - picture: 
-    desc: I will do my internship at <highlight>Eli Lilly</highlight>, working on automating drug manufacturing processes.
+    desc: I am on the <highlight>2026–27 job market</highlight>, available Spring 2027.
+    time: Nov 2026
+
+  - picture: 
+    desc: Our paper on neural implicit LiDAR mapping (NIEO) was accepted at <highlight>WACV 2027</highlight>!
+    time: Oct 2026
+
+  - picture: 
+    desc: Released <highlight>SkipVLA</highlight>, which pairs VLAs with classical planning to cut task-completion time by 46% and energy by 52% on a physical robot arm.
+    time: Sep 2026
+
+  - picture: 
+    desc: Our survey on neural operators and data-driven scientific ML was published in <highlight>IEEE TPAMI</highlight>.
+    time: 2026
+
+  - picture: 
+    desc: Presented <highlight>'Tunable Soft Equivariance'</highlight> at <highlight>CVPR 2026</highlight> and released soft-equivariant vision foundation models on Hugging Face.
+    time: Jun 2026
+
+  - picture: 
+    desc: Joined <highlight>Eli Lilly</highlight> as a research intern, working on automating drug manufacturing processes.
     time: May 2026
 
   - picture: 
     desc: Honored to receive the <highlight>Bilsland Dissertation Fellowship</highlight>!
-    time: April 2026
+    time: Apr 2026
 
-  - picture: 
-    desc: I will present my paper on <highlight>'Tunable Soft Equivariance'</highlight> at <highlight>CVPR 2026</highlight>!
-    time: March 2026
-    
   - picture: assets/img/updates_fig/iccv.png
     desc: Two papers accepted at <highlight>ICCV 2025</highlight>!
     time: Aug 2025
 
   - picture: assets/img/updates_fig/autodesk_1.png
-    desc: I will spend my summer as an AI Research Intern at <highlight>Autodesk</highlight>!
+    desc: Joined <highlight>Autodesk Research</highlight> as an AI Research Intern.
     time: May 2025
-
-  - picture: assets/img/updates_fig/iclr_png_singa.png
-    desc: I will attend ICLR 2025 in <highlight>Singapore</highlight>.
-    time: April 2025
-    
-  - picture: assets/img/updates_fig/confernec.png
-    desc: I will attend NeurIPS 2024 in <highlight>Vancouver, Canada</highlight>.
-    time: December 2024
 
 
 

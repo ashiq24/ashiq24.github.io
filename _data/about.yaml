@@ -13,6 +13,7 @@ scholar: https://scholar.google.com/citations?user=isCWj28AAAAJ&hl=en
 researchgate:
 github: https://github.com/ashiq24
 huggingface: https://huggingface.co/ashiq24
+linkedin: https://www.linkedin.com/in/md-ashiqur-rahman-35782910a/
 youtube:
 resume: assets/doc/cv_ashiq.pdf
 projects:             # delete "show" or leave it blank to hide this icon
@@ -22,7 +23,7 @@ orcid:
 contact:             # delete "show" or leave it blank to hide this icon
 
 # information for contact card
-dept: cs @ Purdue
+dept: PhD Candidate, CS @ Purdue
 # lab: 
 email: rahman79@purdue.edu
 # phone: 
@@ -31,16 +32,19 @@ email: rahman79@purdue.edu
 # feedback: https://docs.google.com/forms/d/e/1FAIpQLScwlxkoM-ZuKhDk3nZvk70MGKirSne6BH3Y_zlkMLJxHLRMRw/viewform?usp=dialog
 
 # about me
-first-paragraph:  I am a final year Ph.D. student in Computer Science at Purdue University, advised by Professor Raymond A. Yeh. I develop consistent and reliable AI systems for computer vision and scientific computing. I have completed my bachelor's degree in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET), where I worked with Professor Md. Shamsuzzoha Bayzid. 
-second-paragraph: 
-research-introduction: My research unifies geometric principles, signal processing techniques, and group theory to improve machine learning models. 
+first-paragraph: I am a final-year Ph.D. candidate in Computer Science at Purdue University, advised by Professor Raymond A. Yeh, and a Bilsland Dissertation Fellow. I received my bachelor's degree in Computer Science and Engineering from the Bangladesh University of Engineering and Technology (BUET), where I worked with Professor Md. Shamsuzzoha Bayzid.
+second-paragraph: <b class="job-market">I am on the 2026–27 job market, available Spring 2027.</b>
+research-introduction: I design robust, physically grounded AI systems by building the structure of the real world (symmetry, physics, and embodiment) into modern foundation models.
 
 research-interests:
 
-  - field: Computer Vision
-    subfields: Geometric Deep Learning, Equivariant Neural Networks
-  
-  - field: Operator Learning
-    subfields: PDE Surrogate Models, Scientific Machine Learning
+  - field: Symmetry & Robustness
+    subfields: Geometric deep learning, Provably robust AI systems
 
-feedback-text: 'For feedback, advice, or simply to connect, please feel free to leave an <a href="https://docs.google.com/forms/d/e/1FAIpQLScwlxkoM-ZuKhDk3nZvk70MGKirSne6BH3Y_zlkMLJxHLRMRw/viewform?usp=dialog" style="color: #c45d3e; font-family: cursive; text-decoration: none;">anonymous message</a>.'
+  - field: Scientific Machine Learning
+    subfields: Neural operators, Physics foundation models, Multiphysics and weather surrogates
+
+  - field: Multimodal & Embodied AI
+    subfields: Multimodal LLMs and agents, Efficient vision-language-action models (VLAs)
+
+feedback-text: 'For feedback or simply to connect, please feel free to leave an <a href="https://docs.google.com/forms/d/e/1FAIpQLScwlxkoM-ZuKhDk3nZvk70MGKirSne6BH3Y_zlkMLJxHLRMRw/viewform?usp=dialog" style="color: #c45d3e; font-family: cursive; text-decoration: none;">anonymous message</a>.'
