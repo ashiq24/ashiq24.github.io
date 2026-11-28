@@ -3260,3 +3260,23 @@ hr {
         margin-right: auto;
     }
 }
+
+/* Square CV tile, same footprint as the other social icons */
+.cv-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+}
+
+.social-icon:hover .cv-tile {
+    background: var(--accent-hover);
+}
